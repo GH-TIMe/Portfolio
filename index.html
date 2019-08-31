@@ -95,7 +95,7 @@
 
 <body>
     <header>
-        <h1>Привет мам, как тебе?</h1>
+        <h1>Mozilla</h1>
         <!-- insert <img> element, link to the small
           version of the Firefox logo -->
         <img src="originals/firefox_logo_120px.png" alt="Small version of the Firefox logo">
@@ -112,18 +112,24 @@
             <!-- insert images with srcsets and sizes -->
             <a href="https://www.mozilla.org/en-US/firefox/new/">
                 <img scrset="originals/firefox_logo_120px.png 120w,
-                             originals/firefox_logo_400px.png 400w" sizes="(max-width: 480px) 100px,
-                            400px" src="originals/firefox_logo_400px.png" alt="logo of the Firefox">
+                             originals/firefox_logo_400px.png 400w" 
+                     sizes="(max-width: 480px) 120px,
+                            400px" 
+                     src="originals/firefox_logo_400px.png" alt="logo of the Firefox">
             </a>
             <a href="https://www.mozilla.org/">
-                <img scrset="originals/mozilla_dinosaur_head_400px.png 400w,
-                             originals/mozilla_dinosaur_head_120px.png 120w" sizes="(max-width: 480px) 100px,
-                             400px" src="originals/mozilla_dinosaur_head_400px.png" alt="Mozilla's dinosaur">
+                <img scrset="originals/mozilla_dinosaur_head_120px.png 120w,
+                             originals/mozilla_dinosaur_head_400px.png 400w" 
+                     sizes="(max-width: 480px) 120px,
+                             400px" 
+                     src="originals/mozilla_dinosaur_head_400px.png" alt="Mozilla's dinosaur">
             </a>
             <a href="https://addons.mozilla.org/">
-                <img scrset="originals/firefox_addons_400px.jpg 400w,
-                             originals/firefox_addons_120px.jpg 120w" sizes="(max-width: 480px) 100px,
-                            400px" src="originals/firefox_addons_400px.jpg" alt="Mozilla mosaic logo">
+                <img scrset="originals/firefox_addons_120px.jpg 120w,   
+                             originals/firefox_addons_400px.jpg 400w" 
+                     sizes="(max-width: 480px) 120px,
+                            400px" 
+                     src="originals/firefox_addons_400px.jpg" alt="Mozilla mosaic logo">
             </a>
             <a href="https://developer.mozilla.org/en-US/">
                 <img src="originals/mdn.svg" alt="Mozilla logo (blue print)">
@@ -134,7 +140,6 @@
             <!-- insert picture element -->
             <picture>
                 <source scrset="originals/red-panda-600px.jpg" media="(max-width: 600px)">
-                <source scrset="originals/red-panda-1200px.jpg">
                 <img src="originals/red-panda-1200px.jpg" alt="Red Panda">
             </picture>
         </div>
