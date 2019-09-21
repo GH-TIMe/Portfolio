@@ -9,36 +9,41 @@
   <title>Sign in</title>
 </head>
 <body>
-  <form action="index2.html" class="login-form" method="post">
-    <h1>Sign in</h1>
-      <p>with
-        <a class="btn" href="#">
-        <i class="fab fa-google"></i>
-        </a>
-        <a class="btn" href="#">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </p>
-      <p>or</p>
+    <form action="index2.html" class="login-form" method="post">
+      <div class="bg-img">
+        <div class="scl">
+          <h1>Sign in</h1>
+            <p>with
+              <a href="#">
+                <img src="img\gooleicon.svg" alt="google logo" width="48px" height="48px" />
+              </a>
+              <a href="#">
+                <img src="img\facebookicon.svg" alt="facebook logo" width="48px" height="48px" />
+              </a>
+            </p>
+            <p>or</p>
+        </div>
+        <div class="txtb">
+          <input type="text" placeholder="Email or login" required >
+        </div>
 
-    <div class="txtb">
-      <input type="text" placeholder="Email and login">
-    </div>
+        <div class="txtb">
+          <input type="password" placeholder="Password" required>
+        </div>
 
-    <div class="txtb">
-      <u>
-        <input type="password" placeholder="Password">
-      </u>
-    </div>
+        <div class="bottom-text">
+          <p>
+            <a href="#">Forgot password?</a>
+          </p>
+          <p>
+            <a href="#">Create account</a>
+          </p>
+        </div>
 
-    <div class="bottom-text">
-      <p>
-        <a href="#">Forgot password?</a>
-      </p>
-      <p>
-        <a href="#">Create account</a>
-      </p>
-    </div>
-  </form>
+        <div class="btn-send">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+    </form>
 </body>
 </html>
