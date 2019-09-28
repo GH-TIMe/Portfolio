@@ -2,232 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Sign in</title>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+        $("body").css("display", "none");
+
+        $("body").fadeIn(2000);
+
+    	$("a.transition").click(function(event){
+    		event.preventDefault();
+    		linkLocation = this.href;
+    		$("body").fadeOut(1000, redirectPage);
+    	});
+
+    	function redirectPage() {
+    		window.location = linkLocation;
+    	}
+    });
+  </script>
 </head>
 <body>
-  <form method="post">
-    <p>
-      <label for="comment">Add the comment here:</label>
-      <input type="text" name="comment" id="comment" value="I'm a text field">
-    </p>
-    <p>
-      <label for="email">Enter your email adress:</label>
-      <input type="email" name="mail" id="email" multiple>
-    </p>
-    <p>
-      <label for="pwd">Password:</label>
-      <input type="password" id="pwd" name="pwd">
-    </p>
-    <p>
-      <label for="srh">Search:</label>
-      <input type="search" id="srh" name="srh">
-    </p>
-    <p>
-      <label for="phn">Phone number:</label>
-      <input type="phone" id="phn" name="phn">
-    </p>
-    <p>
-      <label for="url">Add your URLs address:</label>
-      <input type="url" id="url" name="url">
-    </p>
-    <p>
-      <label for="comment">Add a comment here:</label>
-      <textarea cols="30" rows="10">This is my default content.</textarea>
-    </p>
-    <p>
-      <select name="simple" id="simple">
-        <option selected>--</option>
-        <option>Banana</option>
-        <option>Cherry</option>
-        <option>Lemon</option>
-      </select>
-    </p>
-    <p>
-      <select id="groups" name="  groups">
-        <optgroup label="fruits">
-          <option>Banana</option>
-          <option selected>Cherry</option>
-          <option>Lemon</option>
-        </optgroup>
-        <optgroup label="vegetables">
-          <option>Carrot</option>
-          <option>Eggplant</option>
-          <option>Potato</option>
-        </optgroup>
-      </select>
-    </p>
-    <p>
-      <select multiple id="multi" name="multi">
-        <option>Banana</option>
-        <option>Cherry</option>
-        <option>Lemon</option>
-      </select>
-    </p>
-    <p>
-      <label for="myFruit">What's your favorite fruit?</label>
-      <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
-      <datalist id="mySuggestion">
-        <option>Apple</option>
-        <option>Banana</option>
-        <option>Blackberry</option>
-        <option>Blueberry</option>
-        <option>Lemon</option>
-        <option>Lychee</option>
-        <option>Peach</option>
-        <option>Pear</option>
-      </datalist>
-    </p>
-    <p>
-      <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-      <input type="text" id="myFruit" name="fruit" list="fruitList">
-
-      <datalist id="fruitList">
-        <label for="suggestion">or pick a fruit</label>
-        <select id="suggestion" name="altFruit">
-          <option>Apple</option>
-          <option>Banana</option>
-          <option>Blackberry</option>
-          <option>Blueberry</option>
-          <option>Lemon</option>
-          <option>Lychee</option>
-          <option>Peach</option>
-          <option>Pear</option>
-        </select>
-      </datalist>
-    </p>
-    <fieldset>
-          <legend>Choose all the vegetables you like to eat</legend>
-          <ul>
-            <li>
-              <label for="carrots">Carrots</label>
-              <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
-            </li>
-            <li>
-              <label for="peas">Peas</label>
-              <input type="checkbox" id="peas" name="peas" value="peas">
-            </li>
-            <li>
-              <label for="cabbage">Cabbage</label>
-              <input type="checkbox" id="cabbage" name="cabbage" value="cabbage">
-            </li>
-            <li>
-              <label for="cauli">Cauliflower</label>
-              <input type="checkbox" id="cauli" name="cauli" value="cauli">
-            </li>
-            <li>
-              <label for="broc">Broccoli</label>
-              <input type="checkbox" id="broc" name="broc" value="broc">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>What is your favorite meal?</legend>
-          <ul>
-            <li>
-              <label for="soup">Soup</label>
-              <input type="radio" checked id="soup" name="meal" value="soup">
-            </li>
-            <li>
-              <label for="curry">Curry</label>
-              <input type="radio" id="curry" name="meal" value="curry">
-            </li>
-            <li>
-              <label for="pizza">Pizza</label>
-              <input type="radio" id="pizza" name="meal" value="pizza">
-            </li>
-            <li>
-              <label for="tacos">Tacos</label>
-              <input type="radio" id="tacos" name="meal" value="tacos">
-            </li>
-            <li>
-              <label for="bolognaise">Bolognaise</label>
-              <input type="radio" id="bolognaise" name="meal"  value="bolognaise">
-            </li>
-          </ul>
-      </fieldset>
-      <fieldset>
-      <legend>What is your favorite meal?</legend>
-      <ul>
-        <li>
-          <label for="soup">Soup</label>
-          <input type="radio" checked id="soup" name="meal_" value="soup">
-        </li>
-        <li>
-          <label for="curry">Curry</label>
-          <input type="radio" id="curry" name="meal_" value="curry">
-        </li>
-        <li>
-          <label for="pizza">Pizza</label>
-          <input type="radio" id="pizza" name="meal_" value="pizza">
-        </li>
-      </ul>
-    </fieldset>
-    <p>
-      <input type="number" name="age" id="age" min="1" max="10" step="2">
-    </p>
-    <p>
-      <input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-    <p>
-      <input type="range" name="beans" id="beans_" min="0" max="500" step="10">
-    </p>
-    <p>
-      <label for="beans">How many beans can you eat?</label>
-      <input type="range" name="beans" id="beans" min="0" max="500" step="10">
-      <span class="beancount"></span>
-    </p>
-    <p>
-      <input type="datetime-local" name="datetime" id="datetime">
-    </p>
-    <p>
-      <input type="date" name="date" id="date">
-    </p>
-    <p>
-      <input type="month" name="month" id="month">
-    </p>
-    <p>
-      <input type="time" name="time" id="time">
-    </p>
-    <p>
-      <input type="week" name="week" id="week">
-    </p>
-    <p>
-      <label for="myDate">When are you available this summer?</label>
-      <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate">
-    </p>
-    <p>
-      <input type="color" name="color" id="color">
-    </p>
-    <p>
-      <input type="file" multiple accept="image/*" name="file" id="file">
-    </p>
-    <ul>
-      <li>
-      <label for="file_cam">Сamera</label>
-      <input type="file" accept="image/*;capture=camera" name="file_cam" id="file_cam">
-      </li>
-      <li>
-      <label for="file_camcor">Сamcorder</label>
-      <input type="file" accept="video/*;capture=camcorder" name="file_camcor" id="file_camcor">
-      </li>
-      <li>
-      <label for="file_mice">Microphone</label>
-      <input type="file" accept="audio/*;capture=microphone" name="file_mice" id="file_mice">
-      </li>
-    <ul>
+  <form action="index.html" class="login-form" method="post">
+    <select name="lang" id="lang">
+      <option>Eng(UK)</option>
+      <option>Rus(RU)</option>
+    </select>
+    <h1>Welcome to daily plant!</h1>
+    <a href="page2/index2.html" class="transition">
+      <input type="submit" value="Sign in">
+    </a>
   </form>
-  <script>
-   var beans = document.querySelector('#beans');
-   var count = document.querySelector('.beancount');
-
-   count.textContent = beans.value;
-
-   beans.oninput = function() {
-     count.textContent = beans.value;
-   }
-  </script>
 </body>
 </html>
