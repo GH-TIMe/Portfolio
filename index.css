@@ -14,7 +14,7 @@
     position: relative;
     overflow: hidden;
     width: 500px;
-    height: 450px;
+    height: 380px;
     -webkit-animation: timesOfDay 105s linear infinite;
        -moz-animation: timesOfDay 105s linear infinite;
          -o-animation: timesOfDay 105s linear infinite;
@@ -255,19 +255,74 @@
 .smoke-1 {
     top: -25px;
     right: 44px;
-    animation: animateSmoke 2.5s linear infinite 2.5s;
+    -webkit-animation: animateSmoke 2.5s linear infinite 2.5s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 2.5s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 2.5s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 2.5s;
 }
 
 .smoke-2 {
     top: -25px;
     right: 42px;
-    animation: animateSmoke 2.5s linear infinite 1.66s;
+    -webkit-animation: animateSmoke 2.5s linear infinite 1.66s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 1.66s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 1.66s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 1.66s;
 }
 
 .smoke-3 {
     top: -25px;
     right: 49px;
-    animation: animateSmoke 2.5s linear infinite 0.83s;
+    -webkit-animation: animateSmoke 2.5s linear infinite 0.83s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 0.83s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 0.83s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 0.83s; /* Chrome, Firefox 16+,
+                                                     IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+@-moz-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+@-o-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
 }
 
 @keyframes animateSmoke {
@@ -290,45 +345,47 @@
 .sun {
     position: absolute;
     /*поменял первоначальные параметры расположения солнца*/
-    left: 210px;
-    bottom: 0px;
+    right: 150px;
+    bottom: -40px;
     width: 80px;
     height: 80px;
     z-index: 0;
+    transform: scale(1.5, 1) translate3d(0, -310px, 0); /* по вертикали 50% */
     border-radius: 50%;
     background: #ffcf11;
     box-shadow: 0 0 100px #ffdf05;
-    -webkit-animation: orbit2 105s linear infinite; /* Chrome, Safari 5 */
-       -moz-animation: orbit2 105s linear infinite; /* Firefox 5-15 */
-         -o-animation: orbit2 105s linear infinite; /* Opera 12+ */
-            animation: orbit2 105s linear infinite; /* Chrome, Firefox 16+,
-                                                     IE 10+, Safari 5 */
+    -webkit-animation: orbit2 100s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: orbit2 100s linear infinite; /* Firefox 5-15 */
+         -o-animation: orbit2 100s linear infinite; /* Opera 12+ */
+            animation: orbit2 100s linear infinite; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
 }
 
 @-webkit-keyframes orbit2 {
-	from { 	-webkit-transform: rotate(180deg) translate3d(310px, 0, 0) rotate(-4000deg); }
-	to   {  -webkit-transform: rotate(540deg) translate3d(310px, 0, 0) rotate(-540deg); }
+	from { 	-webkit-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -webkit-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
 }
 
 @-moz-keyframes orbit2 {
-	from { 	-moz-transform: rotate(180deg) translate3d(310px, 0, 0) rotate(-4000deg); }
-	to   {  -moz-transform: rotate(540deg) translate3d(310px, 0, 0) rotate(-540deg); }
+	from { 	-moz-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -moz-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
 }
 
 @-o-keyframes orbit2 {
-	from { 	-o-transform: rotate(180deg) translate3d(310px, 0, 0) rotate(-4000deg); }
-	to   {  -o-transform: rotate(540deg) translate3d(310px, 0, 0) rotate(-540deg); }
+	from { 	-o-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -o-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
 }
 
 @keyframes orbit2 {
-	from { 	transform: rotate(180deg) translate3d(310px, 0, 0) rotate(-4000deg); }
-	to   {  transform: rotate(540deg) translate3d(310px, 0, 0) rotate(-540deg); }
+	from { 	transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
 }
 
 .sun-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
+    transform: rotateZ(-90deg) scale(.67, 1);
     transform-origin: bottom center;
 }
 
@@ -339,7 +396,6 @@
     width: 2px;
     height: 100px;
     margin-left: -1px;
-
     border: solid #ffcf11;
     border-width: 10px 0 10px 0;
 }
@@ -379,6 +435,7 @@
 .sun div:nth-child(10) {
     transform: rotate(-72deg);
 }
+
 
 .cloud {
     position: absolute;
