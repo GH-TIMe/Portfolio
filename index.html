@@ -1,65 +1,48 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <title>Document</title>
+    <meta charset="utf-8">
+    <title>Мультик</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<!--
-<style>
-  .text {
-    font: 32px monospace;
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1px solid;
-  }
-
-  .text {
-    animation: typing 4s steps(10) forwards,
-               caret 1s steps(1) infinite;
-  }
-
-  @keyframes typing {
-    to {
-      width: 10ch;
-    }
-  }
-
-  @keyframes caret {
-    50% {
-      border-color: transparent;
-    }
-  }
-</style>
--->
-<style>
-  .box {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
-    border-radius: 50%;
-  }
-
-  .box .circle {
-    width: 30px;
-    height: 30px;
-    background-color: blue;
-    animation: spin 2s linear 1;
-  }
-
-  @keyframes spin {
-                    0% {transform: rotate(0turn) translateY(-50px) rotate(1turn);}
-                    100% {transform: rotate(1turn) translateY(-50px) rotate(0turn);}
-                  }
-</style>
 <body>
-  <div class="box"><div class="circle"></div></div>
+<div class="canvas">
+    <div class="box_front">
+        <div class="sea"></div>
+        <div class="ship">
+            <div class="smoke">
+                <div class="smoke-1"></div>
+                <div class="smoke-2"></div>
+                <div class="smoke-3"></div>
+            </div>
+            <div class="ship_smokestack"></div>
+            <div class="ship_window"></div>
+        </div>
+        <div class="sun-wrapper">
+            <div class="sun">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="cloud cloud-1"></div>
+        <!-- Создаю дополнительное облако для зацикливания анимации-->
+        <div class="cloud cloud-1-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <!-- Создаю дополнительное облако для зацикливания анимации-->
+        <div class="cloud cloud-3-1"></div>
+        <div class="cloud cloud-4"></div>
+        <!-- Создаю дополнительное облако для зацикливания анимации-->
+        <div class="cloud cloud-4-1"></div>
+    </div>
+</div>
 </body>
 </html>
