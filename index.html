@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta property="og:title" content="Sign in" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gh-time.github.io/Assessment-3/" />
-  <meta property="og:image" content="page2/img/plant.png" />
-  <title>Sign in</title>
-  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-        $("body").css("display", "none");
-
-        $("body").fadeIn(2000);
-
-    	$("a.transition").click(function(event){
-    		event.preventDefault();
-    		linkLocation = this.href;
-    		$("body").fadeOut(1000, redirectPage);
-    	});
-
-    	function redirectPage() {
-    		window.location = linkLocation;
-    	}
-    });
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Document</title>
 </head>
+<!--
+<style>
+  .text {
+    font: 32px monospace;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+  }
+
+  .text {
+    animation: typing 4s steps(10) forwards,
+               caret 1s steps(1) infinite;
+  }
+
+  @keyframes typing {
+    to {
+      width: 10ch;
+    }
+  }
+
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>
+-->
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  .box .circle {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    animation: spin 2s linear 1;
+  }
+
+  @keyframes spin {
+                    0% {transform: rotate(0turn) translateY(-50px) rotate(1turn);}
+                    100% {transform: rotate(1turn) translateY(-50px) rotate(0turn);}
+                  }
+</style>
 <body>
-  <form action="index.html" class="login-form" method="post">
-    <select name="lang" id="lang">
-      <option>Eng(UK)</option>
-      <option>Rus(RU)</option>
-    </select>
-    <h1>Welcome to daily plant!</h1>
-    <a href="page2/index2.html" class="transition">
-      <input type="submit" value="Sign in">
-    </a>
-  </form>
+  <div class="box"><div class="circle"></div></div>
 </body>
 </html>
