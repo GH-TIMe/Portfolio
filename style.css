@@ -1,0 +1,131 @@
+:root {
+  --main-color: #707070;
+  --red: #C0392B;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #ecf0f1;
+}
+
+main {
+  margin: 0 auto;
+  float: left;
+  text-align: center;
+}
+
+/*------отдельные ячейки с котейками------*/
+
+section {
+  display: inline-block;
+  width: 300px;
+  margin: 15px 20px;
+  border: 1.5px solid main-color;
+  box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/*------Фото с котейкой------*/
+
+.cat__photo {
+  width: 100%;
+  opacity: 1;
+  transition: opacity;
+  transition: 0.5s;
+}
+
+.cat__photo:hover {
+  opacity: 0.7;
+}
+
+/*------Весь контент описывающий кота------*/
+
+.content {
+  font-family: 'Segoe UI';
+  height: 300px;
+}
+
+/*------Имя кота------*/
+
+a.header {
+  display: block;
+  margin: 0;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--main-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color;
+  transition-duration: .3s;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: var(--red);
+}
+
+/*------Порода------*/
+
+.breed {
+  margin: 0;
+  padding: 0 5px;
+  font-size: 13px;
+  color: var(--main-color);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*------Описание------*/
+
+.description {
+  width: 267px;
+  height: 120px;
+  margin: 5px auto;
+  padding: 0;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: var(--main-color);
+  line-height: 20px;
+}
+
+/*------Типо кнопки покупки------*/
+
+.payment {
+  display: inline-block;
+  float:left;
+}
+
+.payment .pay {
+  text-decoration: none;
+  color: var(--red);
+  font-size: 20px;
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px 45px;
+  float: left;
+  margin: 15px 0px 0px 30px;
+  background-color: #fff;
+  transition: background-color .3s, color .3s;
+}
+
+.payment .price {
+  margin: 25px 20px 20px 60px;
+  font-size: 20px;
+  color: var(--red);
+  float: right;
+}
+
+.payment .pay:hover {
+  background-color: var(--red);
+  color: #fff;
+}
