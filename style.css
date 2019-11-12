@@ -3,10 +3,15 @@
   --red: #C0392B;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background: #ecf0f1;
 }
 
@@ -22,7 +27,6 @@ section {
   display: inline-block;
   width: 300px;
   margin: 15px 20px;
-  border: 1.5px solid main-color;
   box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   overflow: hidden;
@@ -33,8 +37,7 @@ section {
 .cat__photo {
   width: 100%;
   opacity: 1;
-  transition: opacity;
-  transition: 0.5s;
+  transition: opacity 0.2s;
 }
 
 .cat__photo:hover {
@@ -62,7 +65,7 @@ a.header {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: color;
-  transition-duration: .3s;
+  transition-duration: .2s;
   text-decoration: none;
 }
 
@@ -82,6 +85,53 @@ a.header:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/*------Лапочный рейтинг------*/
+
+.rate {
+  display: inline-block;
+  border: 0px solid var(--main-color);
+  margin: 0;
+  padding: 0;
+}
+
+.rate > input {
+  display: none;
+}
+
+.rate > label {
+  float: right;
+  transition: color .2s;
+}
+
+.rate > label:before {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 5px 1.5px;
+  cursor: pointer;
+  width: 20px;
+}
+
+.rate > .half:before {
+  width: 10px;
+  overflow: hidden;
+  padding-right: 0;
+  position: absolute;
+}
+
+input:checked ~ label,
+label:hover, label:hover ~ label {
+  color: var(--red);
+}
+
+/* Для выбора другого рейтинга
+===============================*/
+input:checked ~ label:hover ~ label, input:checked ~ label:hover,
+label:hover ~ input:checked ~ label
+{ color: #e74c3c; }
+
+
 
 /*------Описание------*/
 
@@ -115,7 +165,7 @@ a.header:hover {
   float: left;
   margin: 15px 0px 0px 30px;
   background-color: #fff;
-  transition: background-color .3s, color .3s;
+  transition: background-color .2s, color .2s;
 }
 
 .payment .price {
