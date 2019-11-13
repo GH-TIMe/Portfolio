@@ -7,213 +7,233 @@
 </head>
 <body>
   <main>
-  <section>
-    <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
-    <div class="content">
-      <a class="header" href="#">Имя кота №1</a>
-      <p class="breed">порода: няшка</p>
-      <!-- Рейтинг доброты -->
+    <input type="checkbox" id="view__button" name="view" checked>
+    <label for="view__button"><i class="fas fa-list"></i></label>
+  <article>
+    <section>
+      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <div class="content">
+        <div class="intro">
+          <a class="intro__header" href="#">Имя кота №1</a>
+          <p class="intro__breed">порода: няшка</p>
+          <!-- Рейmинг доброты котика-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate1__rate10" name="kindness1" value="10">
+                <label class="fas fa-paw" for="pawsRate1__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate1__rate9" name="kindness1" value="9">
+                <label class="half fas fa-paw" for="pawsRate1__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate1__rate8" name="kindness1" value="8">
+                <label class="fas fa-paw" for="pawsRate1__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate1__rate7" name="kindness1" value="7">
+                <label class="half fas fa-paw" for="pawsRate1__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate1__rate6" name="kindness1" value="6">
+                <label class="fas fa-paw" for="pawsRate1__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate1__rate5" name="kindness1" value="5">
+                <label class="half fas fa-paw" for="pawsRate1__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate1__rate4" name="kindness1" value="4">
+                <label class="fas fa-paw" for="pawsRate1__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate1__rate3" name="kindness1" value="3">
+                <label class="half fas fa-paw" for="pawsRate1__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate1__rate2" name="kindness1" value="2">
+                <label class="fas fa-paw" for="pawsRate1__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate1__rate1" name="kindness1" value="1">
+                <label class="half fas fa-paw" for="pawsRate1__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+           id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
+           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+           pariatur.
+         </p>
+        <div class="payment">
+          <p class="price">14&#36;</p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div>
+    </section>
+    <section>
+      <img class="cat__photo" src="img/s1200.webp" alt="Cat_photo">
+      <div class="content">
+        <div class="intro">
+          <a class="intro__header" href="#">Имя кота №2</a>
+          <p class="intro__breed">порода: няшка</p>
+          <!-- Рейmинг доброты котика-->
+          <fieldset class="rate">
+            <input type="radio" id="pawsRate2__rate10" name="kidness2" value="10">
+              <label class="fas fa-paw" for="pawsRate2__rate10" title="rate 5 paws"></label>
+            <input type="radio" id="pawsRate2__rate9" name="kidness2" value="9">
+              <label class="half fas fa-paw" for="pawsRate2__rate9" title="rate 4 1/2 paws"></label>
+            <input type="radio" id="pawsRate2__rate8" name="kidness2" value="8">
+              <label class="fas fa-paw" for="pawsRate2__rate8" title="rate 4 paws"></label>
+            <input type="radio" id="pawsRate2__rate7" name="kidness2" value="7">
+              <label class="half fas fa-paw" for="pawsRate2__rate7" title="rate 3 1/2 paws"></label>
+            <input type="radio" id="pawsRate2__rate6" name="kidness2" value="6">
+              <label class="fas fa-paw" for="pawsRate2__rate6" title="rate 3 paws"></label>
+            <input type="radio" id="pawsRate2__rate5" name="kidness2" value="5">
+              <label class="half fas fa-paw" for="pawsRate2__rate5" title="rate 2 1/2 paws"></label>
+            <input type="radio" id="pawsRate2__rate4" name="kidness2" value="4">
+              <label class="fas fa-paw" for="pawsRate2__rate4" title="rate 2 paws"></label>
+            <input type="radio" id="pawsRate2__rate3" name="kidness2" value="3">
+              <label class="half fas fa-paw" for="pawsRate2__rate3" title="rate 1 1/2 paws"></label>
+            <input type="radio" id="pawsRate2__rate2" name="kidness2" value="2">
+              <label class="fas fa-paw" for="pawsRate2__rate2" title="rate 1 paw"></label>
+            <input type="radio" id="pawsRate2__rate1" name="kidness2" value="1">
+              <label class="half fas fa-paw" for="pawsRate2__rate1" title="rate 1/2 paw"></label>
+          </fieldset>
+        </div>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+           id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
+           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+           pariatur.
+         </p>
+        <div class="payment">
+          <p class="price">14&#36;</p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div>
+    </section>
+    <section>
+      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <div class="content">
+        <a class="header" href="#">Имя кота №1</a>
+        <p class="breed">порода: няшка</p>
+        <!-- Рейmинг доброты котика-->
         <fieldset class="rate">
-          <input type="radio" id="rate10" name="kindness" value="10">
-            <label class="fas fa-paw" for="rate10" title="rate 5 paws"></label>
-          <input type="radio" id="rate9" name="kindness" value="9">
-            <label class="half fas fa-paw" for="rate9" title="rate 4 1/2 paws"></label>
-          <input type="radio" id="rate8" name="kindness" value="8">
-            <label class="fas fa-paw" for="rate8" title="rate 4 paws"></label>
-          <input type="radio" id="rate7" name="kindness" value="7">
-            <label class="half fas fa-paw" for="rate7" title="rate 3 1/2 paws"></label>
-          <input type="radio" id="rate6" name="kindness" value="6">
-            <label class="fas fa-paw" for="rate6" title="rate 3 paws"></label>
-          <input type="radio" id="rate5" name="kindness" value="5">
-            <label class="half fas fa-paw" for="rate5" title="rate 2 1/2 paws"></label>
-          <input type="radio" id="rate4" name="kindness" value="4">
-            <label class="fas fa-paw" for="rate4" title="rate 2 paws"></label>
-          <input type="radio" id="rate3" name="kindness" value="3">
-            <label class="half fas fa-paw" for="rate3" title="rate 1 1/2 paws"></label>
-          <input type="radio" id="rate2" name="kindness" value="2">
-            <label class="fas fa-paw" for="rate2" title="rate 1 paw"></label>
-          <input type="radio" id="rate1" name="kindness" value="1">
-            <label class="half fas fa-paw" for="rate1" title="rate 1/2 paw"></label>
+          <input type="radio" id="pawsRate3__rate10" name="kindness3" value="10">
+            <label class="fas fa-paw" for="pawsRate3__rate10" title="rate 5 paws"></label>
+          <input type="radio" id="pawsRate3__rate9" name="kindness3" value="9">
+            <label class="half fas fa-paw" for="pawsRate3__rate9" title="rate 4 1/2 paws"></label>
+          <input type="radio" id="pawsRate3__rate8" name="kindness3" value="8">
+            <label class="fas fa-paw" for="pawsRate3__rate8" title="rate 4 paws"></label>
+          <input type="radio" id="pawsRate3__rate7" name="kindness3" value="7">
+            <label class="half fas fa-paw" for="pawsRate3__rate7" title="rate 3 1/2 paws"></label>
+          <input type="radio" id="pawsRate3__rate6" name="kindness3" value="6">
+            <label class="fas fa-paw" for="pawsRate3__rate6" title="rate 3 paws"></label>
+          <input type="radio" id="pawsRate3__rate5" name="kindness3" value="5">
+            <label class="half fas fa-paw" for="pawsRate3__rate5" title="rate 2 1/2 paws"></label>
+          <input type="radio" id="pawsRate3__rate4" name="kindness3" value="4">
+            <label class="fas fa-paw" for="pawsRate3__rate4" title="rate 2 paws"></label>
+          <input type="radio" id="pawsRate3__rate3" name="kindness3" value="3">
+            <label class="half fas fa-paw" for="pawsRate3__rate3" title="rate 1 1/2 paws"></label>
+          <input type="radio" id="pawsRate3__rate2" name="kindness3" value="2">
+            <label class="fas fa-paw" for="pawsRate3__rate2" title="rate 1 paw"></label>
+          <input type="radio" id="pawsRate3__rate1" name="kindness3" value="1">
+            <label class="half fas fa-paw" for="pawsRate3__rate1" title="rate 1/2 paw"></label>
         </fieldset>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-         id est laborum.</p>
-      <div class="payment">
-        <a href="#" class="pay">Pay</a>
-        <p class="price">14&#36;</p>
-      </div>
-     </div>
-  </section>
-  <section>
-    <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
-    <div class="content">
-      <a class="header" href="#">Имя кота №1</a>
-      <p class="breed">порода: няшка</p>
-      <!-- Рейтинг доброты -->
-      <fieldset class="rate">
-        <input type="radio" id="rate10" name="kindness" value="10">
-          <label class="fas fa-paw" for="rate10" title="rate 5 paws"></label>
-        <input type="radio" id="rate9" name="kindness" value="9">
-          <label class="half fas fa-paw" for="rate9" title="rate 4 1/2 paws"></label>
-        <input type="radio" id="rate8" name="kindness" value="8">
-          <label class="fas fa-paw" for="rate8" title="rate 4 paws"></label>
-        <input type="radio" id="rate7" name="kindness" value="7">
-          <label class="half fas fa-paw" for="rate7" title="rate 3 1/2 paws"></label>
-        <input type="radio" id="rate6" name="kindness" value="6">
-          <label class="fas fa-paw" for="rate6" title="rate 3 paws"></label>
-        <input type="radio" id="rate5" name="kindness" value="5">
-          <label class="half fas fa-paw" for="rate5" title="rate 2 1/2 paws"></label>
-        <input type="radio" id="rate4" name="kindness" value="4">
-          <label class="fas fa-paw" for="rate4" title="rate 2 paws"></label>
-        <input type="radio" id="rate3" name="kindness" value="3">
-          <label class="half fas fa-paw" for="rate3" title="rate 1 1/2 paws"></label>
-        <input type="radio" id="rate2" name="kindness" value="2">
-          <label class="fas fa-paw" for="rate2" title="rate 1 paw"></label>
-        <input type="radio" id="rate1" name="kindness" value="1">
-          <label class="half fas fa-paw" for="rate1" title="rate 1/2 paw"></label>
-      </fieldset>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-         id est laborum.</p>
-      <div class="payment">
-        <a href="#" class="pay">Pay</a>
-        <p class="price">14&#36;</p>
-      </div>
-     </div>
-  </section>
-  <section>
-    <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
-    <div class="content">
-      <a class="header" href="#">Имя кота №1</a>
-      <p class="breed">порода: няшка</p>
-      <!-- Рейтинг доброты -->
-      <fieldset class="rate">
-        <input type="radio" id="rate10" name="kindness" value="10">
-          <label class="fas fa-paw" for="rate10" title="rate 5 paws"></label>
-        <input type="radio" id="rate9" name="kindness" value="9">
-          <label class="half fas fa-paw" for="rate9" title="rate 4 1/2 paws"></label>
-        <input type="radio" id="rate8" name="kindness" value="8">
-          <label class="fas fa-paw" for="rate8" title="rate 4 paws"></label>
-        <input type="radio" id="rate7" name="kindness" value="7">
-          <label class="half fas fa-paw" for="rate7" title="rate 3 1/2 paws"></label>
-        <input type="radio" id="rate6" name="kindness" value="6">
-          <label class="fas fa-paw" for="rate6" title="rate 3 paws"></label>
-        <input type="radio" id="rate5" name="kindness" value="5">
-          <label class="half fas fa-paw" for="rate5" title="rate 2 1/2 paws"></label>
-        <input type="radio" id="rate4" name="kindness" value="4">
-          <label class="fas fa-paw" for="rate4" title="rate 2 paws"></label>
-        <input type="radio" id="rate3" name="kindness" value="3">
-          <label class="half fas fa-paw" for="rate3" title="rate 1 1/2 paws"></label>
-        <input type="radio" id="rate2" name="kindness" value="2">
-          <label class="fas fa-paw" for="rate2" title="rate 1 paw"></label>
-        <input type="radio" id="rate1" name="kindness" value="1">
-          <label class="half fas fa-paw" for="rate1" title="rate 1/2 paw"></label>
-      </fieldset>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-         id est laborum.</p>
-      <div class="payment">
-        <a href="#" class="pay">Pay</a>
-        <p class="price">14&#36;</p>
-      </div>
-     </div>
-  </section>
-  <section>
-    <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
-    <div class="content">
-      <a class="header" href="#">Имя кота №1</a>
-      <p class="breed">порода: няшка</p>
-      <!-- Рейтинг доброты -->
-      <fieldset class="rate">
-        <input type="radio" id="rate10" name="kindness" value="10">
-          <label class="fas fa-paw" for="rate10" title="rate 5 paws"></label>
-        <input type="radio" id="rate9" name="kindness" value="9">
-          <label class="half fas fa-paw" for="rate9" title="rate 4 1/2 paws"></label>
-        <input type="radio" id="rate8" name="kindness" value="8">
-          <label class="fas fa-paw" for="rate8" title="rate 4 paws"></label>
-        <input type="radio" id="rate7" name="kindness" value="7">
-          <label class="half fas fa-paw" for="rate7" title="rate 3 1/2 paws"></label>
-        <input type="radio" id="rate6" name="kindness" value="6">
-          <label class="fas fa-paw" for="rate6" title="rate 3 paws"></label>
-        <input type="radio" id="rate5" name="kindness" value="5">
-          <label class="half fas fa-paw" for="rate5" title="rate 2 1/2 paws"></label>
-        <input type="radio" id="rate4" name="kindness" value="4">
-          <label class="fas fa-paw" for="rate4" title="rate 2 paws"></label>
-        <input type="radio" id="rate3" name="kindness" value="3">
-          <label class="half fas fa-paw" for="rate3" title="rate 1 1/2 paws"></label>
-        <input type="radio" id="rate2" name="kindness" value="2">
-          <label class="fas fa-paw" for="rate2" title="rate 1 paw"></label>
-        <input type="radio" id="rate1" name="kindness" value="1">
-          <label class="half fas fa-paw" for="rate1" title="rate 1/2 paw"></label>
-      </fieldset>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-         id est laborum.</p>
-      <div class="payment">
-        <a href="#" class="pay">Pay</a>
-        <p class="price">14&#36;</p>
-      </div>
-     </div>
-  </section>
-  <section>
-    <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
-    <div class="content">
-      <a class="header" href="#">Имя кота №1</a>
-      <p class="breed">порода: няшка</p>
-      <!-- Рейтинг доброты -->
-      <fieldset class="rate">
-        <input type="radio" id="rate10" name="kindness" value="10">
-          <label class="fas fa-paw" for="rate10" title="rate 5 paws"></label>
-        <input type="radio" id="rate9" name="kindness" value="9">
-          <label class="half fas fa-paw" for="rate9" title="rate 4 1/2 paws"></label>
-        <input type="radio" id="rate8" name="kindness" value="8">
-          <label class="fas fa-paw" for="rate8" title="rate 4 paws"></label>
-        <input type="radio" id="rate7" name="kindness" value="7">
-          <label class="half fas fa-paw" for="rate7" title="rate 3 1/2 paws"></label>
-        <input type="radio" id="rate6" name="kindness" value="6">
-          <label class="fas fa-paw" for="rate6" title="rate 3 paws"></label>
-        <input type="radio" id="rate5" name="kindness" value="5">
-          <label class="half fas fa-paw" for="rate5" title="rate 2 1/2 paws"></label>
-        <input type="radio" id="rate4" name="kindness" value="4">
-          <label class="fas fa-paw" for="rate4" title="rate 2 paws"></label>
-        <input type="radio" id="rate3" name="kindness" value="3">
-          <label class="half fas fa-paw" for="rate3" title="rate 1 1/2 paws"></label>
-        <input type="radio" id="rate2" name="kindness" value="2">
-          <label class="fas fa-paw" for="rate2" title="rate 1 paw"></label>
-        <input type="radio" id="rate1" name="kindness" value="1">
-          <label class="half fas fa-paw" for="rate1" title="rate 1/2 paw"></label>
-      </fieldset>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-         id est laborum.</p>
-      <div class="payment">
-        <a href="#" class="pay">Pay</a>
-        <p class="price">14&#36;</p>
-      </div>
-     </div>
-  </section>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+           id est laborum.</p>
+        <div class="payment">
+          <a href="#" class="pay">Pay</a>
+          <p class="price">14&#36;</p>
+        </div>
+       </div>
+    </section>
+    <section>
+      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <div class="content">
+        <a class="header" href="#">Имя кота №1</a>
+        <p class="breed">порода: няшка</p>
+        <!-- Рейmинг доброты котика-->
+        <fieldset class="rate">
+          <input type="radio" id="pawsRate4__rate10" name="kindness4" value="10">
+            <label class="fas fa-paw" for="pawsRate4__rate10" title="rate 5 paws"></label>
+          <input type="radio" id="pawsRate4__rate9" name="kindness4" value="9">
+            <label class="half fas fa-paw" for="pawsRate4__rate9" title="rate 4 1/2 paws"></label>
+          <input type="radio" id="pawsRate4__rate8" name="kindness4" value="8">
+            <label class="fas fa-paw" for="pawsRate4__rate8" title="rate 4 paws"></label>
+          <input type="radio" id="pawsRate4__rate7" name="kindness4" value="7">
+            <label class="half fas fa-paw" for="pawsRate4__rate7" title="rate 3 1/2 paws"></label>
+          <input type="radio" id="pawsRate4__rate6" name="kindness4" value="6">
+            <label class="fas fa-paw" for="pawsRate4__rate6" title="rate 3 paws"></label>
+          <input type="radio" id="pawsRate4__rate5" name="kindness4" value="5">
+            <label class="half fas fa-paw" for="pawsRate4__rate5" title="rate 2 1/2 paws"></label>
+          <input type="radio" id="pawsRate4__rate4" name="kindness4" value="4">
+            <label class="fas fa-paw" for="pawsRate4__rate4" title="rate 2 paws"></label>
+          <input type="radio" id="pawsRate4__rate3" name="kindness4" value="3">
+            <label class="half fas fa-paw" for="pawsRate4__rate3" title="rate 1 1/2 paws"></label>
+          <input type="radio" id="pawsRate4__rate2" name="kindness4" value="2">
+            <label class="fas fa-paw" for="pawsRate4__rate2" title="rate 1 paw"></label>
+          <input type="radio" id="pawsRate4__rate1" name="kindness4" value="1">
+            <label class="half fas fa-paw" for="pawsRate4__rate1" title="rate 1/2 paw"></label>
+        </fieldset>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+           id est laborum.</p>
+        <div class="payment">
+          <a href="#" class="pay">Pay</a>
+          <p class="price">14&#36;</p>
+        </div>
+       </div>
+    </section>
+    <section>
+      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <div class="content">
+        <a class="header" href="#">Имя кота №1</a>
+        <p class="breed">порода: няшка</p>
+        <!-- Рейmинг доброты котика-->
+        <fieldset class="rate">
+          <input type="radio" id="pawsRate5__rate10" name="kindness5" value="10">
+            <label class="fas fa-paw" for="pawsRate5__rate10" title="rate 5 paws"></label>
+          <input type="radio" id="pawsRate5__rate9" name="kindness5" value="9">
+            <label class="half fas fa-paw" for="pawsRate5__rate9" title="rate 4 1/2 paws"></label>
+          <input type="radio" id="pawsRate5__rate8" name="kindness5" value="8">
+            <label class="fas fa-paw" for="pawsRate5__rate8" title="rate 4 paws"></label>
+          <input type="radio" id="pawsRate5__rate7" name="kindness5" value="7">
+            <label class="half fas fa-paw" for="pawsRate5__rate7" title="rate 3 1/2 paws"></label>
+          <input type="radio" id="pawsRate5__rate6" name="kindness5" value="6">
+            <label class="fas fa-paw" for="pawsRate5__rate6" title="rate 3 paws"></label>
+          <input type="radio" id="pawsRate5__rate5" name="kindness5" value="5">
+            <label class="half fas fa-paw" for="pawsRate5__rate5" title="rate 2 1/2 paws"></label>
+          <input type="radio" id="pawsRate5__rate4" name="kindness5" value="4">
+            <label class="fas fa-paw" for="pawsRate5__rate4" title="rate 2 paws"></label>
+          <input type="radio" id="pawsRate5__rate3" name="kindness5" value="3">
+            <label class="half fas fa-paw" for="pawsRate5__rate3" title="rate 1 1/2 paws"></label>
+          <input type="radio" id="pawsRate5__rate2" name="kindness5" value="2">
+            <label class="fas fa-paw" for="pawsRate5__rate2" title="rate 1 paw"></label>
+          <input type="radio" id="pawsRate5__rate1" name="kindness5" value="1">
+            <label class="half fas fa-paw" for="pawsRate5__rate1" title="rate 1/2 paw"></label>
+        </fieldset>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+           id est laborum.</p>
+        <div class="payment">
+          <a href="#" class="pay">Pay</a>
+          <p class="price">14&#36;</p>
+        </div>
+       </div>
+    </section>
+  </article>
   </main>
 </body>
-<!-- Для того, чтоб отображались лапки -->
+<!-- Для того, чтоб отображались лапок -->
 <script src="https://kit.fontawesome.com/6a55ef0e59.js" crossorigin="anonymous"></script>
 </html>
