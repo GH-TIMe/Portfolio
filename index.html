@@ -4,25 +4,32 @@
   <meta charset='utf-8'>
   <title>Мяндекс.Муррркет</title>
   <link rel='stylesheet' href='style.css'>
+  <!-- Для того, чтобы отображались лапоки. ЭТО НИКАК НЕ ВЛИЯЕТ НА РАЗМЕТКУ. Просто для красоты -->
+  <script src="https://kit.fontawesome.com/6a55ef0e59.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <main>
-    <input type="checkbox" id="view__button" name="view" checked>
+    <!--Кнопка переключения вида из блочного в список-->
+    <input type="checkbox" id="view__button" name="view">
     <label for="view__button"><i class="fas fa-list"></i></label>
   <article>
+    <!--Блок с котиком и информации о нём-->
     <section>
-      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-1.jfif" alt="Cat_photo">
+      <!--Основной контент блока-->
       <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
         <div class="intro">
-          <a class="intro__header" href="#">Имя кота №1</a>
-          <p class="intro__breed">порода: няшка</p>
-          <!-- Рейmинг доброты котика-->
+          <a class="intro__header" href="#">Бильбо</a>
+          <p class="intro__breed">порода: нибелунг</p>
+          <!-- Рейmинг доброты котика (лапки)-->
             <fieldset class="rate">
               <input type="radio" id="pawsRate1__rate10" name="kindness1" value="10">
                 <label class="fas fa-paw" for="pawsRate1__rate10" title="rate 5 paws"></label>
               <input type="radio" id="pawsRate1__rate9" name="kindness1" value="9">
                 <label class="half fas fa-paw" for="pawsRate1__rate9" title="rate 4 1/2 paws"></label>
-              <input type="radio" id="pawsRate1__rate8" name="kindness1" value="8">
+              <input type="radio" id="pawsRate1__rate8" name="kindness1" value="8" checked>
                 <label class="fas fa-paw" for="pawsRate1__rate8" title="rate 4 paws"></label>
               <input type="radio" id="pawsRate1__rate7" name="kindness1" value="7">
                 <label class="half fas fa-paw" for="pawsRate1__rate7" title="rate 3 1/2 paws"></label>
@@ -39,201 +46,404 @@
               <input type="radio" id="pawsRate1__rate1" name="kindness1" value="1">
                 <label class="half fas fa-paw" for="pawsRate1__rate1" title="rate 1/2 paw"></label>
             </fieldset>
-        </div>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-           id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
-           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-           pariatur.
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Ласковый и общительный молодой котик Бильбо. Он очень привязчивый малыш, любит сидеть на руках, встречать и вообще быть рядом с человеком. По отцу - сибиряк (невский маскарадный), по маме - британец, по характеру - чистая радость, по внешнему виду - чудо ) По размеру - не крупный, небольшой ладненький котик. Аккуратный и хорошо воспитанный. Кастрирован. Возраст 1 год. Отдадим в добрые, заботливые руки.
          </p>
+        <!--Цена и кнопка покупки-->
         <div class="payment">
-          <p class="price">14&#36;</p>
+          <p class="price">7&#36;<span class="price__old">10&#36;</span></p>
           <a href="#" class="pay">Pay</a>
         </div>
-       </div>
-    </section>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
     <section>
-      <img class="cat__photo" src="img/s1200.webp" alt="Cat_photo">
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-2.webp" alt="Cat_photo">
+      <!--Основной контент блока-->
       <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
         <div class="intro">
-          <a class="intro__header" href="#">Имя кота №2</a>
-          <p class="intro__breed">порода: няшка</p>
-          <!-- Рейmинг доброты котика-->
-          <fieldset class="rate">
-            <input type="radio" id="pawsRate2__rate10" name="kidness2" value="10">
-              <label class="fas fa-paw" for="pawsRate2__rate10" title="rate 5 paws"></label>
-            <input type="radio" id="pawsRate2__rate9" name="kidness2" value="9">
-              <label class="half fas fa-paw" for="pawsRate2__rate9" title="rate 4 1/2 paws"></label>
-            <input type="radio" id="pawsRate2__rate8" name="kidness2" value="8">
-              <label class="fas fa-paw" for="pawsRate2__rate8" title="rate 4 paws"></label>
-            <input type="radio" id="pawsRate2__rate7" name="kidness2" value="7">
-              <label class="half fas fa-paw" for="pawsRate2__rate7" title="rate 3 1/2 paws"></label>
-            <input type="radio" id="pawsRate2__rate6" name="kidness2" value="6">
-              <label class="fas fa-paw" for="pawsRate2__rate6" title="rate 3 paws"></label>
-            <input type="radio" id="pawsRate2__rate5" name="kidness2" value="5">
-              <label class="half fas fa-paw" for="pawsRate2__rate5" title="rate 2 1/2 paws"></label>
-            <input type="radio" id="pawsRate2__rate4" name="kidness2" value="4">
-              <label class="fas fa-paw" for="pawsRate2__rate4" title="rate 2 paws"></label>
-            <input type="radio" id="pawsRate2__rate3" name="kidness2" value="3">
-              <label class="half fas fa-paw" for="pawsRate2__rate3" title="rate 1 1/2 paws"></label>
-            <input type="radio" id="pawsRate2__rate2" name="kidness2" value="2">
-              <label class="fas fa-paw" for="pawsRate2__rate2" title="rate 1 paw"></label>
-            <input type="radio" id="pawsRate2__rate1" name="kidness2" value="1">
-              <label class="half fas fa-paw" for="pawsRate2__rate1" title="rate 1/2 paw"></label>
-          </fieldset>
-        </div>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-           id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
-           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-           pariatur.
+          <a class="intro__header" href="#">Буся</a>
+          <p class="intro__breed">порода: ангорская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate2__rate10" name="kindness2" value="10">
+                <label class="fas fa-paw" for="pawsRate2__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate2__rate9" name="kindness2" value="9">
+                <label class="half fas fa-paw" for="pawsRate2__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate2__rate8" name="kindness2" value="8">
+                <label class="fas fa-paw" for="pawsRate2__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate2__rate7" name="kindness2" value="7">
+                <label class="half fas fa-paw" for="pawsRate2__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate2__rate6" name="kindness2" value="6" checked>
+                <label class="fas fa-paw" for="pawsRate2__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate2__rate5" name="kindness2" value="5">
+                <label class="half fas fa-paw" for="pawsRate2__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate2__rate4" name="kindness2" value="4">
+                <label class="fas fa-paw" for="pawsRate2__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate2__rate3" name="kindness2" value="3">
+                <label class="half fas fa-paw" for="pawsRate2__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate2__rate2" name="kindness2" value="2">
+                <label class="fas fa-paw" for="pawsRate2__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate2__rate1" name="kindness2" value="1">
+                <label class="half fas fa-paw" for="pawsRate2__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Молодая! Харизматичная! Динамичная! Игривая и смешная! Домашняя рысь! С ней вам не будет скучно. Она любит быть в центре внимания. Не очень жалует конкурентов, по этому пристраивается одной котейкой в семью без маленьких детей. Здорова! Возраст 1 год. Воспитана. Стерилизована. Привита. От паразитов обработана. Лоток знает на отлично. Пристраивается по договору с ненавязчивым отслеживанием судьбы в ответственные руки. Без самовыгула. Сетки на окнах обязательны. Звоните и приезжайте знакомиться!!!
          </p>
+        <!--Цена и кнопка покупки-->
         <div class="payment">
-          <p class="price">14&#36;</p>
+          <p class="price">10&#36;</p>
           <a href="#" class="pay">Pay</a>
         </div>
-       </div>
-    </section>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
     <section>
-      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-3.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
       <div class="content">
-        <a class="header" href="#">Имя кота №1</a>
-        <p class="breed">порода: няшка</p>
-        <!-- Рейmинг доброты котика-->
-        <fieldset class="rate">
-          <input type="radio" id="pawsRate3__rate10" name="kindness3" value="10">
-            <label class="fas fa-paw" for="pawsRate3__rate10" title="rate 5 paws"></label>
-          <input type="radio" id="pawsRate3__rate9" name="kindness3" value="9">
-            <label class="half fas fa-paw" for="pawsRate3__rate9" title="rate 4 1/2 paws"></label>
-          <input type="radio" id="pawsRate3__rate8" name="kindness3" value="8">
-            <label class="fas fa-paw" for="pawsRate3__rate8" title="rate 4 paws"></label>
-          <input type="radio" id="pawsRate3__rate7" name="kindness3" value="7">
-            <label class="half fas fa-paw" for="pawsRate3__rate7" title="rate 3 1/2 paws"></label>
-          <input type="radio" id="pawsRate3__rate6" name="kindness3" value="6">
-            <label class="fas fa-paw" for="pawsRate3__rate6" title="rate 3 paws"></label>
-          <input type="radio" id="pawsRate3__rate5" name="kindness3" value="5">
-            <label class="half fas fa-paw" for="pawsRate3__rate5" title="rate 2 1/2 paws"></label>
-          <input type="radio" id="pawsRate3__rate4" name="kindness3" value="4">
-            <label class="fas fa-paw" for="pawsRate3__rate4" title="rate 2 paws"></label>
-          <input type="radio" id="pawsRate3__rate3" name="kindness3" value="3">
-            <label class="half fas fa-paw" for="pawsRate3__rate3" title="rate 1 1/2 paws"></label>
-          <input type="radio" id="pawsRate3__rate2" name="kindness3" value="2">
-            <label class="fas fa-paw" for="pawsRate3__rate2" title="rate 1 paw"></label>
-          <input type="radio" id="pawsRate3__rate1" name="kindness3" value="1">
-            <label class="half fas fa-paw" for="pawsRate3__rate1" title="rate 1/2 paw"></label>
-        </fieldset>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-           id est laborum.</p>
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Бэмби</a>
+          <p class="intro__breed">порода: американская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate3__rate10" name="kindness3" value="10">
+                <label class="fas fa-paw" for="pawsRate3__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate3__rate9" name="kindness3" value="9" checked>
+                <label class="half fas fa-paw" for="pawsRate3__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate3__rate8" name="kindness3" value="8">
+                <label class="fas fa-paw" for="pawsRate3__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate3__rate7" name="kindness3" value="7">
+                <label class="half fas fa-paw" for="pawsRate3__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate3__rate6" name="kindness3" value="6">
+                <label class="fas fa-paw" for="pawsRate3__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate3__rate5" name="kindness3" value="5">
+                <label class="half fas fa-paw" for="pawsRate3__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate3__rate4" name="kindness3" value="4">
+                <label class="fas fa-paw" for="pawsRate3__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate3__rate3" name="kindness3" value="3">
+                <label class="half fas fa-paw" for="pawsRate3__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate3__rate2" name="kindness3" value="2">
+                <label class="fas fa-paw" for="pawsRate3__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate3__rate1" name="kindness3" value="1">
+                <label class="half fas fa-paw" for="pawsRate3__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Милый ласковый, трогательный и скромный, с ярко-рыжей мягкой шерсткой и большими удивленными глазами получил имя Бэмби, потому что он похож на этого героя мультфильма. Бэмби - хорошо воспитанный, умненький, послушный. Любит играть, доверчиво сидит на ручках. Родился в мае.
+         </p>
+        <!--Цена и кнопка покупки-->
         <div class="payment">
+          <p class="price">8&#36;<span class="price__old">12&#36;</span></p>
           <a href="#" class="pay">Pay</a>
-          <p class="price">14&#36;</p>
         </div>
-       </div>
-    </section>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
     <section>
-      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-4.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
       <div class="content">
-        <a class="header" href="#">Имя кота №1</a>
-        <p class="breed">порода: няшка</p>
-        <!-- Рейmинг доброты котика-->
-        <fieldset class="rate">
-          <input type="radio" id="pawsRate4__rate10" name="kindness4" value="10">
-            <label class="fas fa-paw" for="pawsRate4__rate10" title="rate 5 paws"></label>
-          <input type="radio" id="pawsRate4__rate9" name="kindness4" value="9">
-            <label class="half fas fa-paw" for="pawsRate4__rate9" title="rate 4 1/2 paws"></label>
-          <input type="radio" id="pawsRate4__rate8" name="kindness4" value="8">
-            <label class="fas fa-paw" for="pawsRate4__rate8" title="rate 4 paws"></label>
-          <input type="radio" id="pawsRate4__rate7" name="kindness4" value="7">
-            <label class="half fas fa-paw" for="pawsRate4__rate7" title="rate 3 1/2 paws"></label>
-          <input type="radio" id="pawsRate4__rate6" name="kindness4" value="6">
-            <label class="fas fa-paw" for="pawsRate4__rate6" title="rate 3 paws"></label>
-          <input type="radio" id="pawsRate4__rate5" name="kindness4" value="5">
-            <label class="half fas fa-paw" for="pawsRate4__rate5" title="rate 2 1/2 paws"></label>
-          <input type="radio" id="pawsRate4__rate4" name="kindness4" value="4">
-            <label class="fas fa-paw" for="pawsRate4__rate4" title="rate 2 paws"></label>
-          <input type="radio" id="pawsRate4__rate3" name="kindness4" value="3">
-            <label class="half fas fa-paw" for="pawsRate4__rate3" title="rate 1 1/2 paws"></label>
-          <input type="radio" id="pawsRate4__rate2" name="kindness4" value="2">
-            <label class="fas fa-paw" for="pawsRate4__rate2" title="rate 1 paw"></label>
-          <input type="radio" id="pawsRate4__rate1" name="kindness4" value="1">
-            <label class="half fas fa-paw" for="pawsRate4__rate1" title="rate 1/2 paw"></label>
-        </fieldset>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-           id est laborum.</p>
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Дымка</a>
+          <p class="intro__breed">порода: британская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate4__rate10" name="kindness4" value="10">
+                <label class="fas fa-paw" for="pawsRate4__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate4__rate9" name="kindness4" value="9">
+                <label class="half fas fa-paw" for="pawsRate4__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate4__rate8" name="kindness4" value="8">
+                <label class="fas fa-paw" for="pawsRate4__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate4__rate7" name="kindness4" value="7" checked>
+                <label class="half fas fa-paw" for="pawsRate4__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate4__rate6" name="kindness4" value="6">
+                <label class="fas fa-paw" for="pawsRate4__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate4__rate5" name="kindness4" value="5">
+                <label class="half fas fa-paw" for="pawsRate4__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate4__rate4" name="kindness4" value="4">
+                <label class="fas fa-paw" for="pawsRate4__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate4__rate3" name="kindness4" value="3">
+                <label class="half fas fa-paw" for="pawsRate4__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate4__rate2" name="kindness4" value="2">
+                <label class="fas fa-paw" for="pawsRate4__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate4__rate1" name="kindness4" value="1">
+                <label class="half fas fa-paw" for="pawsRate4__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Мальчик годика 3-4, бывшедомаший был предан хозяевами и скитался по улице от помойкии к помойке (Очень ласковый и любвеобильный, мурчик как трактор. Обработан, здоров, ходит в лоточек, готовится к кастрации. Неимоверно благодарный, он так боится, что его опять предадут (Ищем ответственную семью без детей, с ненавязчивым отслеживанием судьбы. Отдается на испытательный срок, при необходимости без всяких проблем возвращается куратору.
+         </p>
+        <!--Цена и кнопка покупки-->
         <div class="payment">
+          <p class="price">11&#36;</p>
           <a href="#" class="pay">Pay</a>
-          <p class="price">14&#36;</p>
         </div>
-       </div>
-    </section>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
     <section>
-      <img class="cat__photo" src="img/s1200.jfif" alt="Cat_photo">
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-5.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
       <div class="content">
-        <a class="header" href="#">Имя кота №1</a>
-        <p class="breed">порода: няшка</p>
-        <!-- Рейmинг доброты котика-->
-        <fieldset class="rate">
-          <input type="radio" id="pawsRate5__rate10" name="kindness5" value="10">
-            <label class="fas fa-paw" for="pawsRate5__rate10" title="rate 5 paws"></label>
-          <input type="radio" id="pawsRate5__rate9" name="kindness5" value="9">
-            <label class="half fas fa-paw" for="pawsRate5__rate9" title="rate 4 1/2 paws"></label>
-          <input type="radio" id="pawsRate5__rate8" name="kindness5" value="8">
-            <label class="fas fa-paw" for="pawsRate5__rate8" title="rate 4 paws"></label>
-          <input type="radio" id="pawsRate5__rate7" name="kindness5" value="7">
-            <label class="half fas fa-paw" for="pawsRate5__rate7" title="rate 3 1/2 paws"></label>
-          <input type="radio" id="pawsRate5__rate6" name="kindness5" value="6">
-            <label class="fas fa-paw" for="pawsRate5__rate6" title="rate 3 paws"></label>
-          <input type="radio" id="pawsRate5__rate5" name="kindness5" value="5">
-            <label class="half fas fa-paw" for="pawsRate5__rate5" title="rate 2 1/2 paws"></label>
-          <input type="radio" id="pawsRate5__rate4" name="kindness5" value="4">
-            <label class="fas fa-paw" for="pawsRate5__rate4" title="rate 2 paws"></label>
-          <input type="radio" id="pawsRate5__rate3" name="kindness5" value="3">
-            <label class="half fas fa-paw" for="pawsRate5__rate3" title="rate 1 1/2 paws"></label>
-          <input type="radio" id="pawsRate5__rate2" name="kindness5" value="2">
-            <label class="fas fa-paw" for="pawsRate5__rate2" title="rate 1 paw"></label>
-          <input type="radio" id="pawsRate5__rate1" name="kindness5" value="1">
-            <label class="half fas fa-paw" for="pawsRate5__rate1" title="rate 1/2 paw"></label>
-        </fieldset>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-           consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-           id est laborum.</p>
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Белоснежка</a>
+          <p class="intro__breed">порода: нибелунг</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate5__rate10" name="kindness5" value="10" checked>
+                <label class="fas fa-paw" for="pawsRate5__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate5__rate9" name="kindness5" value="9">
+                <label class="half fas fa-paw" for="pawsRate5__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate5__rate8" name="kindness5" value="8">
+                <label class="fas fa-paw" for="pawsRate5__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate5__rate7" name="kindness5" value="7">
+                <label class="half fas fa-paw" for="pawsRate5__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate5__rate6" name="kindness5" value="6">
+                <label class="fas fa-paw" for="pawsRate5__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate5__rate5" name="kindness5" value="5">
+                <label class="half fas fa-paw" for="pawsRate5__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate5__rate4" name="kindness5" value="4">
+                <label class="fas fa-paw" for="pawsRate5__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate5__rate3" name="kindness5" value="3">
+                <label class="half fas fa-paw" for="pawsRate5__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate5__rate2" name="kindness5" value="2">
+                <label class="fas fa-paw" for="pawsRate5__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate5__rate1" name="kindness5" value="1">
+                <label class="half fas fa-paw" for="pawsRate5__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Белоснежка - кошечка добрая, ласковая, тянется к человеку. Но боится других кошек, потому что её очень обижала вторая кошка ее бывших хозяев. Ищем ей дом, где она будет единственной принцессой, там она успокоится, расслабится и снова станет ласковой мурлыкой, какой она была совсем недавно. Белоснежке 2 года, она стерилизована, хорошо воспитана.
+         </p>
+        <!--Цена и кнопка покупки-->
         <div class="payment">
+          <p class="price">15&#36;</p>
           <a href="#" class="pay">Pay</a>
-          <p class="price">14&#36;</p>
         </div>
-       </div>
-    </section>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
+    <section>
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-6.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
+      <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Зефир </a>
+          <p class="intro__breed">порода: британская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate6__rate10" name="kindness6" value="10">
+                <label class="fas fa-paw" for="pawsRate6__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate6__rate9" name="kindness6" value="9">
+                <label class="half fas fa-paw" for="pawsRate6__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate6__rate8" name="kindness6" value="8">
+                <label class="fas fa-paw" for="pawsRate6__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate6__rate7" name="kindness6" value="7">
+                <label class="half fas fa-paw" for="pawsRate6__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate6__rate6" name="kindness6" value="6" checked>
+                <label class="fas fa-paw" for="pawsRate6__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate6__rate5" name="kindness6" value="5">
+                <label class="half fas fa-paw" for="pawsRate6__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate6__rate4" name="kindness6" value="4">
+                <label class="fas fa-paw" for="pawsRate6__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate6__rate3" name="kindness6" value="3">
+                <label class="half fas fa-paw" for="pawsRate6__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate6__rate2" name="kindness6" value="2">
+                <label class="fas fa-paw" for="pawsRate6__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate6__rate1" name="kindness6" value="1">
+                <label class="half fas fa-paw" for="pawsRate6__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Пристраивается в добрые руки красивый черный британец Зефир, возраст 3 года. Кот кастрированный, ухо пролечено от клеща. Лоток без промахов. Как большинство представителей этой породы, кот самодостаточный, не терпит фамильярности, ценит личное пространство. Строго в семью без маленьких детей и других животных. Если Вы мечтали о ненавязчивом питомце, который немного сам по себе, посмотрите на это сокровище и возьмите радость себе в дом. Не упускайте шанс! 
+         </p>
+        <!--Цена и кнопка покупки-->
+        <div class="payment">
+          <p class="price">12&#36;<span class="price__old">15&#36;</span></p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
+    <section>
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-7.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
+      <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Плюшик</a>
+          <p class="intro__breed">порода: шотландская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate7__rate10" name="kindness7" value="10" checked>
+                <label class="fas fa-paw" for="pawsRate7__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate7__rate9" name="kindness7" value="9">
+                <label class="half fas fa-paw" for="pawsRate7__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate7__rate8" name="kindness7" value="8">
+                <label class="fas fa-paw" for="pawsRate7__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate7__rate7" name="kindness7" value="7">
+                <label class="half fas fa-paw" for="pawsRate7__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate7__rate6" name="kindness7" value="6">
+                <label class="fas fa-paw" for="pawsRate7__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate7__rate5" name="kindness7" value="5">
+                <label class="half fas fa-paw" for="pawsRate7__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate7__rate4" name="kindness7" value="4">
+                <label class="fas fa-paw" for="pawsRate7__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate7__rate3" name="kindness7" value="3">
+                <label class="half fas fa-paw" for="pawsRate7__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate7__rate2" name="kindness7" value="2">
+                <label class="fas fa-paw" for="pawsRate7__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate7__rate1" name="kindness7" value="1">
+                <label class="half fas fa-paw" for="pawsRate7__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Плюшик - золотой котик с золотым характером. Ласковый, спокойный, любит и поиграть и на ручках посидеть, помурлыкать. Послушный, как воспитанный мальчик. Сейчас ему 1 год Отдаем в добрые, заботливые руки. Кастрирован, хорошо воспитан.
+         </p>
+        <!--Цена и кнопка покупки-->
+        <div class="payment">
+          <p class="price">13&#36;</p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
+    <section>
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-8.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
+      <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Пэтси</a>
+          <p class="intro__breed">порода: нибелунг</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate8__rate10" name="kindness8" value="10">
+                <label class="fas fa-paw" for="pawsRate8__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate8__rate9" name="kindness8" value="9" checked>
+                <label class="half fas fa-paw" for="pawsRate8__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate8__rate8" name="kindness8" value="8">
+                <label class="fas fa-paw" for="pawsRate8__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate8__rate7" name="kindness8" value="7">
+                <label class="half fas fa-paw" for="pawsRate8__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate8__rate6" name="kindness8" value="6">
+                <label class="fas fa-paw" for="pawsRate8__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate8__rate5" name="kindness8" value="5">
+                <label class="half fas fa-paw" for="pawsRate8__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate8__rate4" name="kindness8" value="4">
+                <label class="fas fa-paw" for="pawsRate8__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate8__rate3" name="kindness8" value="3">
+                <label class="half fas fa-paw" for="pawsRate8__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate8__rate2" name="kindness8" value="2">
+                <label class="fas fa-paw" for="pawsRate8__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate8__rate1" name="kindness8" value="1">
+                <label class="half fas fa-paw" for="pawsRate8__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">От ее присутствия в доме становится теплее. Она такая всегда дружелюбная и нежная, привязчивая и ласковая, спокойная и открытая для общения. Всегда готова помурлыкать, а если хозяева захотят - то и поиграть. Редко встречаются кошки с таким золотым характером. Пэтси 1 год, она воспитанная домашняя кошечка, стерилизованная.
+         </p>
+        <!--Цена и кнопка покупки-->
+        <div class="payment">
+          <p class="price">7&#36;<span class="price__old">10&#36;</span></p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
+    <section>
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-9.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
+      <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Барса</a>
+          <p class="intro__breed">порода: британская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate9__rate10" name="kindness9" value="10">
+                <label class="fas fa-paw" for="pawsRate9__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate9__rate9" name="kindness9" value="9">
+                <label class="half fas fa-paw" for="pawsRate9__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate9__rate8" name="kindness9" value="8">
+                <label class="fas fa-paw" for="pawsRate9__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate9__rate7" name="kindness9" value="7" checked>
+                <label class="half fas fa-paw" for="pawsRate9__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate9__rate6" name="kindness9" value="6">
+                <label class="fas fa-paw" for="pawsRate9__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate9__rate5" name="kindness9" value="5">
+                <label class="half fas fa-paw" for="pawsRate9__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate9__rate4" name="kindness9" value="4">
+                <label class="fas fa-paw" for="pawsRate9__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate9__rate3" name="kindness9" value="3">
+                <label class="half fas fa-paw" for="pawsRate9__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate9__rate2" name="kindness9" value="2">
+                <label class="fas fa-paw" for="pawsRate9__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate9__rate1" name="kindness9" value="1">
+                <label class="half fas fa-paw" for="pawsRate9__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Кошечка мурлыка Барса всегда готова прийти к хозяйке, чтобы ее погладили. Барсюня - бархатная красавица, у нее большие выразительные глаза и словно всегда улыбающаяся мордашка. Ласковая, умная, самостоятельная - найдет время и помурлыкать, и поиграть, и в сторонке посидеть, прихорашиваясь. Барсе 2 года, она стерилизована, хорошо воспитана.
+         </p>
+        <!--Цена и кнопка покупки-->
+        <div class="payment">
+          <p class="price">9&#36;<span class="price__old">13&#36;</span></p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
+        <!--Блок с котиком и информации о нём-->
+    <section>
+      <!--Фотография кота-->
+      <img class="cat__photo" src="img/cat-10.jpg" alt="Cat_photo">
+      <!--Основной контент блока-->
+      <div class="content">
+        <!--Заголовок: Имя, порода, рейтинг-->
+        <div class="intro">
+          <a class="intro__header" href="#">Ксюша</a>
+          <p class="intro__breed">порода: ангорская</p>
+          <!-- Рейmинг доброты котика (лапки)-->
+            <fieldset class="rate">
+              <input type="radio" id="pawsRate10__rate10" name="kindness10" value="10">
+                <label class="fas fa-paw" for="pawsRate10__rate10" title="rate 5 paws"></label>
+              <input type="radio" id="pawsRate10__rate9" name="kindness10" value="9" checked>
+                <label class="half fas fa-paw" for="pawsRate10__rate9" title="rate 4 1/2 paws"></label>
+              <input type="radio" id="pawsRate10__rate8" name="kindness10" value="8">
+                <label class="fas fa-paw" for="pawsRate10__rate8" title="rate 4 paws"></label>
+              <input type="radio" id="pawsRate10__rate7" name="kindness10" value="7">
+                <label class="half fas fa-paw" for="pawsRate10__rate7" title="rate 3 1/2 paws"></label>
+              <input type="radio" id="pawsRate10__rate6" name="kindness10" value="6">
+                <label class="fas fa-paw" for="pawsRate10__rate6" title="rate 3 paws"></label>
+              <input type="radio" id="pawsRate10__rate5" name="kindness10" value="5">
+                <label class="half fas fa-paw" for="pawsRate10__rate5" title="rate 2 1/2 paws"></label>
+              <input type="radio" id="pawsRate10__rate4" name="kindness10" value="4">
+                <label class="fas fa-paw" for="pawsRate10__rate4" title="rate 2 paws"></label>
+              <input type="radio" id="pawsRate10__rate3" name="kindness10" value="3">
+                <label class="half fas fa-paw" for="pawsRate10__rate3" title="rate 1 1/2 paws"></label>
+              <input type="radio" id="pawsRate10__rate2" name="kindness10" value="2">
+                <label class="fas fa-paw" for="pawsRate10__rate2" title="rate 1 paw"></label>
+              <input type="radio" id="pawsRate10__rate1" name="kindness10" value="1">
+                <label class="half fas fa-paw" for="pawsRate10__rate1" title="rate 1/2 paw"></label>
+            </fieldset>
+        </div> <!--/Заголовок: Имя, порода, рейтинг-->
+        <p class="description">Ксюша - нежная, красивая, ласковая трехцветка, с шелковистой нежной шерсткой и пушистым хвостом-пальмой, как у ангорских кошек. У неё дружелюбный, спокойный характер счастливой домашней кошки, для которой главное в жизни - любимые хозяева и уютный дом. Ксюше 1,5 года, она стерилизована, хорошо воспитана
+         </p>
+        <!--Цена и кнопка покупки-->
+        <div class="payment">
+          <p class="price">13&#36;</p>
+          <a href="#" class="pay">Pay</a>
+        </div>
+       </div> <!--/Заголовок: Имя, порода, рейтинг-->
+    </section> <!--/Блок с котиком и информации о нём-->
   </article>
   </main>
 </body>
-<!-- Для того, чтоб отображались лапок -->
-<script src="https://kit.fontawesome.com/6a55ef0e59.js" crossorigin="anonymous"></script>
 </html>

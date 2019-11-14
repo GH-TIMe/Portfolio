@@ -52,18 +52,20 @@ input[id="view__button"]:checked + label {
   border: 1.2px solid var(--red);
 }
 
-/*------отдельные ячейки с котейками------*/
+/*Отдельные ячейки с котейками
+================================*/
 
 section {
   display: inline-block;
   width: 300px;
-  margin: 15px 20px;
+  margin: 15px 15px;
   box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   overflow: hidden;
 }
 
-/*------Фото с котейкой------*/
+/*Фото с котейкой
+============================*/
 
 .cat__photo {
   width: 100%;
@@ -75,14 +77,16 @@ section {
   opacity: 0.7;
 }
 
-/*------Весь контент описывающий кота------*/
+/*Весь контент описывающий кота
+=================================*/
 
 .content {
   font-family: 'Segoe UI';
   height: 300px;
 }
 
-/*------Имя кота------*/
+/*Имя котика
+=========================*/
 
 a.intro__header {
   display: block;
@@ -104,7 +108,8 @@ a.intro__header:hover {
   color: var(--red);
 }
 
-/*------Порода------*/
+/*Порода
+===========================*/
 
 .intro__breed {
   margin: 0;
@@ -127,7 +132,8 @@ input[id="view__button"]:checked ~ article section {
   overflow: hidden;
 }
 
-/*------Фото с котейкой (отображение списком)------*/
+/*Фото с котейкой (отображение списком)
+=====================================*/
 
 input[id="view__button"]:checked ~ article section .cat__photo {
   display: inline-block;
@@ -136,14 +142,15 @@ input[id="view__button"]:checked ~ article section .cat__photo {
   opacity: 1;
   transition: opacity 0.2s;
   vertical-align: top;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 input[id="view__button"]:checked ~ article section .cat__photo:hover {
   opacity: 0.7;
 }
 
-/*------Весь контент описывающий кота (отображение списком)------*/
+/*Весь контент описывающий кота (отображение списком)
+================================*/
 
 input[id="view__button"]:checked ~ article section .content {
   display: inline-block;
@@ -154,17 +161,17 @@ input[id="view__button"]:checked ~ article section .content {
 
 input[id="view__button"]:checked ~ article section .content .intro {
   display: inline-block;
-  width: 40%;
+  width: 45%;
   height: 35%;
   vertical-align: top;
   margin: 13px 10px 0 0;
-  text-align: left;
 }
 
 input[id="view__button"]:checked ~ article section .content .intro a.intro__header {
   text-align: left;
 }
-/*------Лапочный рейтинг------*/
+/*Лапочный рейтинг
+=========================*/
 
 .intro > fieldset {
   display: inline-block;
@@ -211,7 +218,8 @@ input[id="view__button"]:checked ~ article section .content .intro a.intro__head
 
 
 
-/*------Описание------*/
+/*Описание кота
+========================*/
 
 .description {
   width: 267px;
@@ -228,12 +236,13 @@ input[id="view__button"]:checked ~ article section .content .intro a.intro__head
 
 input[id="view__button"]:checked ~ article section .content .description {
   display: inline-block;
-  margin-top: 13px;
+  margin: 15px 0 15px 0;
   width: 50%;
-  height: 90%;
+  height: 220px;
 }
 
-/*------Типо кнопки покупки------*/
+/*Цена и кнопка покупки
+============================*/
 
 .payment {
   display: inline-block;
@@ -252,8 +261,8 @@ input[id="view__button"]:checked ~ article section .content .description {
   padding: 10px 45px;
   margin: 5px;
   float: right;
-  background-color: #fff;
-  transition: background-color .2s, color .2s;
+  background: #fff;
+  transition: background .2s, color .2s;
 }
 
 .payment .price {
@@ -271,14 +280,27 @@ input[id="view__button"]:checked ~ article section .content .description {
 input[id="view__button"]:checked ~ article section .content .payment {
   display: inline-block;
   position: absolute;
-  margin-left: -570px;
+  margin-left: -585px;
   margin-top: 176px;
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .pay {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .price {
-  margin-left: 20px;
+    margin-left: 0;
+}
+
+input[id="view__button"]:checked ~ article {
+    text-align: left;
+}
+
+/*Старая цена котика
+==========================*/
+.price__old {
+    text-decoration: line-through;
+    font-size: .7em;
+    color: var(--main-color);
+    margin-left: 5px;
 }
