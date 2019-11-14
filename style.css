@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ecf0f1;
+  -webkit-font-smoothing: antialiased;
 }
 
 article {
@@ -81,8 +82,8 @@ section {
 =================================*/
 
 .content {
-  font-family: 'Segoe UI';
-  height: 300px;
+  font-family: 'Arimo', sans-serif;
+  height: 285px;
 }
 
 /*Имя котика
@@ -154,7 +155,7 @@ input[id="view__button"]:checked ~ article section .cat__photo:hover {
 
 input[id="view__button"]:checked ~ article section .content {
   display: inline-block;
-  font-family: 'Segoe UI';
+  font-family: 'Arimo', sans-serif;
   width: 60%;
   height: 250px;
 }
@@ -285,7 +286,7 @@ input[id="view__button"]:checked ~ article section .content .payment {
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .pay {
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .price {
