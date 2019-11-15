@@ -95,14 +95,17 @@ a.intro__header {
   padding-bottom: 5px;
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   color: var(--main-color);
+  text-decoration: none;
+  text-transform: uppercase;
+    
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+    
   transition: color;
   transition-duration: .2s;
-  text-decoration: none;
 }
 
 a.intro__header:hover {
@@ -286,7 +289,7 @@ input[id="view__button"]:checked ~ article section .content .payment {
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .pay {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 input[id="view__button"]:checked ~ article section .content .payment .price {
