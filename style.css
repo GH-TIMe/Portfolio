@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ecf0f1;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* Делает шрифты красивее*/
 }
 
 article {
