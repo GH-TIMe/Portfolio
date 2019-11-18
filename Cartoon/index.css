@@ -1,0 +1,843 @@
+0.canvas {
+    position: relative;
+
+    width: 500px;
+    height: 380px;
+    margin: 80px 0 0 0;
+
+    transition: .3s ease;
+
+    perspective: 800px;
+}
+
+.box_front {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 380px;
+    -webkit-animation: timesOfDay 100s linear infinite;
+       -moz-animation: timesOfDay 100s linear infinite;
+         -o-animation: timesOfDay 100s linear infinite;
+            animation: timesOfDay 100s linear infinite;
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+
+/*-------------------Смена для и ночи---------------------*/
+
+@-webkit-keyframes timesOfDay {
+  0% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  25%{
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  50% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+  }
+  75% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px transparent inset;
+  }
+  100% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+}
+
+@-moz-keyframes timesOfDay {
+  0% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  25%{
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  50% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+  }
+  75% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px transparent inset;
+  }
+  100% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+}
+
+@-o-keyframes timesOfDay {
+  0% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  25%{
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  50% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+  }
+  75% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px transparent inset;
+  }
+  100% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+}
+
+@keyframes timesOfDay {
+  0% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  25%{
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+  50% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px orangered inset;
+  }
+  75% {
+    background: darkslateblue;
+    box-shadow: 0 -400px 300px -300px transparent inset;
+  }
+  100% {
+    background: steelblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+  }
+}
+
+
+/*TODO
+Цвета неба задаются следующими свойствами:
+    День:
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    Вечер:
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    Ночь:
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+
+Нужно реализовать плавный переход между ними и зациклить его.
+*/
+
+/*----------------------Корабль---------------------------------*/
+
+.ship::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+    height: 20px;
+
+    content: '';
+
+    border-radius: 0 0 0 20px;
+    background: #e25c45;
+}
+
+.ship::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+  width: 65px;
+    height: 16px;
+
+    content: '';
+
+    border-radius: 20px 0 0 0;
+    background: #fff;
+}
+
+/*----------------------Анимация Корабля--------------------------*/
+
+.ship {
+    position: absolute;
+    right: 200px;
+    bottom: 30px;
+    width: 100px;
+    height: 36px;
+    transform: translate3d(-300px, 0, 0);
+    -webkit-animation: animateShip 60s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: animateShip 60s linear infinite; /* Firefox 5-15 */
+         -o-animation: animateShip 60s linear infinite; /* Opera 12+ */
+            animation: animateShip 60s linear infinite; /* Chrome, Firefox 16+,
+                                                     IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateShip {
+  0%, 11% {
+    transform: translate3d(300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateShip {
+  0%, 11% {
+    transform: translate3d(300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+@-o-keyframes animateShip {
+  0%, 11% {
+    transform: translate3d(300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+@keyframes animateShip {
+  0%, 11% {
+    transform: translate3d(300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+
+.ship_smokestack {
+    position: absolute;
+    bottom: 36px;
+    left: 45px;
+
+    width: 10px;
+    height: 17px;
+
+    background: #a18e6e;
+}
+
+.ship_window {
+    position: absolute;
+    top: 6px;
+    left: 40px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #a18e6e;
+    box-shadow: 13px 0 0 0 #a18e6e, -13px 0 0 0 #a18e6e;
+}
+
+.smoke div {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+/*----------------------Анимация дыма из труды--------------------------*/
+
+.smoke-1 {
+    top: -25px;
+    right: 44px;
+    -webkit-animation: animateSmoke 2.5s linear infinite 2.5s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 2.5s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 2.5s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 2.5s;
+}
+
+.smoke-2 {
+    top: -25px;
+    right: 42px;
+    -webkit-animation: animateSmoke 2.5s linear infinite 1.66s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 1.66s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 1.66s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 1.66s;
+}
+
+.smoke-3 {
+    top: -25px;
+    right: 49px;
+    -webkit-animation: animateSmoke 2.5s linear infinite 0.83s; /* Chrome, Safari 5 */
+       -moz-animation: animateSmoke 2.5s linear infinite 0.83s; /* Firefox 5-15 */
+         -o-animation: animateSmoke 2.5s linear infinite 0.83s; /* Opera 12+ */
+            animation: animateSmoke 2.5s linear infinite 0.83s; /* Chrome, Firefox 16+,
+                                                     IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+@-moz-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+@-o-keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+@keyframes animateSmoke {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  20%, 30% {
+    opacity: 0.7;
+    transform: scale3d(1.3, 1.3, 1.3) translate3d(0, -6px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(2, 2, 2) translate3d(0, -15px, 0);
+  }
+}
+
+/*------------------------Анимация солнца------------------------------*/
+
+.sun {
+    position: absolute;
+    /*поменял первоначальные параметры расположения солнца*/
+    right: 150px;
+    bottom: -40px;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    transform: scale(1.5, 1) translate3d(0, -310px, 0); /* по вертикали 50% */
+    border-radius: 50%;
+    background: #ffcf11;
+    box-shadow: 0 0 100px #ffdf05;
+    -webkit-animation: orbit2 100s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: orbit2 100s linear infinite; /* Firefox 5-15 */
+         -o-animation: orbit2 100s linear infinite; /* Opera 12+ */
+            animation: orbit2 100s linear infinite; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes orbit2 {
+	from { 	-webkit-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -webkit-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
+}
+
+@-moz-keyframes orbit2 {
+	from { 	-moz-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -moz-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
+}
+
+@-o-keyframes orbit2 {
+	from { 	-o-transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  -o-transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
+}
+
+@keyframes orbit2 {
+	from { 	transform: rotate(90deg) translate3d(-310px, 0, 0) rotate(-90deg) scale(1.5, 1) rotate(1turn); }
+	to   {  transform: rotate(450deg) translate3d(-310px, 0, 0) rotate(-450deg) scale(1.5, 1) rotate(9turn); }
+}
+
+.sun-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(-90deg) scale(.67, 1);
+    transform-origin: bottom center;
+}
+
+.sun div {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    margin-left: -1px;
+    border: solid #ffcf11;
+    border-width: 10px 0 10px 0;
+}
+
+.sun div:nth-child(2) {
+    transform: rotate(18deg);
+}
+
+.sun div:nth-child(3) {
+    transform: rotate(36deg);
+}
+
+.sun div:nth-child(4) {
+    transform: rotate(54deg);
+}
+
+.sun div:nth-child(5) {
+    transform: rotate(72deg);
+}
+
+.sun div:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.sun div:nth-child(7) {
+    transform: rotate(-18deg);
+}
+
+.sun div:nth-child(8) {
+    transform: rotate(-36deg);
+}
+
+.sun div:nth-child(9) {
+    transform: rotate(-54deg);
+}
+
+.sun div:nth-child(10) {
+    transform: rotate(-72deg);
+}
+
+
+.cloud {
+    position: absolute;
+    left: -180px;
+
+    width: 200px;
+    height: 60px;
+
+    opacity: .8;
+    border-radius: 200px;
+    background: #fff;
+}
+
+.cloud:before,
+.cloud:after {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+
+    width: 100px;
+    height: 80px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:after {
+    top: -55px;
+    right: 15px;
+    left: auto;
+
+    width: 120px;
+    height: 120px;
+}
+
+/*------------------------Анимация 1-ого облака-----------------------------------*/
+
+.cloud-1 {
+    top: 10px;
+    left: 150px;
+    -webkit-animation: animateCloud1-1 24s linear 1 forwards; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud1-1 24s linear 1 forwards; /* Firefox 5-15 */
+         -o-animation: animateCloud1-1 24s linear 1 forwards; /* Opera 12+ */
+            animation: animateCloud1-1 24s linear 1 forwards; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud1-1 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(150px, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(1000px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud1-1 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(150px, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(1000px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud1-1 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(150px, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(1000px, 0, 0);
+  }
+}
+
+@keyframes animateCloud1-1 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(150px, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(1000px, 0, 0);
+  }
+}
+
+.cloud-1-1 {
+  top: 10px;
+  left: -150px;
+  transform: scale3d(0.3, 0.3, 0.3);
+  -webkit-animation: animateCloud1-2 60s linear infinite 38s; /* Chrome, Safari 5 */
+     -moz-animation: animateCloud1-2 60s linear infinite 38s; /* Firefox 5-15 */
+       -o-animation: animateCloud1-2 60s linear infinite 38s; /* Opera 12+ */
+          animation: animateCloud1-2 60s linear infinite 38s; /* Chrome, Firefox 16+,
+                                                             IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud1-2 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(2000px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud1-2 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(2000px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud1-2 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes animateCloud1-2 {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale3d(0.3, 0.3, 0.3) translate3d(2000px, 0, 0);
+  }
+}
+
+/*------------------------Анимация 2-ого облака------------------------*/
+
+.cloud-2 {
+    top: 50px;
+    left: 440px;
+    transform: scale(.4) scaleX(-1);
+    -webkit-animation: animateCloud2 40s linear infinite; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud2 40s linear infinite; /* Firefox 5-15 */
+         -o-animation: animateCloud2 40s linear infinite; /* Opera 12+ */
+            animation: animateCloud2 40s linear infinite; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+    -webkit-animation-direction: reverse; /* Chrome, Safari 5 */
+       -moz-animation-direction: reverse; /* Firefox 5-15 */
+         -o-animation-direction: reverse; /* Opera 12+ */
+            animation-direction: reverse; /* Chrome, Firefox 16+,
+                                                IE 10+, Safari 5 */
+
+}
+
+@-webkit-keyframes animateCloud2 {
+  0% {
+    transform: scale(.4) scaleX(-1) translate3d(0, 0, 0);
+  }
+  87%, 100% {
+    transform: scale(.4) scaleX(-1) translate3d(1500px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud2 {
+  0% {
+    transform: scale(.4) scaleX(-1) translate3d(0, 0, 0);
+  }
+  87%, 100% {
+    transform: scale(.4) scaleX(-1) translate3d(1500px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud2 {
+  0% {
+    transform: scale(.4) scaleX(-1) translate3d(0, 0, 0);
+  }
+  87%, 100% {
+    transform: scale(.4) scaleX(-1) translate3d(1500px, 0, 0);
+  }
+}
+
+@keyframes animateCloud2 {
+  0% {
+    transform: scale(.4) scaleX(-1) translate3d(0, 0, 0);
+  }
+  87%, 100% {
+    transform: scale(.4) scaleX(-1) translate3d(1500px, 0, 0);
+  }
+}
+
+/*------------------------Анимация 3-ого облака------------------------*/
+
+.cloud-3 {
+    top: 100px;
+    left: 150px;
+    transform: scale(.5);
+    -webkit-animation: animateCloud3-1 3s linear 1 forwards; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud3-1 3s linear 1 forwards; /* Firefox 5-15 */
+         -o-animation: animateCloud3-1 3s linear 1 forwards; /* Opera 12+ */
+            animation: animateCloud3-1 3s linear 1 forwards; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud3-1 {
+  0% {
+    transform: scale(.5) translate3d(430px, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(600px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud3-1 {
+  0% {
+    transform: scale(.5) translate3d(430px, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(600px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud3-1 {
+  0% {
+    transform: scale(.5) translate3d(430px, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(600px, 0, 0);
+  }
+}
+
+@keyframes animateCloud3-1 {
+  0% {
+    transform: scale(.5) translate3d(430px, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(600px, 0, 0);
+  }
+}
+
+.cloud-3-1 {
+    top: 100px;
+    left: -150px;
+    transform: scale(.5);
+    -webkit-animation: animateCloud3-2 33s linear infinite 4s; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud3-2 33s linear infinite 4s; /* Firefox 5-15 */
+         -o-animation: animateCloud3-2 33s linear infinite 4s; /* Opera 12+ */
+            animation: animateCloud3-2 33s linear infinite 4s; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud3-2 {
+  0%, 9% {
+    transform: scale(.5) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(1500px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud3-2 {
+  0%, 9% {
+    transform: scale(.5) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(1500px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud3-2 {
+  0%, 9% {
+    transform: scale(.5) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(1500px, 0, 0);
+  }
+}
+
+@keyframes animateCloud3-2 {
+  0%, 9% {
+    transform: scale(.5) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(.5) translate3d(1500px, 0, 0);
+  }
+}
+
+/*------------------------Анимация 4-ого облака------------------------*/
+
+.cloud-4 {
+    top: 170px;
+    left: 150px;
+    transform: scaleX(-1) scale(.7) translate3d(405px, 0, 0);
+    -webkit-animation: animateCloud4-1 17s linear 1 forwards; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud4-1 17s linear 1 forwards; /* Firefox 5-15 */
+         -o-animation: animateCloud4-1 17s linear 1 forwards; /* Opera 12+ */
+            animation: animateCloud4-1 17s linear 1 forwards; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud4-1 {
+  0% {
+    transform: scaleX(-1) scale(.7) translate3d(405px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud4-1 {
+  0% {
+    transform: scaleX(-1) scale(.7) translate3d(405px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud4-1 {
+  0% {
+    transform: scaleX(-1) scale(.7) translate3d(405px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@keyframes animateCloud4-1 {
+  0% {
+    transform: scaleX(-1) scale(.7) translate3d(405px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+.cloud-4-1 {
+    top: 170px;
+    left: 150px;
+    transform: scaleX(-1) scale(.7) translate3d(460px, 0, 0);
+    -webkit-animation: animateCloud4-2 19s linear infinite 17s; /* Chrome, Safari 5 */
+       -moz-animation: animateCloud4-2 19s linear infinite 17s; /* Firefox 5-15 */
+         -o-animation: animateCloud4-2 19s linear infinite 17s; /* Opera 12+ */
+            animation: animateCloud4-2 19s linear infinite 17s; /* Chrome, Firefox 16+,
+                                                               IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes animateCloud4-2 {
+  0%, 10% {
+    transform: scaleX(-1) scale(.7) translate3d(460px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@-moz-keyframes animateCloud4-2 {
+  0%, 10% {
+    transform: scaleX(-1) scale(.7) translate3d(460px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@-o-keyframes animateCloud4-2 {
+  0%, 10% {
+    transform: scaleX(-1) scale(.7) translate3d(460px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+@keyframes animateCloud4-2 {
+  0%, 10% {
+    transform: scaleX(-1) scale(.7) translate3d(460px, 0, 0);
+  }
+  100% {
+    transform: scaleX(-1) scale(.7) translate3d(-460px, 0, 0);
+  }
+}
+
+/*------------------------Море-------------------------------*/
+
+.sea {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 40px;
+
+    opacity: .8;
+    background: #2a94d6;
+}
+
+.sea::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 10px;
+
+    content: '';
+
+    background: #1d7fbb;
+}
