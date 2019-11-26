@@ -7,21 +7,68 @@
 /* Блок с фотографиями
 ===========================*/
 
-section {
-    position: absolute;
-    margin: 250px auto 30px;
-    width: 100vw;
-    text-align: center;
+.slider {
+    display: block;
+    position: relative;
+    width: 80vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    margin-top: 30vh;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    font-family: 'Roboto', sans-serif;
 }
+
+.slider::-webkit-scrollbar {
+    width: 0; /* убирает scroll */
+}
+
+/* Кнопки / Swiper
+===========================*/
+
+.btn {
+    text-align: center;
+
+    display: block;
+    margin-top: -120px;
+
+    position: relative;
+    z-index: 12;
+}
+
+label a {
+    width: 1.5rem;
+    height: 1.5rem;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 2px 7px;
+
+    background: #fff;
+    color: #e74c3c;
+    border: 1px solid #95a5a6;
+
+    transition: .3s linear;
+}
+
+label a:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
 
 /* Отбражение фотографий
 ===========================*/
 
 ul li {
+    scroll-snap-align: start;
     display: inline-block;
-    margin: 0 10px 20px 0px;
-    width: 20%;
+    margin: 0 5px 20px 0px;
+    width: 24.5%;
     position: relative;
+    white-space: normal;
 }
 
 ul:last-child {
@@ -41,7 +88,6 @@ p {
     overflow: hidden;
     background: #fff;
 
-
     font-size: 13px;
     text-align: justify;
 
@@ -53,9 +99,12 @@ p {
             transform-origin: 0 0;
     transition: .3s linear;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    z-index: 15;
 }
 
-input[type="checkbox"]:not(:checked) + label img:hover ~ p {
+input[type="checkbox"]:not(:checked) + label:hover + p {
     -webkit-transform: scaleY(1);
         -ms-transform: scaleY(1);
             transform: scaleY(1);
@@ -63,7 +112,6 @@ input[type="checkbox"]:not(:checked) + label img:hover ~ p {
 
 /* Картинка на весь экран при нажантии
 ========================================*/
-
 input {
     display: none;
 }
