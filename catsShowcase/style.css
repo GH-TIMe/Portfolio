@@ -89,6 +89,12 @@ header h1 {
 
     color: #95a5a6;
     border-bottom: 1px solid #bdc3c7;
+    transition: all .2s;
+}
+
+.breeds ul li:hover {
+    color: rgb(38, 137, 172);
+    border-bottom: 1px solid rgb(41, 175, 111);
 }
 
 /* Витрина
@@ -148,6 +154,88 @@ img {
     border-radius: 0 10px 0 0;
 }
 
+.rate {
+    display: flex;
+    flex-direction: column;
+}
+
+.rate__item {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.rate__line {
+    width: calc(100% - 40px);
+    height: 10px;
+    background: #bdc3c7;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.rate__line__in {
+    background: linear-gradient(270deg, rgba(195,42,42,1) 0%, rgba(225,146,36,1) 100%);
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+}
+.rate__value {
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+/* Выставление параметров для баров
+======================================*/
+
+.rate__item:nth-child(4) .rate__mater .rate__line .rate__line__in {
+    width: 90%;
+    background: linear-gradient(270deg, rgba(36,225,38,1) 0%, rgba(42,125,195,1) 100%);
+}
+
+.rate__item:nth-child(2) .rate__mater .rate__line .rate__line__in {
+    width: 56.66%;
+    background: rgb(255,115,0);
+    background: linear-gradient(270deg, rgba(255,115,0,1) 0%, rgba(225,213,36,1) 100%);
+}
+
+.rate__item:nth-child(1) .rate__mater .rate__line .rate__line__in {
+    width: 30%;
+}
+
+.rate__item:nth-child(3) .rate__mater .rate__line .rate__line__in {
+    width: 66.67%;
+    background: linear-gradient(270deg, rgba(36,225,38,1) 0%, rgba(42,125,195,1) 100%);
+}
+
+.rate__item:nth-child(5) .rate__mater .rate__line .rate__line__in {
+    width: 33.333%;
+    background: rgb(255,115,0);
+    background: linear-gradient(270deg, rgba(255,115,0,1) 0%, rgba(225,213,36,1) 100%);
+}
+
+input[id="filter"]:checked ~ .rate .rate__item:nth-child(4){
+    order: 1;
+}
+
+input[id="filter"]:checked ~ .rate .rate__item:nth-child(3){
+    order: 2;
+}
+
+input[id="filter"]:checked ~ .rate .rate__item:nth-child(2){
+    order: 3;
+}
+
+input[id="filter"]:checked ~ .rate .rate__item:nth-child(5){
+    order: 4;
+}
+
+input[id="filter"]:checked ~ .rate .rate__item:nth-child(1){
+    order: 5;
+}
+
 /* footer
 ==============================*/
 
@@ -172,7 +260,7 @@ a {
     background-position: 100% 0;
     background-size: 200% 200%;
     color: transparent;
-    -webkit-transition: .1s .2s;
+    -webkit-transition: .05s .1s;
     -webkit-background-clip: text;
 }
 
