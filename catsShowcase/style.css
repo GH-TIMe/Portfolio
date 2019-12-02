@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Шапка
+==============================*/
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+
+    position: relative;
+    background: rgb(44,212,52);
+    background: -webkit-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 100%);
+    background: -o-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 100%);
+    background: linear-gradient(47deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 100%);
+    border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+
+}
+
+/* Основная сетка
+==============================*/
+
+ .content {
+    display: grid;
+    grid-template: 1fr / 150px 1fr 200px;
+    grid-column-gap: 15px;
+    justify-content: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Породы
+==============================*/
+
+.breeds {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px #7f8c8d;
+    border-radius: 10px 0 0 0;
+}
+
+.subHeader {
+    text-align: center;
+    color: #2980b9;
+    font-family: 'Comfortaa', cursive;
+
+    background-color: #3498db;
+    background-image: -webkit-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-image: -o-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-image: linear-gradient(47deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+}
+
+.breeds ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.breeds ul li {
+    padding: 10px;
+    text-align: center;
+
+    color: #95a5a6;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+/* Витрина
+==============================*/
+
+main {
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px #7f8c8d;
+}
+
+.catsShowcase {
+    grid-area: 1 / 2 / 2 / 3;
+
+    display: grid;
+    grid-template: repeat(5, 200px) / repeat(3, 1fr);
+    grid-gap: 15px 15px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Расположение картинок
+==============================*/
+
+.showcase__item {
+    position: relative;
+}
+
+.showcase__item:nth-child(2) {
+    grid-area: 1 / 2 / 1 / 4;
+}
+
+.showcase__item:nth-child(6) {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.showcase__item:nth-child(8) {
+    grid-area: 4 / 1 / 5 / 4;
+}
+
+.showcase__item:nth-child(10) {
+    grid-area: 5 / 2 / 6 / 4;
+}
+
+/* Рейтинг
+==============================*/
+
+.rating {
+    background: #fff;
+    box-shadow: 0 0 10px #7f8c8d;
+    padding: 10px;
+    border-radius: 0 10px 0 0;
+}
+
+/* footer
+==============================*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0.2);
+
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #3498db;
+    background-image: -webkit-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-image: -o-linear-gradient(317deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-image: linear-gradient(47deg, rgba(44,212,52,1) 0%, rgba(36,104,225,1) 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+}
+
+a:hover {
+    color: transparent;
+    background-position: 0 0;
+}
