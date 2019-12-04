@@ -41,11 +41,8 @@ header h1 {
 ==============================*/
 
  .content {
-    display: grid;
-    grid-template: 1fr / 150px 1fr 200px;
-    grid-column-gap: 15px;
+    display: flex;
     justify-content: center;
-
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -100,18 +97,17 @@ header h1 {
 /* Витрина
 ==============================*/
 
-main {
-    background: #fff;
-    padding: 15px;
-    box-shadow: 0 0 10px #7f8c8d;
-}
-
 .catsShowcase {
-    grid-area: 1 / 2 / 2 / 3;
+    flex-grow: 20;
 
     display: grid;
     grid-template: repeat(5, 200px) / repeat(3, 1fr);
     grid-gap: 15px 15px;
+
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px #7f8c8d;
+    margin: 0 15px;
 }
 
 img {
@@ -119,6 +115,20 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+}
+
+figure:hover::after {
+    content: attr(data-name);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 9999;
+    top: 80%;
+    transform: translate3d(0, -80%, 0);
+    text-transform: uppercase;
+    padding: 10px;
 }
 
 /* Расположение картинок
@@ -144,19 +154,59 @@ img {
     grid-area: 5 / 2 / 6 / 4;
 }
 
+/* Выделение фотографий по породам
+====================================*/
+
+input[name="breedchecker"] {
+    display: none;
+}
+
+input[id="breed1"]:checked ~ .catsShowcase >
+.showcase__item:not([data-breed="американская"]) img {
+    opacity: 0.6;
+}
+
+input[id="breed2"]:checked ~ .catsShowcase >
+.showcase__item:not([data-breed="ангорская"]) img {
+    opacity: 0.6;
+}
+
+input[id="breed3"]:checked ~ .catsShowcase >
+.showcase__item:not([data-breed="британская"]) img {
+    opacity: 0.6;
+}
+
+input[id="breed4"]:checked ~ .catsShowcase >
+.showcase__item:not([data-breed="нибелунг"]) img {
+    opacity: 0.6;
+}
+
+input[id="breed5"]:checked ~ .catsShowcase >
+.showcase__item:not([data-breed="шотландская"]) img {
+    opacity: 0.6;
+}
+
 /* Рейтинг
 ==============================*/
 
 .rating {
+    align-self: flex-start;
+    flex-grow: 1;
+
     background: #fff;
     box-shadow: 0 0 10px #7f8c8d;
     padding: 10px;
     border-radius: 0 10px 0 0;
+
+    text-align: right;
 }
 
 .rate {
+    text-align: left;
     display: flex;
     flex-direction: column;
+
+    clear: both;
 }
 
 .rate__item {
@@ -187,6 +237,10 @@ img {
     top: 15px;
 }
 
+.rating input{
+    position: relative;
+    top: 2.5px;
+}
 /* Выставление параметров для баров
 ======================================*/
 
