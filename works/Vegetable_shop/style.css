@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Блок с фотографиями
+===========================*/
+
+.slider {
+    display: block;
+    position: relative;
+    width: 80vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    margin-top: 30vh;
+
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0; /* убирает scroll */
+}
+
+/* Кнопки / Swiper
+===========================*/
+
+.btn {
+    text-align: center;
+
+    display: block;
+    margin-top: -120px;
+
+    position: relative;
+    z-index: 12;
+}
+
+label a {
+    width: 1.5rem;
+    height: 1.5rem;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 2px 7px;
+
+    background: #fff;
+    color: #e74c3c;
+    border: 1px solid #95a5a6;
+
+    transition: .3s linear;
+}
+
+label a:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+
+/* Отбражение фотографий
+===========================*/
+
+ul li {
+    scroll-snap-align: start;
+    display: inline-block;
+    margin: 0 5px 20px 0px;
+    width: 24.5%;
+    position: relative;
+    white-space: normal;
+}
+
+ul:last-child {
+    margin-right: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+/* Текст при наведении
+===========================*/
+
+p {
+    height: 150px;
+    padding: 5px;
+    overflow: hidden;
+    background: #fff;
+
+    font-size: 13px;
+    text-align: justify;
+
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    transition: .3s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    position: relative;
+    z-index: 15;
+}
+
+input[type="checkbox"]:not(:checked) + label:hover + p {
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
+}
+
+/* Картинка на весь экран при нажантии
+========================================*/
+input {
+    display: none;
+}
+
+.background {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 28;
+    opacity: 0.7;
+    background: #7f8c8d;
+}
+
+label span {
+    display: none;
+}
+
+input[type="checkbox"]:checked + label img {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50vw;
+    z-index: 30;
+}
+
+input[type="checkbox"]:checked ~ .background {
+    display: block;
+}
+
+/* Крест для закрытия
+========================================*/
+
+input[type="checkbox"]:checked + label span {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 29;
+    margin: 20px 20px 0 0;
+    transform: scale(1.7);
+    color: #fff;
+    transition: color .3s linear;
+}
+
+input[type="checkbox"]:checked + label span:hover {
+    color: #e74c3c;
+}
+
+
+
+
+
+
+
+
+

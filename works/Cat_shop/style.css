@@ -1,0 +1,310 @@
+:root {
+  --main-color: #707070;
+  --red: #C0392B;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ecf0f1;
+  -webkit-font-smoothing: antialiased; /* Делает шрифты красивее*/
+}
+
+article {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Отображение боксами/списком
+================================*/
+
+input[id="view__button"] {
+  display: none;
+}
+
+input[id="view__button"] + label {
+  display: block;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+  padding: 6px;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  color: var(--main-color);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+input[id="view__button"] + label:hover {
+  color: var(--red);
+  border: 1.2px solid var(--red);
+  transition: color .2s, border .1s;
+}
+
+input[id="view__button"]:checked + label {
+  color: var(--red);
+  border: 1.2px solid var(--red);
+}
+
+/*Отдельные ячейки с котейками
+================================*/
+
+section {
+  display: inline-block;
+  width: 300px;
+  margin: 15px 15px;
+  box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/*Фото с котейкой
+============================*/
+
+.cat__photo {
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.cat__photo:hover {
+  opacity: 0.7;
+}
+
+/*Весь контент описывающий кота
+=================================*/
+
+.content {
+  font-family: 'Arimo', sans-serif;
+  height: 285px;
+}
+
+/*Имя котика
+=========================*/
+
+a.intro__header {
+  display: block;
+  margin: 0;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: uppercase;
+    
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    
+  transition: color;
+  transition-duration: .2s;
+}
+
+a.intro__header:hover {
+  color: var(--red);
+}
+
+/*Порода
+===========================*/
+
+.intro__breed {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 13px;
+  color: var(--main-color);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input[id="view__button"]:checked ~ article section {
+  display: block;
+  width: 1000px;
+  height: 250px;
+  margin: 0px 20px 30px;
+  box-shadow: -7px -7px 7px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/*Фото с котейкой (отображение списком)
+=====================================*/
+
+input[id="view__button"]:checked ~ article section .cat__photo {
+  display: inline-block;
+  max-width: 35%;
+  height: 250px;
+  opacity: 1;
+  transition: opacity 0.2s;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+input[id="view__button"]:checked ~ article section .cat__photo:hover {
+  opacity: 0.7;
+}
+
+/*Весь контент описывающий кота (отображение списком)
+================================*/
+
+input[id="view__button"]:checked ~ article section .content {
+  display: inline-block;
+  font-family: 'Arimo', sans-serif;
+  width: 60%;
+  height: 250px;
+}
+
+input[id="view__button"]:checked ~ article section .content .intro {
+  display: inline-block;
+  width: 45%;
+  height: 35%;
+  vertical-align: top;
+  margin: 13px 10px 0 0;
+}
+
+input[id="view__button"]:checked ~ article section .content .intro a.intro__header {
+  text-align: left;
+}
+/*Лапочный рейтинг
+=========================*/
+
+.intro > fieldset {
+  display: inline-block;
+  border: 0px solid var(--main-color);
+  margin: 0;
+  padding: 0;
+}
+
+.rate > input {
+  display: none;
+}
+
+.rate > label {
+  float: right;
+  transition: color .2s;
+}
+
+.rate > label:before {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 5px 1.5px;
+  cursor: pointer;
+  width: 20px;
+}
+
+.rate > .half:before {
+  width: 10px;
+  overflow: hidden;
+  padding-right: 0;
+  position: absolute;
+}
+
+.rate > input:checked ~ label,
+.rate > label:hover, .rate >  label:hover ~ label {
+  color: var(--red);
+}
+
+/* Для выбора другого рейтинга
+===============================*/
+.rate > input:checked ~ label:hover ~ label, .rate > input:checked ~ label:hover,
+.rate > label:hover ~ input:checked ~ label
+{ color: #e74c3c; }
+
+
+
+/*Описание кота
+========================*/
+
+.description {
+  width: 267px;
+  height: 120px;
+  margin: 5px auto;
+  padding: 0;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: var(--main-color);
+  line-height: 20px;
+}
+
+input[id="view__button"]:checked ~ article section .content .description {
+  display: inline-block;
+  margin: 15px 0 15px 0;
+  width: 50%;
+  height: 220px;
+}
+
+/*Цена и кнопка покупки
+============================*/
+
+.payment {
+  display: inline-block;
+  width: 267px;
+  height: 60px;
+  margin: 5px auto;
+  padding: 0;
+}
+
+.payment .pay {
+  text-decoration: none;
+  color: var(--red);
+  font-size: 20px;
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  padding: 10px 45px;
+  margin: 5px;
+  float: right;
+  background: #fff;
+  transition: background .2s, color .2s;
+}
+
+.payment .price {
+  font-size: 20px;
+  color: var(--red);
+  float: left;
+  margin: 15px 50px 0px 15px;
+}
+
+.payment .pay:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+input[id="view__button"]:checked ~ article section .content .payment {
+  display: inline-block;
+  position: absolute;
+  margin-left: -585px;
+  margin-top: 176px;
+}
+
+input[id="view__button"]:checked ~ article section .content .payment .pay {
+  margin-right: 20px;
+}
+
+input[id="view__button"]:checked ~ article section .content .payment .price {
+    margin-left: 0;
+}
+
+input[id="view__button"]:checked ~ article {
+    text-align: left;
+}
+
+/*Старая цена котика
+==========================*/
+.price__old {
+    text-decoration: line-through;
+    font-size: .7em;
+    color: var(--main-color);
+    margin-left: 5px;
+}
