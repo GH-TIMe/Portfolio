@@ -5,16 +5,11 @@
 .social {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-}
-
-.greeting__hello {
-    font-weight: 400;
-    font-size: 2.133rem;
-    padding-bottom: 10px;
 }
 
 .greeting__name {
@@ -108,24 +103,29 @@
 .btns {
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
 }
 
-.btns a {
+.button {
     text-decoration: none;
     text-transform: uppercase;
-    margin-right: 1rem;
-    padding: 15px 45px;
     border: 1px solid @black;
     border-radius: 25px;
     font-size: 1.0667rem;
     background: @white;
     color: @black;
     font-weight: 400;
+    white-space: nowrap;
 
     &:hover {
         background: @black;
         color: @white;
     }
+}
+
+.button_size {
+    margin: 0.667rem 1rem 0.667rem 0;
+    padding: 1rem 3rem;
 }
 
 /* Фото

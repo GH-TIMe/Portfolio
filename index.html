@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="https://kit.fontawesome.com/e056cd3039.js" crossorigin="anonymous"></script>
     <title>Портфолио</title>
 </head>
@@ -14,22 +14,22 @@
             <img class="profile__avatar" width=57px src="img/racoon.jpg" alt="profile icon">
             <div class="user">
                 <div class="profile__name">Аверьянов<br>Тимофей</div>
-                <div class="profile__spec">Frontend-разработчик</div>
+                <div class="profile__spec">Frontend</div>
             </div>
         </div>
-        <nav class="navigation">
+        <input class="itro__bars" type="checkbox" id="bars">
+        <label for="bars"><i class="fas fa-bars"></i></label>
+        <nav class="navigation navigation_location">
            <a href="works/index.html" class="nav__link">Работы</a>
            <a href="#" class="nav__link">Обо мне</a>
-           <a href="#" class="nav__link">Блог</a>
            <a href="#" class="nav__link">Контакты</a>
            <a href="#" class="nav__link nav__link--btn">hire me</a>
         </nav>
     </header>
     <section class="social">
         <div class="social__greeting">
-            <h2 class="greeting__hello">Здравствуйте, меня зовут</h2>
             <h1 class="greeting__name">Тимофей Аверьянов</h1>
-            <div class="social__spec">Frontend-разработчик</div>
+            <div class="social__spec">Frontend</div>
             <div class="social__icons">
                 <a class="icons" href="https://github.com/GH-TIMe"><i class="fab fa-github"></i></a>
                 <a class="icons" href="https://t-do.ru/Tims_Tel"><i class="fab fa-telegram-plane"></i></a>
@@ -37,8 +37,8 @@
                 <a class="icons" href="https://www.instagram.com/_tims_photos/?hl=ru"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="btns">
-                <a href="#">hire me</a>
-                <a href="#">Резюме</a>
+                <a class="button button_size" href="#">hire me</a>
+                <a class="button button_size" href="#">Резюме</a>
             </div>
         </div>
         <img class="social__img" src="img/my_photo.png" alt="GH-TIMe">
