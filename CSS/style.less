@@ -11,6 +11,7 @@
 
 html {
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,15 +23,23 @@ body {
 /* Block */
 @import "block/intro";
 @import "block/social";
+@import "block/works";
 
-@media (max-width: 830px) {
+@media (max-width: 1074px) {
+    @import "block-tablet/works";
+}
+
+@media (max-width: 960px) {
     @import "block-tablet/social";
 }
 
-
 @media (max-width: 760px) {
-    @import "block-mobile/social";
     @import "block-mobile/intro";
+    @import "block-mobile/social";
+}
+
+@media (max-width: 716px) {
+    @import "block-mobile/works";
 }
 
 

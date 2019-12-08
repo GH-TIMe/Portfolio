@@ -9,7 +9,7 @@
     <title>Портфолио</title>
 </head>
 <body>
-    <header class="intro">
+    <header class="intro" id="intro">
         <div class="profile">
             <img class="profile__avatar" width=57px src="img/racoon.jpg" alt="profile icon">
             <div class="user">
@@ -20,7 +20,7 @@
         <input class="itro__bars" type="checkbox" id="bars">
         <label for="bars"><i class="fas fa-bars"></i></label>
         <nav class="navigation navigation_location">
-           <a href="works/index.html" class="nav__link">Работы</a>
+           <a href="#works_nav" class="nav__link">Работы</a>
            <a href="#" class="nav__link">Обо мне</a>
            <a href="#" class="nav__link">Контакты</a>
            <a href="#" class="nav__link nav__link--btn">hire me</a>
@@ -34,7 +34,9 @@
                 <a class="icons" href="https://github.com/GH-TIMe"><i class="fab fa-github"></i></a>
                 <a class="icons" href="https://t-do.ru/Tims_Tel"><i class="fab fa-telegram-plane"></i></a>
                 <a class="icons" href="https://vk.com/tima1999"><i class="fab fa-vk"></i></a>
-                <a class="icons" href="https://www.instagram.com/_tims_photos/?hl=ru"><i class="fab fa-instagram"></i></a>
+                <a class="icons" href="https://www.instagram.com/_tims_photos/?hl=ru">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
             <div class="btns">
                 <a class="button button_size" href="#">hire me</a>
@@ -42,6 +44,95 @@
             </div>
         </div>
         <img class="social__img" src="img/my_photo-min.png" alt="GH-TIMe">
+    </section>
+    <article class="nav_work" id="works_nav">
+        <ul class="work_filter">
+            <li class="work_filter_category">
+               <label for="all">All</label>
+            </li>
+            <li class="work_filter_category">
+               <label for="coursera">Coursera</label>
+            </li>
+        </ul>
+    </article>
+    <section class="works container_location">
+        <input type="radio" id="all" name="works" >
+        <input type="radio" id="coursera" name="works">
+        <div class="works__container" data-category="personally">
+            <img class="works__preview" src="https://via.placeholder.com/370" alt="котятки">
+            <div class="works__content content__layout">
+                <div class="content__title">Витрина котов</div>
+                <div class="content__text"></div>
+                <a class="button button_decr" href="#intro">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="#intro">Портфолио</a>
+                    <div class="works__year">2019</div>
+                </div>
+            </div>
+        </div>
+        <div class="works__container" data-category="coursera">
+            <img class="works__preview" src="img/work-1.png" alt="котятки">
+            <div class="works__content content__layout">
+                <div class="content__title">Витрина котов</div>
+                <div class="content__text">В задаче реализована витрина картинок (в нашем случае котов) с помощью CSS свойства <kbd>grid</kbd>. Так же для большей функциональности страницы, добавлены: слева фильтр по породам и справа рейтинг котов, который сортируется по убыванию при нажатии на <kbd>checkbox</kbd>.</div>
+                <a class="button button_decr" href="works/catsShowcase/index.html">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="works/catsShowcase/index.html">Витрина котов</a>
+                    <div class="works__year">2019</div>
+                </div>
+            </div>
+        </div>
+        <div class="works__container" data-category="coursera">
+            <img class="works__preview" src="img/work-2-1.png" alt="котятки">
+            <div class="works__content content__layout">
+                <div class="content__title">Магазин котов</div>
+                <div class="content__text">Главной особенностью работы заключается в том, что контейнеры реализованы без использования <kbd>flex</kbd>, <kbd>grid</kbd> и JS. Следовательно использовались только <kbd>inline</kbd>, <kbd>inline-block</kbd>, <kbd>block</kbd> элементы. Так же при желании модно переключиться в режим отображения списком с помощью иконки в левом верхнем углу экрана.</div>
+                <a class="button button_decr" href="works/Cat_shop/index.html">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="works/Cat_shop/index.html">Магазин котов</a>
+                    <div class="works__year">2019</div>
+                </div>
+            </div>
+        </div>
+        <div class="works__container" data-category="coursera">
+            <img class="works__preview" src="img/work-3.png" alt="котятки">
+            <div class="works__content content__layout">
+                <div class="content__title">Мультик</div>
+                <div class="content__text">Целью работы было применение анимации к элементам, а конкретно следовало реализовать: движение солнца по эллипсу, смена времени суток, движение облаков с разных позиций на экране, движение корабля и дыма из трубы.</div>
+                <a class="button button_decr" href="works/Cartoon/index.html">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="works/Cartoon/index.html">Мультик</a>
+                    <div class="works__year">2019</div>
+                </div>
+            </div>
+        </div>
+        <div class="works__container" data-category="coursera">
+            <img class="works__preview" src="img/work-4.png" alt="котятки">
+            <div class="works__content content__layout">
+                <div class="content__title">Магазин овощей</div>
+                <div class="content__text">Цель работы - реализация swipe строки, где перемещение между элементами происходит либо с помощью кнопок под изображениями, либо свайпом по экрану. Так же при наведении на изображение появляется его описание.</div>
+                <a class="button button_decr" href="works/Vegetable_shop/index.html">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="works/Vegetable_shop/index.html">Магазин овощей</a>
+                    <div class="works__year">2019</div>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
