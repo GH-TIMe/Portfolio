@@ -1,0 +1,115 @@
+// main: ../style.less
+
+.timeline {
+    display: flex;
+    margin: 0 auto 5rem;
+    position: relative;
+
+    &::before {
+        content: "";
+
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: @gray;
+
+        top: 0;
+        left: 50%;
+        z-index: 1;
+    }
+}
+
+.timeline__col {
+    width: 50%;
+    max-width: 768px;
+
+    &--left {
+        text-align: right;
+        padding-right: 3.2rem;
+    }
+
+    &--right {
+        text-align: left;
+        padding-left: 3.2rem;
+    }
+}
+
+.timeline__item {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.timeline__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @black;
+    margin-bottom: 2.6rem;
+}
+
+.timeline__date {
+    font: 0.94rem;
+    color: @black;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: .8rem;
+}
+
+.timeline__subtitle {
+    font-size: 1.06rem;
+    font-weight: 700;
+    color: @black;
+
+    margin-bottom: .2rem;
+}
+
+.timeline__position {
+    font-style: italic;
+    font-size: .94rem;
+    color: @black;
+}
+
+.timeline__specialization {
+    font-style: normal;
+}
+
+.timeline__text {
+    color: @black;
+    font-size: .9rem;
+
+    margin-top: .53rem;
+    margin-left: 1rem;
+}
+
+.text__link {
+    text-decoration: none;
+    color: @gray;
+
+    &:hover {
+        color: @black;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,16 +18,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 /* Block */
 @import "block/intro";
 @import "block/social";
 @import "block/works";
-
-@media (max-width: 1074px) {
-    @import "block-tablet/works";
-}
+@import "block/modal";
+@import "block/timeline";
+@import "block/progress-bar";
 
 @media (max-width: 960px) {
     @import "block-tablet/social";
@@ -38,8 +41,7 @@ body {
     @import "block-mobile/social";
 }
 
-@media (max-width: 716px) {
-    @import "block-mobile/works";
+@media (max-width: 563px) {
+    @import "block-mobile/progress-bar";
 }
-
 

@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="https://kit.fontawesome.com/e056cd3039.js" crossorigin="anonymous"></script>
     <title>Портфолио</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+    <!-- intro -->
     <header class="intro" id="intro">
         <div class="profile">
             <img class="profile__avatar" width=57px src="img/racoon.jpg" alt="profile icon">
@@ -21,11 +23,10 @@
         <label for="bars"><i class="fas fa-bars"></i></label>
         <nav class="navigation navigation_location">
            <a href="#works_nav" class="nav__link">Работы</a>
-           <a href="#" class="nav__link">Обо мне</a>
-           <a href="#" class="nav__link">Контакты</a>
-           <a href="#" class="nav__link nav__link--btn">hire me</a>
+           <a href="mailto:timhaha@yandex.ru" class="nav__link nav__link--btn">hire me</a>
         </nav>
     </header>
+    <!-- social -->
     <section class="social">
         <div class="social__greeting">
             <h1 class="greeting__name">Тимофей Аверьянов</h1>
@@ -39,12 +40,14 @@
                 </a>
             </div>
             <div class="btns">
-                <a class="button button_size" href="#">hire me</a>
-                <a class="button button_size" href="#">Резюме</a>
+                <a class="button button_size" href="mailto:timhaha@yandex.ru">hire me</a>
+                <button class="button button_size" data-modal="#modal_resume">Резюме</button>
             </div>
         </div>
         <img class="social__img" src="img/my_photo-min.png" alt="GH-TIMe">
     </section>
+
+    <!-- works navigation -->
     <article class="nav_work" id="works_nav">
         <ul class="work_filter">
             <li class="work_filter_category">
@@ -55,9 +58,13 @@
             </li>
         </ul>
     </article>
+
+    <!-- works -->
     <section class="works container_location">
+
         <input type="radio" id="all" name="works" >
         <input type="radio" id="coursera" name="works">
+
         <div class="works__container" data-category="personally">
             <img class="works__preview" src="https://via.placeholder.com/370" alt="котятки">
             <div class="works__content content__layout">
@@ -73,6 +80,7 @@
                 </div>
             </div>
         </div>
+
         <div class="works__container" data-category="coursera">
             <img class="works__preview" src="img/work-1.png" alt="котятки">
             <div class="works__content content__layout">
@@ -88,6 +96,7 @@
                 </div>
             </div>
         </div>
+
         <div class="works__container" data-category="coursera">
             <img class="works__preview" src="img/work-2-1.png" alt="котятки">
             <div class="works__content content__layout">
@@ -103,6 +112,7 @@
                 </div>
             </div>
         </div>
+
         <div class="works__container" data-category="coursera">
             <img class="works__preview" src="img/work-3.png" alt="котятки">
             <div class="works__content content__layout">
@@ -118,6 +128,7 @@
                 </div>
             </div>
         </div>
+
         <div class="works__container" data-category="coursera">
             <img class="works__preview" src="img/work-4.png" alt="котятки">
             <div class="works__content content__layout">
@@ -133,6 +144,123 @@
                 </div>
             </div>
         </div>
-    </section>
+
+    </section> <!--/.works /.container_location-->
+
+    <div class="modal" id="modal_resume">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="img/close.svg" alt="Close">
+            </button>
+
+            <div class="modal__content">
+                <h3 class="modal__title">РЕЗЮМЕ</h3>
+
+                <div class="timeline">
+                    <div class="timeline__col timeline__col--left">
+                        <h4 class="timeline__title">EDUCATION</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="08-12-2019">2017 - <b>Present</b></time>
+                            <h5 class="timeline__subtitle">Финансовый университет при <br>  Правительстве Российской Федерации</h5>
+                            <div class="timeline__position">Прикладная математика и информатика</div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="31-05-2017">2006 - 2017</time>
+                            <h5 class="timeline__subtitle">ГБОУ СОШ №2009</h5>
+                            <div class="timeline__position">Общеобразовательная</div>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline__col timeline__col--right">
+                        <h4 class="timeline__title">SELF-EDUCATION</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="08-12-2019">2019 - <b>Present</b></time>
+                            <h5 class="timeline__subtitle">Coursera</h5>
+                            <div class="timeline__specialization">Специализация Разработка интерфейсов: вёрстка и JavaScript</div>
+                            <ul class="timeline__text">
+                                <li>
+                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/9HHUCJE23DML">JavaScript, часть 1: основы и функции;</a>
+                                </li>
+                                <li>
+                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/B2L73CX3ERE8">Основы HTML и CSS;</a>
+                                </li>
+                                <li>
+                                    <p class="coming soon">Тонкости вёрстки (week 4).</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h4 class="timeline__title">SKILLS</h4>
+                        <div class="progress-bar">
+
+                            <div class="progress-bar__row">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">HMTL5</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__item">
+                                        <div class="progress-bar__progress" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__row">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">CSS</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__item">
+                                        <div class="progress-bar__progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__row">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">JS</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__item">
+                                        <div class="progress-bar__progress" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- /.progress-bar -->
+                    </div> <!-- /.timeline__col--right -->
+                </div><!--/.timeline-->
+                <div class="text-center">
+                    <a class="button button_size" href="mailto:timhaha@yandex.ru">hire me</a>
+                </div>
+            </div><!--/.modal__content-->
+
+        </div><!--/.modal__dialog-->
+    </div><!--/.modal-->
+
+<!--  JS  -->
+
+<script src="JS/app.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
