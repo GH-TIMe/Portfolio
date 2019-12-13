@@ -1,0 +1,57 @@
+:root {
+    --background-color: #f6f5f3;
+    --white: #fff;
+    --black: #000;
+    --yandex-red: #ed4c2e;
+    --yandex-yellow: #ffdb4a;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Шрифты
+================================*/
+
+/* font-family: "ArialRegular"; */
+@font-face {
+    font-family: "ArialRegular";
+    src: url("../fonts/ArialRegular/ArialRegular.eot");
+    src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ArialRegular/ArialRegular.woff") format("woff"),
+    url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "Yandex"; */
+@font-face {
+    font-family: "Yandex";
+    src: url("../fonts/Yandex-logo/PT Sans Pro Demi.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+    font: 15px "ArialRegular", serif;
+}
+
+.content {
+    min-width: 430px;
+    max-width: 985px;
+    height: auto;
+    background-color:
+        var(--background-color);
+
+    overflow: hidden;
+}
+
+.content_layout {
+    margin: 1.2rem auto;
+
+    position: relative;
+}
