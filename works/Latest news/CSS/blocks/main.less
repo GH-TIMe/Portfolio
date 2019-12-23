@@ -1,0 +1,54 @@
+// main: ../style.less
+
+@import "../vars";
+
+.new {
+    max-width: 1460px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    background: url("../../img/town.png");
+    background-repeat: no-repeat;
+    background-position: -80px -110px;
+}
+
+.new__left {
+    margin: 1.2rem 0 0 1.2rem;
+}
+
+.back {
+    width: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1.2rem 0 0 1.2rem;
+}
+
+.left__text {
+    width: 205px;
+    color: @text-color;
+
+    font: 1.44rem 'Podkova', serif;
+}
+
+.new__right {
+    font-family: 'Open Sans', sans-serif;
+    color: @text-color;
+    margin: 0 1.2rem 2.88rem 0;
+}
+
+.right__title {
+    font-size: 2.56rem;
+    font-weight: 400;
+    margin: 53px 0 40px 0;
+}
+
+.right__text {
+    width: 539px;
+    font-size: .96rem;
+}
