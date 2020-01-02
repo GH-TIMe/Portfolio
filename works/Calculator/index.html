@@ -11,43 +11,32 @@
 <body>
     <main>
         <div class="calculator calculator_layout">
-            <input class="calculator__output" type="number"
-            placeholder="0" />
+            <input class="history" type="text" disabled />
+            <input class="calculator__output" type="text" maxlength="9" value="0" disabled />
             <div class="calculator__buttons">
-                <button class="button">-1</button>
-                <button class="button">deg</button>
-                <button class="button">sin</button>
-                <button class="button">cos</button>
-                <button class="button">%</button>
-                <button class="button">e</button>
-                <button class="button">lg</button>
-                <button class="button">ln</button>
-                <button class="button btn__backspace">
-                    <img class="backspace" src="img/backspace.svg" alt="delete">
-                </button>
                 <button class="button btn_ac">AC</button>
-                <button class="button">^</button>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">/</button>
-                <button class="button">(</button>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">x</button>
-                <button class="button">)</button>
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">-</button>
-                <button class="button">&pi;</button>
-                <button class="button">.</button>
-                <button class="button">0</button>
-                <button class="button">=</button>
-                <button class="button">+</button>
+                <button class="button plusminus">&plusmn;</button>
+                <button class="button percentage">&percnt;</button>
+                <button class="button actiondivide">/</button>
+                <button class="button num7">7</button>
+                <button class="button num8">8</button>
+                <button class="button num9">9</button>
+                <button class="button actionmult">x</button>
+                <button class="button num4">4</button>
+                <button class="button num5">5</button>
+                <button class="button num6">6</button>
+                <button class="button actionminus">-</button>
+                <button class="button num1">1</button>
+                <button class="button num2">2</button>
+                <button class="button num3">3</button>
+                <button class="button actionplus">+</button>
+                <button class="button num0">0</button>
+                <button class="button dot">.</button>
+                <button class="button equally">=</button>
             </div>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

@@ -19,10 +19,12 @@ html {
     border-radius: 10px;
 }
 
+/* if we want use type="number" for input
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+*/
 
 .calculator_layout {
     position: absolute;
@@ -31,6 +33,26 @@ input[type="number"]::-webkit-inner-spin-button {
     top: 50%;
     transform: translate(-50%, -50%);
     -moz-appearance: textfield;
+}
+
+.history {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border: none;
+    padding-right: 1rem;
+    background-color: #2A2B2A;
+    color: #fff;
+
+    font: 1rem 'Righteous', cursive;
+    text-align: right;
+
+    outline: none;
+
+
+    z-index: 1;
 }
 
 .calculator__output {
@@ -55,15 +77,15 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: center;
     justify-items: center;
     align-items: center;
-    grid-gap: 12.5px;
+    grid-gap: 15px;
     margin: 15px 0;
 
-    grid-template: repeat(6, 50px) e("/") repeat(5, 50px);
+    grid-template: repeat(5, 60px) e("/") repeat(4, 60px);
 }
 
 .button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 
     background-color: #2A2B2A;
     font: 1rem 'Righteous', cursive;
@@ -78,6 +100,12 @@ input[type="number"]::-webkit-inner-spin-button {
     &:active {
         background-color: #525452;
     }
+}
+
+.num0 {
+    grid-column: 1 e("/") 3;
+
+    width: 135px;
 }
 
 .btn_ac {
