@@ -135,17 +135,19 @@
             now = 0,
             end = now + time*min;
 
-        setTimeout(function runTimer() {
+        let timerRun = setTimeout(function runTimer() {
             now += sec;
             let distance = end - now,
                 seconds = Math.floor( (distance % min) / sec ),
                 minutes = Math.floor( (distance % hour) / min );
             if (document.getElementsByClassName("cards__matched").length === 12) {
                 showModalWindow("Win");
+                clearTimeout(timerRun);
                 return;
             }
             if (distance < 0) {
                 showModalWindow("Lose");
+                clearTimeout(timerRun);
                 return;
             }
             setTime(minutes, seconds);
@@ -168,6 +170,7 @@
      */
     function showModalWindow(text) {
         let modalTitle = document.getElementsByClassName("modal__title")[0];
+        modalTitle.textContent = "";
         for (let letter of text) {
             let span = document.createElement("span");
             span.innerHTML = letter;

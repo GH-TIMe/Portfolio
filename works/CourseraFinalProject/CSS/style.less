@@ -31,11 +31,6 @@ body {
     width: @width;
     height: @height;
 }
-.background-lin(@linear: e("bottom left, rgba(34,171,147,1) 0%, rgba(25,102,141,1) 100%")) {
-    background: -webkit-linear-gradient(@linear);
-    background: -o-linear-gradient(@linear);
-    background: linear-gradient(@linear);
-}
 
 .fontArial-col(@weight: 700, @size: 1rem, @color: @font-color) {
     font: @weight @size Arial, Helvetica, sans-serif;
@@ -96,7 +91,7 @@ input[type="checkbox"] {
     &::before {
         content: "";
         .absolute(absolute, 5px, 5px, 120px, 120px);
-        .background-lin;
+        background: linear-gradient(to top right, rgba(34,171,147,1) 0%, rgba(25,102,141,1) 100%);
         border-radius: 4px;
     }
     transform: rotateY(0);
@@ -189,7 +184,7 @@ input[type="checkbox"] {
 }
 
 .modal__btn {
-    .background-lin(e("left, rgba(25,102,141,1) 0%, rgba(34,171,147,1) 100%"));
+    background: linear-gradient(to right, rgba(25,102,141,1) 0%, rgba(34,171,147,1) 100%);
 
     padding: 10px 30px;
     margin: 40px 0 30px;
