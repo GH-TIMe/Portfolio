@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Портфолио</title>
     <script src="https://kit.fontawesome.com/e056cd3039.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -65,97 +65,33 @@
         <input type="radio" id="all" name="works">
         <input type="radio" id="coursera" name="works">
 
+        <div class="works__container" data-category="coursera">
+            <img class="works__preview" src="img/finalProject.png" alt="Финальный проект">
+            <div class="works__content content__layout">
+                <div class="content__title">Memoji</div>
+                <div class="content__text">Memoji - известная всем игра Memory, финальный проект специализации Coursera: "Разработка интерфейсов: вёрстка и <kbd>JavaScript</kbd>".  Для этого проекта использовались, такие технологии, как <kbd>Gulp</kbd>, <kbd>LESS</kbd>. Вся логика игры написана на <kbd>JavaScript</kbd></div>
+                <a class="button button_decr" href="works/CourseraFinalProject/index.html">смотреть</a>
+            </div>
+            <div class="works__description">
+                <div class="works__category">Coursera</div>
+                <div class="works__title_year">
+                    <a class="container__inner works__title" href="works/CourseraFinalProject/index.html">Memoji</a>
+                    <div class="works__year">2020</div>
+                </div>
+            </div>
+        </div>
+
         <div class="works__container" data-category="personally">
-            <img class="works__preview" src="img/portfolio.png" alt="Портфолио">
+            <img class="works__preview" src="img/calculator.png" alt="Калькулятор">
             <div class="works__content content__layout">
-                <div class="content__title">Портфолио</div>
-                <div class="content__text">Портфолио - сайт на котором вы сейчас находитесь является самой сложной работай, помимо стилизации многих элементов, здесь использовался JS для закрытия / открытия модальных окон и их анимации.</div>
-                <a class="button button_decr" href="#intro">смотреть</a>
+                <div class="content__title">Калькулятор</div>
+                <div class="content__text">Главной целью проекта было знакомство с библиотекой <kbd>jQuery</kbd> (для корректного отображения, желательно использовать браузер <kbd>Google Chrome</kbd>)</div>
+                <a class="button button_decr" href="works/Calculator/index.html">смотреть</a>
             </div>
             <div class="works__description">
-                <div class="works__category">Coursera</div>
+                <div class="works__category">Personally</div>
                 <div class="works__title_year">
-                    <a class="container__inner works__title" href="#intro">Портфолио</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/work-1.png" alt="Витрина котов">
-            <div class="works__content content__layout">
-                <div class="content__title">Витрина котов</div>
-                <div class="content__text">В задаче реализована витрина картинок (в нашем случае котов) с помощью CSS свойства <kbd>grid</kbd>. Так же для большей функциональности страницы, добавлены: слева фильтр по породам и справа рейтинг котов, который сортируется по убыванию при нажатии на <kbd>checkbox</kbd>.</div>
-                <a class="button button_decr" href="works/catsShowcase/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/catsShowcase/index.html">Витрина котов</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/work-2-1.png" alt="Магазин котов">
-            <div class="works__content content__layout">
-                <div class="content__title">Магазин котов</div>
-                <div class="content__text">Главной особенностью работы заключается в том, что контейнеры реализованы без использования <kbd>flex</kbd>, <kbd>grid</kbd> и JS. Следовательно использовались только <kbd>inline</kbd>, <kbd>inline-block</kbd>, <kbd>block</kbd> элементы. Так же при желании модно переключиться в режим отображения списком с помощью иконки в левом верхнем углу экрана.</div>
-                <a class="button button_decr" href="works/Cat_shop/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Cat_shop/index.html">Магазин котов</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/yandex_auto.png" alt="Яндекс авто">
-            <div class="works__content content__layout">
-                <div class="content__title">Яндекс авто</div>
-                <div class="content__text">В работе реализована вёрстка по макету "Яндекс.авто". Вёрстка статичная (ничего не меняется при клике), но адаптивная.</div>
-                <a class="button button_decr" href="works/Yandex_auto/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Yandex_auto/index.html">Яндекс авто</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/work-3.png" alt="Мультик">
-            <div class="works__content content__layout">
-                <div class="content__title">Мультик</div>
-                <div class="content__text">Целью работы было применение анимации к элементам, а конкретно следовало реализовать: движение солнца по эллипсу, смена времени суток, движение облаков с разных позиций на экране, движение корабля и дыма из трубы.</div>
-                <a class="button button_decr" href="works/Cartoon/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Cartoon/index.html">Мультик</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/work-4.png" alt="Магазин овощей">
-            <div class="works__content content__layout">
-                <div class="content__title">Магазин овощей</div>
-                <div class="content__text">Цель работы - реализация swipe строки, где перемещение между элементами происходит либо с помощью кнопок под изображениями, либо свайпом по экрану. Так же при наведении на изображение появляется его описание.</div>
-                <a class="button button_decr" href="works/Vegetable_shop/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Vegetable_shop/index.html">Магазин овощей</a>
+                    <a class="container__inner works__title" href="works/Calculator/index.html">Калькулятор</a>
                     <div class="works__year">2019</div>
                 </div>
             </div>
@@ -201,13 +137,19 @@
                             <div class="timeline__specialization">Специализация Разработка интерфейсов: вёрстка и JavaScript</div>
                             <ul class="timeline__text">
                                 <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/9HHUCJE23DML">JavaScript, часть 1: основы и функции;</a>
+                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/9HHUCJE23DML"><kbd>JavaScript</kbd>, часть 1: основы и функции;</a>
                                 </li>
                                 <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/B2L73CX3ERE8">Основы HTML и CSS;</a>
+                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/B2L73CX3ERE8">Основы <kbd>HTML</kbd> и <kbd>CSS</kbd>;</a>
                                 </li>
                                 <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/U3E6KHJMCVBS">Тонкости вёрстки.</a>
+                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/U3E6KHJMCVBS">Тонкости вёрстки;</a>
+                                </li>
+                                <li>
+                                    <p><kbd>JavaScript</kbd>, часть 2: прототипы и асинхронность;</p>
+                                </li>
+                                <li>
+                                    <p>Разработка интерфейсов: финальный проект;</p>
                                 </li>
                             </ul>
                         </div>
@@ -221,7 +163,7 @@
                                 </div>
                                 <div class="progress-bar__right">
                                     <div class="progress-bar__item">
-                                        <div class="progress-bar__progress" style="width: 70%;"></div>
+                                        <div class="progress-bar__progress" style="width: 90%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +185,7 @@
                                 </div>
                                 <div class="progress-bar__right">
                                     <div class="progress-bar__item">
-                                        <div class="progress-bar__progress" style="width: 40%;"></div>
+                                        <div class="progress-bar__progress" style="width: 80%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -264,7 +206,7 @@
     <!--/.modal-->
 
     <!--  JS  -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="JS/app.js"></script>
 
 </body>
