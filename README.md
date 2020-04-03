@@ -7,6 +7,7 @@
 В папке **works** расположены все работы, которые сделаны в процессе обучения, в том числе те, которых нет в списке работ на сайте.
 
 Самые крупные работы:
+- [Бо Джек](works/Yandex/task1). Технологии: ![HTML5](img/icons/html.svg) ![CSS3](img/icons/css3.svg) ![Gulp](img/icons/gulp.svg) ![LESS](img/icons/less.svg)
 - [Memoji](works/CourseraFinalProject). Технологии: ![HTML5](img/icons/html.svg) ![CSS3](img/icons/css3.svg) ![Gulp](img/icons/gulp.svg) ![JavaScript JS](img/icons/js.svg) ![LESS](img/icons/less.svg)
 - [Калькулятор](works/Calculator). Технологии: ![JavaScript JS](img/icons/js.svg) (библиотека jQuery)
 
