@@ -1,0 +1,2 @@
+.acordion__invisible-box{max-height:0;overflow:hidden;visibility:hidden;-webkit-transition:max-height .2s linear;-o-transition:max-height .2s linear;transition:max-height .2s linear}.acordion__radio:checked~.acordion__invisible-box{visibility:visible;max-height:100px}
+/*# sourceMappingURL=acordion__invisible-box.min.css.map */

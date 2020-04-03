@@ -1,0 +1,16 @@
+@import "../../../vars";
+
+.acordion__title {
+    font: 800 18px 'Montserrat', sans-serif;
+    color: @btn-color;
+
+    transition: all .2s linear;
+}
+
+.acordion__radio:checked + .acordion__label .acordion__title {
+    color: @black;
+}
+
+.acordion__label:hover .acordion__title {
+    color: @black;
+}

@@ -1,0 +1,30 @@
+@import "../../../vars";
+
+.work__slider {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    background-color: @link-color;
+    border-radius: 50%;
+    border: 1px solid @link-color;
+    transition: all .2s linear;
+}
+
+.work__label:hover .work__slider {
+    background-color: @white;
+    border: 1px solid @white;
+}
+
+.work__radio-btn1:checked ~ .work__details .work__sliders .work__label:nth-child(1) .work__slider {
+    background-color: transparent;
+}
+.work__radio-btn2:checked ~ .work__details .work__sliders .work__label:nth-child(2) .work__slider {
+    background-color: transparent;
+}
+.work__radio-btn3:checked ~ .work__details .work__sliders .work__label:nth-child(3) .work__slider {
+    background-color: transparent;
+}
+.work__radio-btn4:checked ~ .work__details .work__sliders .work__label:nth-child(4) .work__slider {
+    background-color: transparent;
+}

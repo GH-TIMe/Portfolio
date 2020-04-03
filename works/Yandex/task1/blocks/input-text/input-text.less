@@ -1,0 +1,22 @@
+@import "../../vars";
+
+.input-text {
+    font: 16px/20px 'PT Sans', sans-serif;
+    border: 1px solid fade(@black, 20%);
+    background-color: @white;
+    border-radius: 4px;
+    padding: 12px 6px 12px 10px;
+    outline: none;
+
+    &::placeholder {
+        font: 16px/20px 'PT Sans', sans-serif;
+    }
+
+    &:focus {
+        border: 1px solid @btn-color;
+    }
+
+    &:active {
+        border: 1px solid @btn-color;
+    }
+}

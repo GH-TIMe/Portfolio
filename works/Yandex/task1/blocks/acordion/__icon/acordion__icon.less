@@ -1,0 +1,17 @@
+@import "../../../vars";
+
+.acordion__icon {
+    fill: @btn-color;
+    transform: rotate(45deg);
+    
+    transition: all .2s linear;
+}
+
+.acordion__radio:checked + .acordion__label .acordion__icon {
+    fill: @black;
+    transform: rotate(0);
+}
+
+.acordion__label:hover .acordion__icon {
+    fill: @black;
+}
