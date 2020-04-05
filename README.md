@@ -1,6 +1,6 @@
 # Портфолио
 
-Страница [Портфолио](https://gh-time.github.io/Portfolio/) размещена на хостинге GitHub Pages.
+Мое портфолио можно посмотреть [здесь](https://gh-time.github.io/Portfolio/). В нем собраны мои лучшие проекты по веб-разработке, а ещё указаны контакты для связи со мной.
 
 ## [works](works)
 
@@ -12,8 +12,8 @@
 - [Калькулятор](works/Calculator). Технологии: JavaScript (фреймворк jQuery)
 
 Учебные проекты:
-- [Яндекс авто](works/Yandex_auto). Сверстать простой статичный макет 
-- [Витрина котов](works/catsShowcase). Научиться работать с `dispay: grid` и `display: flex` элементами 
-- [Магазин овощей](works/Vegetable_shop). Реализовать swiper
-- [Магазие котов](works/Cat_shop). Научиться работать с инлайн элементами `display: inline`
-- [Мультик](works/Cartoon). Научиться работать с анимацией в CSS `@keyframes` и `transition`
+- [Яндекс авто](works/Yandex_auto). Сверстал статичный макет.
+- [Витрина котов](works/catsShowcase). Поработал с `dispay: grid` и `display: flex` элементами.
+- [Магазин овощей](works/Vegetable_shop). Реализовал swiper.
+- [Магазин котов](works/Cat_shop). Поработал с инлайн элементами `display: inline`.
+- [Мультик](works/Cartoon). Сделал анимацию с помощью: `@keyframes` и `transition`.
