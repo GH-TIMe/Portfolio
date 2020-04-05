@@ -7,9 +7,9 @@
 В папке [**works**](works) есть все проекты, которые я сделал, пока учился. В том числе те, которых нет в портфолио.
  
 Большие проекты:
-- [Бо Джек](works/Yandex/task1). Технологии: HTML5, CSS3, gulp, less
-- [Memoji](works/CourseraFinalProject). Технологии: HTML5, CSS3, gulp, JavaScript, less
-- [Калькулятор](works/Calculator). Технологии: JavaScript (фреймворк jQuery)
+- [Бо Джек](works/Yandex/task1). Технологии: HTML5, CSS3, gulp, less.
+- [Memoji](works/CourseraFinalProject). Технологии: HTML5, CSS3, gulp, JavaScript, less.
+- [Калькулятор](works/Calculator). Технологии: JavaScript (фреймворк jQuery).
 
 Учебные проекты:
 - [Яндекс авто](works/Yandex_auto). Сверстал статичный макет.
