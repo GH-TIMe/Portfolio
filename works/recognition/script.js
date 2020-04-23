@@ -56,13 +56,10 @@ var app = new Vue({
         }
     },
     async beforeMount() {
-        await faceapi.loadSsdMobilenetv1Model(MODEL_URL);
-        await faceapi.loadFaceLandmarkModel(MODEL_URL);
+        await faceapi.loadFaceDetectionModel(MODEL_URL);
         await faceapi.loadFaceRecognitionModel(MODEL_URL);
-        await faceapi.loadTinyFaceDetectorModel(MODEL_URL);
-        await faceapi.loadFaceLandmarkTinyModel(MODEL_URL);
+        await faceapi.loadFaceLandmarkModel(MODEL_URL);
         await faceapi.loadFaceExpressionModel(MODEL_URL);
         await faceapi.loadAgeGenderModel(MODEL_URL);
-        await faceapi.loadFaceDetectionModel(MODEL_URL); 
     }
 });
