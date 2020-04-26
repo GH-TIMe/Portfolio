@@ -1,0 +1,16 @@
+// out: false
+
+.form__invalid-icon {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.form__input-field.invalid ~ .form__invalid-icon,
+.form__input-field:invalid ~ .form__invalid-icon {
+    display: block;
+}

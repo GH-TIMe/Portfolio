@@ -1,0 +1,23 @@
+// out: false
+
+@import "../../../vars.less";
+
+.button_contact {
+    display: inline-block;
+    background-color: @blue;
+    color: @white;
+
+    transition: box-shadow .3s ease;
+
+    &:hover {
+        box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
+    }
+
+    &:active {
+        box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}

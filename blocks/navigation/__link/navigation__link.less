@@ -1,0 +1,20 @@
+// out: false
+
+@import "../../../vars.less";
+
+.navigation__link {
+    display: block;
+
+    font: 700 12px/1.16 'Montserrat', sans-serif;
+    color: @black;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+
+    transition: all .1s linear;
+
+    &:hover {
+        color: @blue;
+        border-bottom: 1px solid @blue;
+    }
+}

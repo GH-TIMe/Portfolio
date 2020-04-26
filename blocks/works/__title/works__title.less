@@ -1,0 +1,18 @@
+// out: false
+@import "../../../vars.less";
+
+.works__title {
+    margin-bottom: 2px;
+
+    font: 700 18px/1.55 'Montserrat', sans-serif;
+    color: @black;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    transition: all .1s linear;
+}
+
+.works__item:hover .works__figure .works__caption .works__title {
+    color: @blue;
+    text-decoration-color: @blue;
+}

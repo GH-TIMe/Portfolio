@@ -1,0 +1,27 @@
+// out: false 
+
+@import "../../../vars.less";
+
+.form__valid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    pointer-events: none;
+
+    transition: all .2s ease;
+}
+
+.form__input-field:hover + .form__valid, .form__textarea:hover + .form__valid,
+.form__input-field:focus + .form__valid, .form__textarea:focus + .form__valid,
+.form__input-field:active + .form__valid, .form__textarea:active + .form__valid {
+    border: 2px solid @blue;
+}
+
+.form__input-field:invalid + .form__valid, .form__textarea:invalid + .form__valid,
+.form__input-field.invalid + .form__valid, .form__textarea.invalid + .form__valid {
+    border: 2px solid @red;
+}

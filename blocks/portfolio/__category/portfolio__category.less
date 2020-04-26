@@ -1,0 +1,28 @@
+// out: false
+@import "../../../vars.less";
+
+.portfolio__category {
+    display: inline-block;
+    margin-right: 25px;
+
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    font: 700 12px/1.16 'Montserrat', sans-serif;
+    color: @black;
+
+    transition: all .1s linear;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        color: @blue;
+        border-bottom: 1px solid @blue;
+    }
+
+    &.active {
+        color: @blue;
+    }
+}

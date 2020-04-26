@@ -1,0 +1,21 @@
+// out: false
+
+@import "../../../vars.less";
+
+.about-me__info-detail {
+    display: block;
+    text-decoration: none;
+    font: 14px 'Roboto', sans-serif;
+    transition: all .1s linear;
+    color: @black;
+    opacity: .8;
+    cursor: pointer;
+
+    &:hover {
+        color: @blue;
+        opacity: 1;
+    }
+    &:active {
+        opacity: 0.8;
+    }
+}

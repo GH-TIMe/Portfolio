@@ -1,0 +1,22 @@
+// out: false
+@import "../../vars.less";
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+
+    @media (max-width: 600px) {
+        padding: 0 20px;
+    }
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+    
+    @media (min-width: 1000px) {
+        width: 1000px;
+    }
+}

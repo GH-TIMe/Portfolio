@@ -1,0 +1,21 @@
+// out: false
+@import "../../../vars.less";
+
+.skills__item {
+    width: 48%;
+    padding: 20px 0;
+
+    &:nth-child(n+3) {
+        border-top: 1px solid @gray;
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        &:nth-child(2) {
+            border-top: 1px solid @gray;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}

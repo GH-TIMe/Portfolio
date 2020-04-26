@@ -1,0 +1,21 @@
+// out: false
+
+@import "../../vars.less";
+
+header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 1000;
+
+    background-color: @white;
+    border-bottom: 1px solid @gray;
+
+    &.active {
+        border-bottom: 1px solid transparent;
+        box-shadow: 0 5px 10px rgba(37, 37, 37, 0.1);
+    }
+}

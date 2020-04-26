@@ -1,0 +1,116 @@
+// out: style.css, compress: true, sourceMap: true, autoprefixer: > 5%; last 2 Chrome versions; not ie 6-9
+@import "vars.less";
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: @black;
+
+     &.no-scroll {
+         overflow: hidden;
+     }
+}
+
+// Blocks
+@import "./blocks/container/container.less";
+
+@import "./blocks/header/header.less";
+@import "./blocks/header/__inner/header__inner.less";
+@import "./blocks/header/__logo/header__logo.less";
+@import "./blocks/header/__burger/header__burger.less";
+
+@import "./blocks/other-color/other-color.less";
+
+@import "./blocks/navigation/navigation.less";
+@import "./blocks/navigation/__item/navigation__item.less";
+@import "./blocks/navigation/__link/navigation__link.less";
+
+@import "./blocks/title/title.less";
+@import "./blocks/title/_underline/title_underline.less";
+
+@import "./blocks/about-me/about-me.less"; 
+@import "./blocks/about-me/__inner/about-me__inner.less";
+@import "./blocks/about-me/__content/about-me__content.less";
+@import "./blocks/about-me/__photo/about-me__photo.less";
+@import "./blocks/about-me/__title/about-me__title.less";
+@import "./blocks/about-me/__text/about-me__text.less";
+@import "./blocks/about-me/__info/about-me__info.less";
+@import "./blocks/about-me/__info-item/about-me__info-item.less";
+@import "./blocks/about-me/__info-title/about-me__info-title.less";
+@import "./blocks/about-me/__info-detail/about-me__info-detail.less";
+
+@import "./blocks/social/social.less";
+@import "./blocks/social/__item/social__item.less";
+@import "./blocks/social/__icon/social__icon.less"; 
+
+@import "./blocks/button/button.less";
+@import "./blocks/button/_contact/button_contact.less";
+@import "./blocks/button/_download-cv/button_download-cv.less";
+
+@import "./blocks/mobile-nav/mobile-nav.less";
+@import "./blocks/mobile-nav/__items/mobile-nav__items.less";
+@import "./blocks/mobile-nav/__item/mobile-nav__item.less";
+@import "./blocks/mobile-nav/__link/mobile-nav__link.less";
+
+@import "./blocks/close/close.less";
+
+@import "./blocks/block/block.less";
+@import "./blocks/block/__content/block__content.less";
+@import "./blocks/block/__description/block__description.less";
+@import "./blocks/block/__items/block__items.less";
+@import "./blocks/block/__item/block__item.less";
+
+@import "./blocks/skills/skills.less";
+@import "./blocks/skills/__items/skills__items.less";
+@import "./blocks/skills/__item/skills__item.less";
+@import "./blocks/skills/__header/skills__header.less";
+@import "./blocks/skills/__text/skills__text.less";
+
+@import "./blocks/education/education.less";
+@import "./blocks/education/__header/education__header.less";
+@import "./blocks/education/__name/education__name.less";
+@import "./blocks/education/__text/education__text.less";
+@import "./blocks/education/__abbr/education__abbr.less";
+@import "./blocks/education/__organization/education__organization.less";
+
+@import "./blocks/portfolio/portfolio.less";
+@import "./blocks/portfolio/__inner/portfolio__inner.less";
+@import "./blocks/portfolio/__navigation/portfolio__navigation.less";
+@import "./blocks/portfolio/__category/portfolio__category.less";
+
+@import "./blocks/works/works.less";
+@import "./blocks/works/__item/works__item.less";
+@import "./blocks/works/__img-container/works__img-container.less";
+@import "./blocks/works/__img/works__img.less";
+@import "./blocks/works/__title/works__title.less";
+@import "./blocks/works/__date/works__date.less";
+
+@import "./blocks/contact/__form/contact__form.less";
+
+@import "./blocks/form/__input-group/form__input-group.less";
+@import "./blocks/form/__input/form__input.less";
+@import "./blocks/form/__input-field/form__input-field.less";
+@import "./blocks/form/__group-left/form__group-left.less";
+@import "./blocks/form/__group-right/form__group-right.less";
+@import "./blocks/form/__textarea/form__textarea.less";
+@import "./blocks/form/__valid/form__valid.less";
+@import "./blocks/form/__invalid-icon/form__invalid-icon.less";
+
+@import "./blocks/modal/modal.less"; 
+@import "./blocks/modal/__container/modal__container.less";
+@import "./blocks/modal/__work/modal__work.less";
+@import "./blocks/modal/__title/modal__title.less";
+@import "./blocks/modal/__stack/modal__stack.less";
+@import "./blocks/modal/__img/modal__img.less";
+@import "./blocks/modal/__link/modal__link.less";

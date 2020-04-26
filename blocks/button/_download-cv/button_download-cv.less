@@ -1,0 +1,27 @@
+// out: false
+
+@import "../../../vars.less";
+
+.button_download-cv {
+    display: inline-block;
+    margin-left: 30px;
+
+    background-color: @gray;
+    color: @black;
+
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+    }
+
+    &:active {
+        background: #c7c7c7;
+        box-shadow: 10px 10px 20px rgba(37, 37, 37, 0.2);
+    }
+
+    @media (max-width: 480px) {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+}

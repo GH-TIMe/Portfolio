@@ -1,0 +1,21 @@
+// out: false
+@import "../../../vars.less";
+
+.block__item {
+    padding-top: 20px;
+
+    border-bottom: 1px solid @gray;
+
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @media (max-width: 1000px) {
+        &:first-child {
+            padding-top: 20px;
+        }
+    }
+}

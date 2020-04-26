@@ -1,0 +1,14 @@
+// out: false
+
+.about-me__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0;
+
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        margin: 30px 0;
+    }
+}

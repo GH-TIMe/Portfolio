@@ -1,0 +1,19 @@
+@import "../../../vars.less";
+
+.social__icon {
+    text-decoration: none;
+
+    transition: all .1s linear;
+
+    svg path {
+        transition: all .1s linear;
+        fill: @black;
+        opacity: 1;
+    }
+    &:hover svg path {
+        fill: @blue;
+    }
+    &:active {
+        opacity: 0.8;
+    }
+}

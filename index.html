@@ -1,250 +1,376 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Портфолио</title>
-    <script src="https://kit.fontawesome.com/e056cd3039.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <!-- intro -->
-    <header class="intro" id="intro">
-        <div class="profile">
-            <img class="profile__avatar" src="img/racoon.jpg" alt="profile icon">
-            <div class="user">
-                <div class="profile__name">Аверьянов<br>Тимофей</div>
-                <div class="profile__spec">Frontend</div>
+
+    <svg style="display:none">
+        <symbol id="close" viewBox="0 0 352 512" width="20">
+            <path fill="#fff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+        </symbol>
+    </svg>
+
+    <svg style="display:none">
+        <symbol id="invalid" viewBox="0 0 352 512" width="10">
+            <path fill="#ff4669" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+        </symbol>
+    </svg>
+
+    <svg style="display:none">
+        <symbol id="bars" viewBox="0 0 448 512" width="18">
+            <path fill="#33f" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+        </symbol> 
+    </svg>  
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo"><span class="other-color">TIM</span>e</div>
+                <nav>
+                    <ul class="navigation">
+                        <li class="navigation__item"><a class="navigation__link" href="#about-me">Обо мне</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#skills">Навыки</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#education">Образование</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#portfolio">Портфолио</a></li>
+                        <li class="navigation__item"><a class="navigation__link" href="#contact">Связаться</a></li>
+                    </ul>
+                </nav>
+                <div class="header__burger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <use xlink:href="#bars">
+                    </svg>
+                </div>
             </div>
         </div>
-        <input class="itro__bars" type="checkbox" id="bars">
-        <label for="bars"><i class="fas fa-bars"></i></label>
-        <nav class="navigation navigation_location">
-            <a href="#works_nav" class="nav__link">Работы</a>
-            <a href="mailto:timhaha@yandex.ru" class="nav__link nav__link--btn">hire me</a>
-        </nav>
     </header>
-    <!-- social -->
-    <div class="social">
-        <div class="social__greeting">
-            <h1 class="greeting__name">Тимофей Аверьянов</h1>
-            <div class="social__spec">Frontend</div>
-            <div class="social__icons">
-                <a class="icons" href="https://github.com/GH-TIMe" target="_blank"><i class="fab fa-github"></i></a>
-                <a class="icons" href="https://t-do.ru/Tims_Tel" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                <a class="icons" href="https://vk.com/tima1999" target="_blank"><i class="fab fa-vk"></i></a>
-                <a class="icons" href="https://www.instagram.com/_tims_photos/?hl=ru" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="btns">
-                <a class="button button_size" href="mailto:timhaha@yandex.ru">hire me</a>
-                <button class="button button_size" data-modal="#modal_resume">Резюме</button>
-            </div>
+
+    <div class="mobile-nav">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <use xlink:href="#close">
+            </svg>
         </div>
-        <img class="social__img" src="img/my_photo-min.png" alt="GH-TIMe">
+        <nav>
+            <ul class="mobile-nav__items">
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#about-me">Обо мне</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#skills">Навыки</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#education">Образование</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#portfolio">Портфолио</a></li>
+                <li class="mobile-nav__item"><a class="mobile-nav__link" href="#contact">Связаться</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- works navigation -->
-    <div class="nav_work" id="works_nav">
-        <ul class="work_filter">
-            <li class="work_filter_category">
-                <label for="all">All</label>
-            </li>
-            <li class="work_filter_category">
-                <label for="coursera">Coursera</label>
-            </li>
-            <li class="work_filter_category">
-                <label for="yandex">Yandex</label>
-            </li>
-        </ul>
-    </div>
-
-    <!-- works -->
-    <div class="works container_location">
-
-        <input type="radio" id="all" name="works">
-        <input type="radio" id="coursera" name="works">
-        <input type="radio" id="yandex" name="works">
-
-        <div class="works__container" data-category="yandex">
-            <img class="works__preview" src="img/beau-jack.png" alt="Бо Джек портфолио">
-            <div class="works__content content__layout">
-                <div class="content__title">Бо Джек</div>
-                <div class="content__text">Тестовое задание по вёрстке от ШРИ Яндекса</div>
-                <a class="button button_decr" href="works/Yandex/task1/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Yandex</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Yandex/task1/index.html">Бо Джек</a>
-                    <div class="works__year">2020</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="coursera">
-            <img class="works__preview" src="img/finalProject.png" alt="Финальный проект">
-            <div class="works__content content__layout">
-                <div class="content__title">Memoji</div>
-                <div class="content__text">Memoji - известная всем игра Memory, финальный проект специализации Coursera: "Разработка интерфейсов: вёрстка и <kbd>JavaScript</kbd>".  Для этого проекта использовались, такие технологии, как <kbd>Gulp</kbd>, <kbd>LESS</kbd>. Вся логика игры написана на <kbd>JavaScript</kbd></div>
-                <a class="button button_decr" href="works/CourseraFinalProject/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Coursera</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/CourseraFinalProject/index.html">Memoji</a>
-                    <div class="works__year">2020</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="personally">
-            <img class="works__preview" src="img/calculator.png" alt="Калькулятор">
-            <div class="works__content content__layout">
-                <div class="content__title">Калькулятор</div>
-                <div class="content__text">Главной целью проекта было знакомство с библиотекой <kbd>jQuery</kbd> (для корректного отображения, желательно использовать браузер <kbd>Google Chrome</kbd>)</div>
-                <a class="button button_decr" href="works/Calculator/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Personally</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/Calculator/index.html">Калькулятор</a>
-                    <div class="works__year">2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works__container" data-category="personally">
-            <img class="works__preview" src="img/test_photo.PNG" alt="Face recognition">
-            <div class="works__content content__layout">
-                <div class="content__title">Face recognition</div>
-                <div class="content__text">Распозвание лиц с помощь фреймворка <kbd>face-api.js</kbd>. Технологии: <kbd>VueJS, JS, LESS</kbd></div>
-                <a class="button button_decr" href="works/recognition/index.html">смотреть</a>
-            </div>
-            <div class="works__description">
-                <div class="works__category">Personally</div>
-                <div class="works__title_year">
-                    <a class="container__inner works__title" href="works/recognition/index.html">Face recognition</a>
-                    <div class="works__year">2020</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--/.works /.container_location-->
-
-    <div class="modal" id="modal_resume">
-        <div class="modal__dialog">
-
-            <button class="modal__close" type="button" data-close>
-                <img src="img/close.svg" alt="Close">
-            </button>
-
-            <div class="modal__content">
-                <h3 class="modal__title">РЕЗЮМЕ</h3>
-                <!-- timeline-->
-                <div class="timeline">
-                    <div class="timeline__col timeline__col--left">
-                        <h4 class="timeline__title">EDUCATION</h4>
-
-                        <div class="timeline__item">
-                            <time class="timeline__date" datetime="2019-12-08">2017 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Фин&shy;ан&shy;со&shy;вый уни&shy;вер&shy;си&shy;тет при <br> Пра&shy;ви&shy;те&shy;льст&shy;ве Рос&shy;сийс&shy;кой Фе&shy;де&shy;ра&shy;ции</h5>
-                            <div class="timeline__position">Прикладная математика и информатика</div>
-                        </div>
-
-                        <div class="timeline__item">
-                            <time class="timeline__date" datetime="2017-05-31">2006 - 2017</time>
-                            <h5 class="timeline__subtitle">ГБОУ СОШ №2009</h5>
-                            <div class="timeline__position">Об&shy;ще&shy;об&shy;разова&shy;тельная</div>
-                        </div>
-
-                    </div>
-
-                    <div class="timeline__col timeline__col--right">
-                        <h4 class="timeline__title">SELF-EDUCATION</h4>
-
-                        <div class="timeline__item">
-                            <time class="timeline__date" datetime="2019-12-20">2019 - <b>Present</b></time>
-                            <h5 class="timeline__subtitle">Coursera</h5>
-                            <div class="timeline__specialization">Специализация Разработка интерфейсов: вёрстка и JavaScript</div>
-                            <ul class="timeline__text">
-                                <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/9HHUCJE23DML"><kbd>JavaScript</kbd>, часть 1: основы и функции;</a>
+    <section id="about-me" class="about-me">
+        <div class="container">
+            <div class="about-me__inner">
+                <div class="about-me__content">
+                    <h1 class="about-me__title">Аверьянов<span class="other-color"> Тим</span>офей</span></h1>
+                    <p class="about-me__text">
+                        Я Front-end разработчик, проживаю в Москве. 
+                        В данный момент я занимаюсь саморазвитием в Front-end разработке 
+                        и хотел бы взять на себя больше работы и повысить свои навыки в качестве разработчика.
+                        Часть моих работ Вы можете посмотреть в портфолио.
+                    </p>
+                    <ul class="about-me__info">
+                        <li class="about-me__info-item"><h2 class="about-me__info-title">Телефон</h2><a class="about-me__info-detail" href="tel:+79036866912">+7 (903) 686-69-12</a></li>
+                        <li class="about-me__info-item"><h2 class="about-me__info-title">Почта</h2><a class="about-me__info-detail" href="mailto:timhaha@yandex.ru">timhaha@yandex.ru</a></li>
+                        <li class="about-me__info-item">
+                            <h2 class="about-me__info-title">Соцсети</h2>
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a class="social__icon" href="https://github.com/GH-TIMe" target="_blank">
+                                        <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                            <path fill="#000" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                                        </svg>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/B2L73CX3ERE8">Основы <kbd>HTML</kbd> и <kbd>CSS</kbd>;</a>
+                                <li class="social__item">
+                                    <a class="social__icon" href="https://t-do.ru/Tims_Tel" target="_blank">
+                                        <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram-plane" class="svg-inline--fa fa-telegram-plane fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="#000" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path>
+                                        </svg>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a class="text__link" href="https://www.coursera.org/account/accomplishments/records/U3E6KHJMCVBS">Тонкости вёрстки;</a>
-                                </li>
-                                <li>
-                                    <p><kbd>JavaScript</kbd>, часть 2: прототипы и асинхронность;</p>
-                                </li>
-                                <li>
-                                    <p>Разработка интерфейсов: финальный проект;</p>
+                                <li class="social__item">
+                                    <a class="social__icon" href="https://vk.com/tima1999" target="_blank">
+                                        <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="vk" class="svg-inline--fa fa-vk fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <path fill="#000" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"></path>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
-                        </div>
+                        </li>
+                    </ul>
+                    <a class="button button_contact" href="#" data-name="contact">Связаться</a>
+                    <a class="button button_download-cv" href="./Resume.pdf" download target="_blank">Резюме</a>
+                </div><!--/.about-me__content-->
+                <div class="about-me__photo">&nbsp;</div>
+            </div><!--/.about-me__inner-->
+        </div><!--/.container-->
+    </section><!--/.about-me-->
 
-                        <h4 class="timeline__title">SKILLS</h4>
-                        <div class="progress-bar">
-
-                            <div class="progress-bar__row">
-                                <div class="progress-bar__left">
-                                    <div class="progress-bar__title">HMTL5</div>
-                                </div>
-                                <div class="progress-bar__right">
-                                    <div class="progress-bar__item">
-                                        <div class="progress-bar__progress" style="width: 90%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress-bar__row">
-                                <div class="progress-bar__left">
-                                    <div class="progress-bar__title">CSS</div>
-                                </div>
-                                <div class="progress-bar__right">
-                                    <div class="progress-bar__item">
-                                        <div class="progress-bar__progress" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress-bar__row">
-                                <div class="progress-bar__left">
-                                    <div class="progress-bar__title">JS</div>
-                                </div>
-                                <div class="progress-bar__right">
-                                    <div class="progress-bar__item">
-                                        <div class="progress-bar__progress" style="width: 80%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> <!-- /.progress-bar -->
-                    </div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="title title_underline">Навыки</h2>
+                    <p class="block__description">Развиваю свои навыки, чтобы достичь уровня уверенного Junior Front-end разработчика.</p>
                 </div>
-                <!--/.timeline-->
-                <div class="text-center">
-                    <a class="button button_size" href="mailto:timhaha@yandex.ru">hire me</a>
+                <ul class="skills__items">
+                    <li class="skills__item">
+                        <h3 class="skills__header">Вёрстка</h3>
+                        <p class="skills__text">HTML5, CSS3/LESS, Python</p>
+                    </li>
+                    <li class="skills__item">
+                        <h3 class="skills__header">Языки программирования</h3>
+                        <p class="skills__text">JavaScript, gulp</p>
+                    </li>
+                    <li class="skills__item">
+                        <h3 class="skills__header">Фреймворки</h3>
+                        <p class="skills__text">VueJS</p>
+                    </li>
+                    <li class="skills__item">
+                        <h3 class="skills__header">Библиотеки</h3>
+                        <p class="skills__text">jQuery, NumPy, pandas</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="title title_underline">Образование</h2>
+                    <p class="block__description">Я считаю, что образование важно. Я стараюсь узнавать что-то новое каждый день.</p>
+                </div>
+                <ul class="block__items">
+                    <li class="block__item">
+                        <h3 class="education__header">Разработка интерфейсов: "Вёрстка и JavaScript"</h3>
+                        <p class="education__name"><span class="education__organization">Coursera</span> <time datetime="2019-10">Окт, 2019</time>—<time datetime="2020-01">Янв, 2020</time></p>
+                        <p class="education__text">
+                            Научился основам вёрстки. Взаимодействовать с DOM элементами, используя JavaScript. 
+                            Получил навык работы с асинхронными операциями, используя callback, promise.
+                        </p>
+                    </li>
+                    <li class="block__item">
+                        <h3 class="education__header">Прикладная математика и информационные технологии</h3>
+                        <p class="education__name"><span class="education__organization"><abbr class="education__abbr" title="Финансовый Университет при правительстве Российской Федерации">ФУ</abbr></span> <time datetime="2019-10">Сент, 2017</time>—<time datetime="2020-01">Июнь, 2021</time></p>
+                        <p class="education__text">
+                            Получил базовые знания программирования на Python, а также использовать библиотеки NumPy и pandas для анализа данных и решения задач машинного обучения.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="portfolio__inner">
+                <h2 class="title title_underline">Портфолио</h2>
+                <ul class="portfolio__navigation">
+                    <li class="portfolio__category active" data-filter="*">Все работы</li>
+                    <li class="portfolio__category" data-filter="coursera">Coursera</li>
+                    <li class="portfolio__category" data-filter="yandex">Яндекс</li>
+                    <li class="portfolio__category" data-filter="person">Личные</li>
+                </ul>
+                <ul class="works">
+                    <li class="works__item" data-category="person" data-name="recognition">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/recognition.png" alt="recognition">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">Face recognition</h3>
+                                <time class="works__date" datatime="2020">2020</time>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="works__item" data-category="yandex" data-name="beau-jack">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/beau-jack.png" alt="Бо Джек">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">Бо Джек</h3>
+                                <time class="works__date" datatime="2020">2020</time>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="works__item" data-category="coursera" data-name="memoji">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/finalProject.png" alt="Memoji">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">Memoji</h3>
+                                <time class="works__date" datatime="2019">2019</time>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul><!--./works-->
+            </div><!--./portfolio__inner-->
+        </div><!--./container-->
+    </section><!--./portfolio-->
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="title title_underline">Связаться</h2>
+                    <p class="block__description">Я открыт для новых проектов. Вы можете написать мне для оценки примерное техническое задание.</p>
+                </div>
+                <div class="contact__form">
+                    <form class="form" action="https://formspree.io/mlewqvwr" method="POST" data-form="contact">
+                        <div class="form__input-group">
+                            <div class="form__group-left">
+                                <div class="form__input">
+                                    <input class="form__input-field" type="text" name="name" placeholder="Имя" data-form="contact">
+                                    <span class="form__valid"></span>
+                                    <span class="form__invalid-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                            <use xlink:href="#invalid">
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="form__input">
+                                    <input class="form__input-field" type="email" name="email" placeholder="E-mail" data-form="contact">
+                                    <span class="form__valid"></span>
+                                    <span class="form__invalid-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                            <use xlink:href="#invalid">
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form__group-right">
+                                <div class="form__input">
+                                    <textarea class="form__textarea" name="text" placeholder="Сообщение" data-form="contact"></textarea>
+                                    <span class="form__valid"></span>
+                                </div>
+                                <button class="button button_contact form__button" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!--./block-->
+        </div><!--./container-->
+    </section><!--./contact-->
+
+    <section class="modal">
+        <div class="modal__container">
+            <div class="modal__work" data-name="recognition">
+                <h2 class="modal__title about-me__title">Face recognition</h2>
+                <p class="modal__text about-me__text">
+                    Приложение созданно с помощью библиотеки <a class="modal__link" href="https://github.com/justadudewhohacks/face-api.js/" target="_blank">face-api.js</a>, позволяет распознавать лица людей, возраст, пол, а так же их эмоции по фотографии.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>HTML, CSS/LESS, VueJS</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2020">2020</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/recognition_1.png" alt="recognition_1">
+                    <img class="modal__img" src="./img/modal/recognition_2.png" alt="recognition_2">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="./works/recognition/index.html" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
                 </div>
             </div>
-            <!--/.modal__content-->
-
-        </div>
-        <!--/.modal__dialog-->
-    </div>
-    <!--/.modal-->
-
-    <!--  JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="JS/app.js"></script>
-
+            <div class="modal__work" data-name="beau-jack">
+                <h2 class="modal__title about-me__title">Бо Джек</h2>
+                <p class="modal__text about-me__text">
+                    Задание 1: Портфолио школы разработки интерфейсов Яндекса. 
+                    Требование: сайт должен максимально соответствовать предложенному макету 
+                    (ссылки на макеты: <a class="modal__link" href="https://yandex-shri-minsk-2019.github.io/task-1/#artboard0" target="_blank">1000px</a>, 
+                    <a class="modal__link" href="https://yandex-shri-minsk-2019.github.io/task-1/#artboard1" target="_blank">600px</a>, 
+                    <a class="modal__link" href="https://yandex-shri-minsk-2019.github.io/task-1/#artboard3" target="_blank">320px</a>, 
+                    <a class="modal__link" href="https://yandex-shri-minsk-2019.github.io/task-1/#artboard2" target="_blank">спецификация</a>). 
+                    Нас интересует только вёрстка, поэтому JavaScript просьба не использовать.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>HTML, CSS/LESS, gulp</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2020">2020</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/beau-jack_1.png" alt="beau-jack_1">
+                    <img class="modal__img" src="./img/modal/beau-jack_2.png" alt="beau-jack_2">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="./works/Yandex/task1/index.html" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
+                </div>
+            </div>
+            <div class="modal__work" data-name="memoji" >
+                <h2 class="modal__title about-me__title">Memoji</h2>
+                <p class="modal__text about-me__text">
+                    Финальный проект специализации <a class="modal__link" href="https://ru.coursera.org/specializations/razrabotka-interfeysov#courses" target="_blank">"Разработка интерфейсов: вёрстка и JavaScript"</a>. Главная цель игрока - открыть все одинаковые пары карточек за отведённое время.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>HTML, CSS/LESS, JS</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2019">2019</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/memoji_1.png" alt="memoji_1">
+                    <img class="modal__img" src="./img/modal/memoji_2.png" alt="memoji_2">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="./works/CourseraFinalProject/index.html" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
+                </div>
+            </div>
+            <div class="modal__work" data-name="contact">
+                <h2 class="modal__title about-me__title">Связаться</h2>
+                <p class="modal__text about-me__text">
+                    Я открыт для новых проектов. Вы можете написать мне для оценки примерное техническое задание.
+                </p>
+                <form class="form" action="https://formspree.io/mlewqvwr" method="POST" data-form="modal">
+                    <div class="form__input-group">
+                        <div class="form__group-left">
+                            <div class="form__input">
+                                <input class="form__input-field" type="text" name="name" placeholder="Имя" data-form="modal">
+                                <span class="form__valid"></span>
+                                <span class="form__invalid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                        <use xlink:href="#invalid">
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="form__input">
+                                <input class="form__input-field" type="email" name="email" placeholder="E-mail" data-form="modal">
+                                <span class="form__valid"></span>
+                                <span class="form__invalid-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                                        <use xlink:href="#invalid">
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form__group-right">
+                            <div class="form__input">
+                                <textarea class="form__textarea" name="text" placeholder="Сообщение" data-form="modal"></textarea>
+                                <span class="form__valid"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__btn">
+                        <button class="button button_contact form__button" type="submit">Отправить</button>
+                        <a class="button button_download-cv">Вернуться к резюме</a>
+                    </div>
+                </form><!--./form-->
+            </div><!--./modal__work-->
+        </div><!--./modal__container-->
+    </section><!--./modal-->
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>
