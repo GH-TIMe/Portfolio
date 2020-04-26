@@ -9,9 +9,10 @@
 Большие проекты:
 - [Бо Джек](works/Yandex/task1). Технологии: HTML5, CSS3, gulp, less.
 - [Memoji](works/CourseraFinalProject). Технологии: HTML5, CSS3, gulp, JavaScript, less.
-- [Калькулятор](works/Calculator). Технологии: JavaScript (фреймворк jQuery).
+- [Recognition](works/recognition). Технологии: HTML5, CSS3, VueJS.
 
 Учебные проекты:
+- [Калькулятор](works/Calculator). Технологии: JavaScript (библиотека jQuery).
 - [Яндекс авто](works/Yandex_auto). Сверстал статичный макет.
 - [Витрина котов](works/catsShowcase). Поработал с `dispay: grid` и `display: flex` элементами.
 - [Магазин овощей](works/Vegetable_shop). Реализовал swiper.
