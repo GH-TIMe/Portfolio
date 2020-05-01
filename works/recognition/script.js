@@ -46,12 +46,51 @@ var app = new Vue({
             faceapi.draw.drawFaceLandmarks(canvas, resizedResults);
             this.info = detectionsWithFaceDescriptors;
         },
+        async detectObjects() {
+            const img = document.getElementById('myImage');
+            // Load the model.
+            const model = await cocoSsd.load();
+            // detect objects in the image.
+            const predictions = await model.detect(img);
+
+            const ctx = document.getElementById('overlay').getContext('2d');
+            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            // resize the canvas
+            ctx.canvas.width = img.width;
+            ctx.canvas.height = img.height;
+            const font = "16px sans-serif";
+            ctx.font = font;
+            ctx.textBaseline = "top";
+
+            predictions.forEach(prediction => {
+                const x = prediction.bbox[0];
+                const y = prediction.bbox[1];
+                const width = prediction.bbox[2];
+                const height = prediction.bbox[3];
+                ctx.lineWidth = 4;
+                ctx.strokeStyle = "#00FFFF";
+                ctx.strokeRect(x, y, width, height);
+                const textWidth = ctx.measureText(prediction.class).width;
+                const textHeight = parseInt(font, 10); // base 10
+                ctx.fillStyle = "#00FFFF";
+                ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
+            });
+
+            predictions.forEach(prediction => {
+                const x = prediction.bbox[0];
+                const y = prediction.bbox[1];
+                // Draw the text last to ensure it's on top.
+                ctx.fillStyle = "#000000";
+                ctx.fillText(prediction.class, x, y);
+            });
+        },
         changePhoto(event) {
-            let item = event.target;
+            const item = event.target;
             if (item.files && item.files[0]) {
-                let img = document.querySelector('img');
+                const img = document.querySelector('img');
+                const ctx = document.getElementById('overlay').getContext('2d');
                 img.src = URL.createObjectURL(item.files[0]);
-                img.onload = () => this.regonizeFaces();
+                img.onload = () => ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
             }
         }
     },
