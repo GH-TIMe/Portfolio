@@ -7,7 +7,7 @@
 В папке [**works**](works) есть все проекты, которые я сделал, пока учился. В том числе те, которых нет в портфолио.
  
 Большие проекты:
-- [GitHub Dashboard](work/avito). Технологии: HTML5, CSS3, less.
+- [GitHub Dashboard](work/avito). Технологии: HTML5, CSS3, less, JavaScript.
 - [Бо Джек](works/Yandex/task1). Технологии: HTML5, CSS3, gulp, less.
 - [Memoji](works/CourseraFinalProject). Технологии: HTML5, CSS3, gulp, JavaScript, less.
 - [Recognition](works/recognition). Технологии: HTML5, CSS3, VueJS.
