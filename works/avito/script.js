@@ -12,11 +12,7 @@
         }
 
         async request(url) {
-            return (await (await fetch(url, {
-                headers: {
-                    authorization: "token c928739a453894b726f7989ac01cdfb484d7e5b9"
-                }
-            })).json());
+            return (await (await fetch(url)).json());
         }
 
         checkEmptySearch() {
