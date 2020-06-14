@@ -179,10 +179,22 @@
                 <ul class="portfolio__navigation">
                     <li class="portfolio__category active" data-filter="*">Все работы</li>
                     <li class="portfolio__category" data-filter="coursera">Coursera</li>
+                    <li class="portfolio__category" data-filter="avito">Avito</li>
                     <li class="portfolio__category" data-filter="yandex">Яндекс</li>
                     <li class="portfolio__category" data-filter="person">Личные</li>
                 </ul>
                 <ul class="works">
+                    <li class="works__item" data-category="avito" data-name="avito">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/github_api_search.png" alt="Github Dashboard">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">Github Dashboard</h3>
+                                <time class="works__date" datatime="2020">2020</time>
+                            </figcaption>
+                        </figure>
+                    </li>
                     <li class="works__item" data-category="person" data-name="recognition">
                         <figure class="works__figure">
                             <div class="works__img-container">
@@ -267,10 +279,29 @@
 
     <section class="modal">
         <div class="modal__container">
+            <div class="modal__work" data-name="avito">
+                <h2 class="modal__title about-me__title">Github Dashboard</h2>
+                <p class="modal__text about-me__text">
+                    Тестовое <a class="modal__link" href="https://github.com/avito-tech/pro-fe-trainee-task/blob/master/README.md" target="_blank">задание</a> "Авито" для стажировки по <a class="modal__link" href="https://start.avito.ru/tech" target="_blank">направлению</a> 
+                    "Frontend-стажёр в юнит продуктовой разработки AvitoPro". Необходимо используя API Github создать реализовать Github Dashboard.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>HTML, CSS/LESS, JS</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2020">2020</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/github_dashboard_1.png" alt="dashboard 1">
+                    <img class="modal__img" src="./img/modal/github_dashboard_2.png" alt="dashboard 2">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="./works/avito/index.html" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
+                </div>
+            </div>
             <div class="modal__work" data-name="recognition">
                 <h2 class="modal__title about-me__title">Face recognition</h2>
                 <p class="modal__text about-me__text">
-                    Приложение созданно с помощью библиотеки <a class="modal__link" href="https://github.com/justadudewhohacks/face-api.js/" target="_blank">face-api.js</a>, позволяет распознавать лица людей, возраст, пол, а так же их эмоции по фотографии.
+                    Приложение созданно с помощью библиотеки <a class="modal__link" href="https://github.com/justadudewhohacks/face-api.js/" target="_blank">face-api.js</a> и <a class="modal__link" href="https://github.com/justadudewhohacks/face-api.js/" target="_blank">tensorflow.js</a>, позволяет распознавать объекты на фотографии, а также лица людей с их характеристиками.
                 </p>
                 <ul class="about-me__info modal__stack">
                     <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>HTML, CSS/LESS, VueJS</span></li>

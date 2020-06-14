@@ -1,0 +1,33 @@
+// out: false
+@import "../../../vars.less";
+
+.paginator__item {
+    display: inline-block;
+    padding: 7px 12px;
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
+    border-right: 1px solid @gray;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: all .25s linear;
+
+    &:first-child {
+        border-left: 1px solid @gray;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    &:hover {
+        background-color: @bg_gray;
+    }
+    &.active {
+        color: @white;
+        background-color: @link;
+    }
+}

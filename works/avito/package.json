@@ -1,0 +1,15 @@
+{
+  "name": "githup-api",
+  "version": "1.0.0",
+  "description": "avito test task",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/build\""
+  },
+  "author": "GH-TIMe",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

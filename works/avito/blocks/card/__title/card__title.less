@@ -1,0 +1,14 @@
+// out: false
+
+.card__title {
+    font-size: 17px;
+    font-weight: 400;
+
+    margin-bottom: 8px;
+
+    &.hidden {
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+}

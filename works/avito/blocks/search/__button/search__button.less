@@ -1,0 +1,26 @@
+// out: false
+@import "../../../vars.less";
+
+.search__button {
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+
+    background-color: @link;
+    color: @white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid @link;
+    outline: none;
+
+    transition: all .25s linear;
+
+    &:hover, &:focus {
+        background-color: @white;
+        color: @link;
+    }
+
+    @media (max-width: 556px) {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+// out: false
+@import "../../vars.less";
+
+.link {
+    text-decoration: none;
+    color: @link;
+
+    &:hover, &:focus {
+        text-decoration: underline;
+        text-decoration-color: @link;
+    }
+}
