@@ -39,9 +39,13 @@
                 `;
             });
             let languages = '';
-            this.languages.forEach(lang => {
-                languages += `<li class="languages__item">${lang}</li>`;
-            });
+            if (!this.languages.languages) {
+                languages = '<li class="languages__item">not found</li>';
+            } else {
+                this.languages.forEach(lang => {
+                    languages += `<li class="languages__item">${lang}</li>`;
+                });
+            }
             this.card.innerHTML = `
                 <div class="author">
                     <img class="author__img" src="${this.repo.owner.avatar_url}" alt="logo">
@@ -55,7 +59,7 @@
                         <span class="link_show">/</span>
                         <a class="link" href="${this.repo.html_url}" target="_blank">${this.repo.name}</a>
                     </h2>
-                    <p class="card__description">${this.repo.description}</p>
+                    <p class="card__description">${(this.repo.description) ? this.repo.description : "no description"}</p>
                     <ul class="languages">
                         <li>Languages:</li>${languages}
                     </ul>

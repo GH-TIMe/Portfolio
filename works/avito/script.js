@@ -38,6 +38,7 @@
             localStorage.searchValue = this.searchLine.value.trim();
             this.firstLoad = false;
 
+            // save search request
             if (this.checkEmptySearch()) {
                 localStorage.searchRequest = "?q=stars:>100&sort=stars&order=desc&per_page=50"
             } else {
@@ -63,6 +64,10 @@
         }
 
         makeRepos() {
+            if (this.repos.length === 0) {
+                return '<li class="repo__empty">not found</li>';
+            }
+
             let i = (this.pageNum - 1) * 10,
                 rows = '';
             const title = `
@@ -115,6 +120,7 @@
     const search = document.getElementById("search");
     const reposList = new listOfRepos();
 
+    
     await reposList.getRepos();
     reposList.showRepos();
 
@@ -123,6 +129,7 @@
         reposList.searchLine.blur();
         reposList.deletePaginator = true;
         reposList.pageNum = 1;
+        
         await reposList.getRepos();
         reposList.showRepos();
     });
@@ -141,8 +148,11 @@
                 page.classList.remove("active");
             });
             element.classList.add("active");
+
+            // save page num
             localStorage.paginator = pageNum;
             reposList.pageNum = pageNum;
+
             reposList.clear();
             reposList.showRepos();
         }
