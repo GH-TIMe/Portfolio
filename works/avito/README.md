@@ -2,9 +2,9 @@
 
 Тестовое задание "Авито". Двустраничный приложение для поиска GitHub репозиториев и просмотра детальной информации о них.
 
-Ссылка на (ТЗ)[https://github.com/avito-tech/pro-fe-trainee-task/blob/master/README.md].
+Ссылка на [ТЗ](https://github.com/avito-tech/pro-fe-trainee-task/blob/master/README.md).
 
-В живую приложение доступно по (ссылке)[https://gh-time.github.io/Portfolio/works/avito/index.html].
+В живую приложение доступно по [ссылке](https://gh-time.github.io/Portfolio/works/avito/index.html).
 
 ## Запуск
 
