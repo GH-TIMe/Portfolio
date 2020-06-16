@@ -10,6 +10,7 @@
   "author": "GH-TIMe",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3"
   }
 }
