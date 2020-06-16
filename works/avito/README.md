@@ -1,6 +1,5 @@
 # Github Dashboard
 
-## Описание
 Тестовое задание "Авито". Двустраничный приложение для поиска GitHub репозиториев и просмотра детальной информации о них.
 
 Ссылка на (ТЗ)[https://github.com/avito-tech/pro-fe-trainee-task/blob/master/README.md].
