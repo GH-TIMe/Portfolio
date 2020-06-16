@@ -36,12 +36,16 @@
                     </svg>
                 </button>
             </form>
-            <p class="load-status"></p>
         </div>
     </header>
 
     <section>
         <div class="container">
+            <ul class="loader active">
+                <li class="loader__ball"></li>
+                <li class="loader__ball"></li>
+                <li class="loader__ball"></li>
+            </ul>
             <ul id="repositories"></ul>
         </div>
     </section>
@@ -52,8 +56,5 @@
         </div>
     </section>
 </body>
-
-<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
 <script src="script.js"></script>
-
 </html>

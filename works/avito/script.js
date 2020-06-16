@@ -5,7 +5,7 @@
             this.repositories = document.getElementById("repositories");
             this.paginator = document.getElementById("paginator");
             this.searchLine = document.getElementById("search__line");
-            this.loadStatus = document.querySelector(".load-status");
+            this.loader = document.querySelector(".loader");
             this.deletePaginator = true;
             this.firstLoad = true;
             this.pageNum = (!isNaN(localStorage.paginator)) ? +localStorage.paginator : 1;
@@ -48,13 +48,13 @@
         }
 
         async getRepos() {
-            this.loadStatus.innerHTML = 'load status: Loading...';
+            this.clear();
+            this.loader.classList.add( "active" );
             this.repos = Array.from( ( await this.request( this.getSearchURL() ) ).items );
-            this.loadStatus.innerHTML = 'load status: Done';
+            this.loader.classList.remove( "active" );
         }
 
         showRepos() {
-            this.clear();
             this.repositories.innerHTML += this.makeRepos();
             if (this.deletePaginator) {
                 this.createPaginator();
@@ -74,7 +74,8 @@
                 </li>
             `;
             while (this.repos[i] && i < this.pageNum * 10) {
-                let repo = this.repos[i];
+                const repo = this.repos[i];
+                const repoPushedAt = repo.pushed_at.slice(0, repo.pushed_at.indexOf("T"));
                 rows += `
                     <li class="repo">
                         <h3 class="repo__title long"><a class="link" href="./card/index.html?repo=https://api.github.com/repos/${repo.full_name}">${repo.name}</a></h3>
@@ -84,7 +85,7 @@
                             </svg>
                             <span class="stars__count">${repo.stargazers_count}<span>
                         </a>
-                        <a class="repo__commit-date long" href="https://github.com/${repo.full_name}/commit/master"><time datetime="${repo.pushed_at}">${repo.pushed_at.slice(0, repo.pushed_at.indexOf("T"))}</time></a>
+                        <a class="repo__commit-date long" href="https://github.com/${repo.full_name}/commit/master"><time datetime="${repoPushedAt}">${repoPushedAt}</time></a>
                         <a class="repo__url link long" href="${repo.html_url}">${repo.html_url}</a>
                     </li>
                 `;
@@ -119,6 +120,7 @@
 
     search.addEventListener("submit", async function searchReposByName(event) {
         event.preventDefault();
+        reposList.searchLine.blur();
         reposList.deletePaginator = true;
         reposList.pageNum = 1;
         await reposList.getRepos();
@@ -141,6 +143,7 @@
             element.classList.add("active");
             localStorage.paginator = pageNum;
             reposList.pageNum = pageNum;
+            reposList.clear();
             reposList.showRepos();
         }
     });
