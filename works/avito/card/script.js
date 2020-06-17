@@ -39,7 +39,7 @@
                 `;
             });
             let languages = '';
-            if (!this.languages) {
+            if (!this.languages.length) {
                 languages = '<li class="languages__item">not found</li>';
             } else {
                 this.languages.forEach(lang => {
