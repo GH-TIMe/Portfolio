@@ -133,11 +133,11 @@
                     </li>
                     <li class="skills__item">
                         <h3 class="skills__header">Фреймворки</h3>
-                        <p class="skills__text">VueJS</p>
+                        <p class="skills__text">ReactJS, Redux, VueJS</p>
                     </li>
                     <li class="skills__item">
                         <h3 class="skills__header">Библиотеки</h3>
-                        <p class="skills__text">JavaScript: jQuery; Python 3: NumPy, pandas</p>
+                        <p class="skills__text">jQuery</p>
                     </li>
                 </ul>
             </div>
@@ -184,6 +184,17 @@
                     <li class="portfolio__category" data-filter="person">Личные</li>
                 </ul>
                 <ul class="works">
+                    <li class="works__item" data-category="person" data-name="react-pizza">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/react-pizza_logo.png" alt="React Pizza">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">React-Pizza</h3>
+                                <time class="works__date" datatime="2020">2020</time>
+                            </figcaption>
+                        </figure>
+                    </li>
                     <li class="works__item" data-category="avito" data-name="avito">
                         <figure class="works__figure">
                             <div class="works__img-container">
@@ -279,6 +290,27 @@
 
     <section class="modal">
         <div class="modal__container">
+            <div class="modal__work" data-name="react-pizza">
+                <h2 class="modal__title about-me__title">React Pizza</h2>
+                <p class="modal__text about-me__text">
+                    &#127829; React Pizza - это интернет-магазин пицц. Приложение разработано на основе курса автора <a class="modal__link" href="https://github.com/Archakov06" target="_blank">Archakov06</a> и немного усовершенствовано.
+                </p>
+                <p class="modal__text about-me__text">
+                    Демо приложения доступно по <a class="modal__link" href="https://hk-time-react-pizzas.herokuapp.com/" target="_blank">ссылке</a>.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>JavaScript, ReactJS, Redux</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2020">2020</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/react-pizza_1.png" alt="pizzas">
+                    <img class="modal__img" src="./img/modal/react-pizza_2.png" alt="cart">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="https://github.com/GH-TIMe/react-pizza" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
+                </div>
+            </div>
             <div class="modal__work" data-name="avito">
                 <h2 class="modal__title about-me__title">Github Dashboard</h2>
                 <p class="modal__text about-me__text">
