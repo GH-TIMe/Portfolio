@@ -7,9 +7,10 @@
 В папке [**works**](works) есть все проекты, которые я сделал, пока учился. В том числе те, которых нет в портфолио.
  
 Большие проекты:
-- [GitHub Dashboard](works/avito). Технологии: HTML5, CSS3, less, JavaScript.
-- [Бо Джек](works/Yandex/task1). Технологии: HTML5, CSS3, gulp, less.
-- [Memoji](works/CourseraFinalProject). Технологии: HTML5, CSS3, gulp, JavaScript, less.
+- [GitHub Dashboard](https://github.com/GH-TIMe/github-dashboard). Технологии: ReactJS, Redux, JavaScript, HTML5, SASS.
+- [React-pizza](https://github.com/GH-TIMe/react-pizza). Технологии: ReactJS, Redux, JavaScript.
+- [Бо Джек](works/Yandex/task1). Технологии: HTML5, less, gulp.
+- [Memoji](works/CourseraFinalProject). Технологии: HTML5, less, gulp, JavaScript.
 - [Recognition](works/recognition). Технологии: HTML5, CSS3, VueJS.
 
 Учебные проекты:
