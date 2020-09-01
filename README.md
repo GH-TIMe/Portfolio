@@ -9,11 +9,12 @@
 Большие проекты:
 - [GitHub Dashboard](https://github.com/GH-TIMe/github-dashboard). Технологии: ReactJS, Redux, JavaScript, HTML5, SASS.
 - [React-pizza](https://github.com/GH-TIMe/react-pizza). Технологии: ReactJS, Redux, JavaScript.
-- [Бо Джек](works/Yandex/task1). Технологии: HTML5, less, gulp.
-- [Memoji](works/CourseraFinalProject). Технологии: HTML5, less, gulp, JavaScript.
+- [Бо Джек](works/Yandex/task1). Технологии: HTML5, LESS, gulp.
+- [Memoji](works/CourseraFinalProject). Технологии: HTML5, LESS, gulp, JavaScript.
 - [Recognition](works/recognition). Технологии: HTML5, CSS3, VueJS.
 
-Учебные проекты:
+Учебные/старые проекты:
+- [GitHub Dashboard](https://github.com/GH-TIMe/Avito-task). Технологии: HTML5, LESS, JavaScript.
 - [Калькулятор](works/Calculator). Технологии: JavaScript (библиотека jQuery).
 - [Яндекс авто](works/Yandex_auto). Сверстал статичный макет.
 - [Витрина котов](works/catsShowcase). Поработал с `dispay: grid` и `display: flex` элементами.
