@@ -7,6 +7,7 @@
 В папке [**works**](works) есть все проекты, которые я сделал, пока учился. В том числе те, которых нет в портфолио.
  
 Большие проекты:
+- [Chat](https://github.com/GH-TIMe/simple-chat). Технологии: ReactJS, NodeJS / Express, Socket.io (frontend + backend).
 - [GitHub Dashboard](https://github.com/GH-TIMe/github-dashboard). Технологии: ReactJS, Redux, JavaScript, HTML5, SASS.
 - [React-pizza](https://github.com/GH-TIMe/react-pizza). Технологии: ReactJS, Redux, JavaScript.
 - [Бо Джек](works/Yandex/task1). Технологии: HTML5, LESS, gulp.
