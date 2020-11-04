@@ -183,6 +183,17 @@
                     <li class="portfolio__category" data-filter="person">Личные</li>
                 </ul>
                 <ul class="works">
+                    <li class="works__item" data-category="person" data-name="simple-chat">
+                        <figure class="works__figure">
+                            <div class="works__img-container">
+                                <img class="works__img" src="./img/simple-chat.png" alt="simple chat">
+                            </div>
+                            <figcaption class="works__caption">
+                                <h3 class="works__title">Simple Chat</h3>
+                                <time class="works__date" datatime="2020">2020</time>
+                            </figcaption>
+                        </figure>
+                    </li>
                     <li class="works__item" data-category="person" data-name="github-dashboard">
                         <figure class="works__figure">
                             <div class="works__img-container">
@@ -289,6 +300,27 @@
 
     <section class="modal">
         <div class="modal__container">
+            <div class="modal__work" data-name="simple-chat">
+                <h2 class="modal__title about-me__title">Simple Chat</h2>
+                <p class="modal__text about-me__text">
+                    Анонимный чат с комнатами. Для того, чтобы начать общение нужно выбрать комнату и ввести имя пользователя.
+                </p>
+                <p class="modal__text about-me__text">
+                    Демо приложения доступно по <a class="modal__link" href="https://gh-time.github.io/simple-chat/" target="_blank">ссылке</a>.
+                </p>
+                <ul class="about-me__info modal__stack">
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">STACK</h2><span>ReactJS, NodeJS, Socket.io</span></li>
+                    <li class="about-me__info-item"><h2 class="about-me__info-title">DATE</h2><time datatime="2020">2020</time></li>
+                </ul>
+                <div class="modal__images">
+                    <img class="modal__img" src="./img/modal/simple-chat_1.png" alt="simple chat 1">
+                    <img class="modal__img" src="./img/modal/simple-chat_2.png" alt="simple chat 2">
+                </div>
+                <div class="modal__btn">
+                    <a class="button button_contact" href="https://github.com/GH-TIMe/simple-chat" target="_blank">Посмотреть</a>
+                    <button class="button button_download-cv">Вернуться к резюме</button>
+                </div>
+            </div>
             <div class="modal__work" data-name="github-dashboard">
                 <h2 class="modal__title about-me__title">Github Dashboard</h2>
                 <p class="modal__text about-me__text">
