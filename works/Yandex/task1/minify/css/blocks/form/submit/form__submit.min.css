@@ -1,2 +1,0 @@
-.form__submit{grid-column:1/3;color:#fff;background-color:#0059d9;-webkit-transition:all .2s linear;-o-transition:all .2s linear;transition:all .2s linear}.form__submit:hover{background-color:#000;color:#fff}.form__submit:active{background-color:#0059d9;color:#fff;opacity:.7}@media (max-width:600px){.form__submit{grid-column:1/2}}
-/*# sourceMappingURL=form__submit.min.css.map */
