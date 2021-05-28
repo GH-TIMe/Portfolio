@@ -4,6 +4,7 @@
 
 ## :briefcase: Проекты
 
+- [Dicord Clone](https://gitlab.com/GL-TIMe/discord-clone). Технологии: React + TypeScript, FireBase, Node.js / Express, Socket.io (frontend + backend).
 - [Chat](https://github.com/GH-TIMe/simple-chat). Технологии: React, Node.js / Express, Socket.io (frontend + backend).
 - [GitHub Dashboard](https://github.com/GH-TIMe/github-dashboard). Технологии: React, Redux, JavaScript, HTML, SCSS.
 - [React-pizza](https://github.com/GH-TIMe/react-pizza). Технологии: React, Redux, JavaScript.
