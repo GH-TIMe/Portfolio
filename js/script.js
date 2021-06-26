@@ -32,41 +32,14 @@
 
     // Modals
 
-    const $modalBtn = $(".works__item, .about-me__content .button_contact");
-    const $modal = $(".modal");
-    const animationTime = 400;
-
-    $modalBtn.on("click", function(event) {
-        event.preventDefault();
-        $modal.fadeIn();
-
+    function addNoScroll() {
         if ($(window).width() > 1000) {
             $("body").addClass("no-scroll").css({paddingRight: "17px"});
             $header.css({paddingRight: "17px"});
         } else {
             $("body").addClass("no-scroll")
         }
-
-        const $currentModal = $(`.modal__work[data-name="${$(this).data("name")}"]`);
-        $currentModal.fadeIn(0).addClass("is-animated");
-        
-        $(".modal__btn .button_download-cv").on("click", function(event) {
-            event.preventDefault();
-            closeModal($currentModal, $modal);
-        });
-        
-        $modal.on("click", () => {
-            closeModal($currentModal, $modal);
-        });
-
-        $(document).keydown(function(event) { 
-            if (event.keyCode == 27) { 
-                closeModal($currentModal, $modal);
-            }
-        });
-
-        $currentModal.on("click", event => event.stopPropagation());
-    });
+    }
 
     function closeModal($currentModal, $modal) {
         $currentModal.removeClass("is-animated").fadeOut(animationTime);
@@ -75,6 +48,74 @@
             $header.css({paddingRight: "0"});
         });
     }
+
+    const $modalBtn = $(".works__item, .button_contact");
+    const $modal = $(".modal");
+    let $currentModal;
+    const animationTime = 400;
+
+    $modalBtn.on("click", function(event) {
+        event.preventDefault();
+        $modal.fadeIn();
+
+        addNoScroll();
+
+        $currentModal = $(`.modal__work[data-name="${$(this).data("name")}"]`);
+        $currentModal.fadeIn(0).addClass("is-animated");
+
+        $currentModal.on("click", event => event.stopPropagation());
+    });
+
+    $modal.on("click", () => {
+        closeModal($currentModal, $modal);
+    });
+
+    $(".modal__btn .button_download-cv").on("click", (event) => {
+        event.preventDefault();
+        closeModal($currentModal, $modal);
+    });
+
+    $(document).keydown(function(event) { 
+        if (event.keyCode == 27) { 
+            closeModal($currentModal, $modal);
+        }
+    });
+
+    $(".modal__work").on("click", (event) => event.stopPropagation());
+
+    // Viewer 
+    
+    const $viewer = $(".viewer");
+    const $gallery = $(".education__certificate");
+    let $currentImg;
+
+    $gallery.on("click", function (event) {
+        event.preventDefault();
+        $viewer.fadeIn();
+
+        addNoScroll();
+
+        $currentImg = $(`.viewer__content[data-name="${$(this).data("name")}"]`);
+        $currentImg.fadeIn();
+    });
+
+    $(".viewer__close").on("click", (event) => {
+        event.stopPropagation();
+        closeModal($currentImg, $viewer);
+    });
+
+    $viewer.on("click", () => {
+        console.log("сработало!")
+        closeModal($currentImg, $viewer);
+    });
+
+    $(document).keydown(function(event) { 
+        if (event.keyCode == 27) { 
+            closeModal($currentImg, $viewer);
+        }
+    });
+
+    $(".viewer__content").on("click", (event) => event.stopPropagation());
 
     // Category filter
 

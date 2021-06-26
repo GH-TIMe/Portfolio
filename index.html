@@ -10,7 +10,7 @@
 <body>
 
     <svg style="display:none">
-        <symbol id="close" viewBox="0 0 352 512" width="20">
+        <symbol id="close" viewBox="0 0 352 512">
             <path fill="#fff" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
         </symbol>
     </svg>
@@ -73,8 +73,7 @@
                     <h1 class="about-me__title">Аверьянов<span class="other-color"> Тим</span>офей</span></h1>
                     <p class="about-me__text">
                         Я Front-end разработчик, проживаю в Москве. 
-                        В данный момент я занимаюсь саморазвитием в Front-end разработке 
-                        и хотел бы взять на себя больше работы и повысить свои навыки в качестве разработчика.
+                        В данный момент занимаюсь саморазвитием и хотел бы взять на себя больше работы, чтоб повысить свои навыки в качестве разработчика.
                         Часть моих работ Вы можете посмотреть в портфолио.
                     </p>
                     <ul class="about-me__info">
@@ -148,23 +147,46 @@
         <div class="container">
             <div class="block">
                 <div class="block__content">
-                    <h2 class="title title_underline">Образование</h2>
+                    <h2 class="title title_underline">Высшее образование</h2>
                     <p class="block__description">Я считаю, что образование важно. Я стараюсь узнавать что-то новое каждый день.</p>
                 </div>
                 <ul class="block__items">
-                    <li class="block__item">
-                        <h3 class="education__header">Разработка интерфейсов: "Вёрстка и JavaScript"</h3>
-                        <p class="education__name"><span class="education__organization">Coursera</span> <time datetime="2019-10">Окт, 2019</time>—<time datetime="2020-01">Янв, 2020</time></p>
-                        <p class="education__text">
-                            Научился основам вёрстки. Взаимодействовать с DOM элементами, используя JavaScript. 
-                            Получил навык работы с асинхронными операциями, используя callback, promise.
-                        </p>
-                    </li>
                     <li class="block__item">
                         <h3 class="education__header">Прикладная математика и информационные технологии</h3>
                         <p class="education__name"><span class="education__organization"><a href="http://www.fa.ru/Pages/Home.aspx" class="modal__link" target="_blank" title="Финансовый Университет при правительстве Российской Федерации">ФУ</a></span> <time datetime="2019-10">Сент, 2017</time>—<time datetime="2020-01">Июнь, 2021</time></p>
                         <p class="education__text">
                             Получил базовые знания программирования на Python, а также использовать библиотеки NumPy и pandas для анализа данных и решения задач машинного обучения.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="additional-education" class="education">
+        <div class="container">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="title title_underline">Дополнительное образование</h2>
+                    <p class="block__description">Курсы являются лучшим мотиватором для изучения чего-то нового :)</p>
+                </div>
+                <ul class="block__items">
+                    <li class="block__item">
+                        <h3 class="education__header">Tinkoff Fintech: Frontend</h3>
+                        <p class="education__name"><span class="education__organization"><a href="https://fintech.tinkoff.ru/study/fintech/frontend/" class="modal__link" target="_blank">Tinkoff</a></span> <time datetime="2021-02">Фев, 2021</time>—<time datetime="2021-05">Май, 2021</time></p>
+                        <p class="education__text">
+                            Улучшил навыки владения React и TypeScript, по окончании курса написал свой курсовой проект.
+                        </p>
+                        <div class="education__certificate" data-name="tinkoff-fintech">
+                            <img class="education__img" src="img/certificates/image_2021-06-26_17-49-45.png" alt="Tinkoff Fintech certificate mini" />
+                        </div>
+                    </li>
+                    <li class="block__item">
+                        <h3 class="education__header">Разработка интерфейсов: "Вёрстка и JavaScript"</h3>
+                        <p class="education__name"><span class="education__organization"><a href="https://ru.coursera.org/specializations/razrabotka-interfeysov" class="modal__link" target="_blank">Coursera</a></span> <time datetime="2019-10">Окт, 2019</time>—<time datetime="2020-01">Янв, 2020</time></p>
+                        <p class="education__text">
+                            Научился основам вёрстки. Взаимодействовать с DOM элементами, используя JavaScript. 
+                            Получил навык работы с асинхронными операциями, используя callback, promise.
                         </p>
                     </li>
                 </ul>
@@ -437,6 +459,19 @@
         </div><!--./modal__container-->
     </section><!--./modal-->
     
+    <section class="viewer">
+        <div class="close viewer__close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <use xlink:href="#close">
+            </svg>
+        </div>
+        <div class="viewer__container">
+            <div class="viewer__content" data-name="tinkoff-fintech">
+                <img class="viewer__img" src="img/certificates/image_2021-06-26_17-49-45.png" alt="Tinkoff Fintech certificate" />
+            </div>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>
